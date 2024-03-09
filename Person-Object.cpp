@@ -19,4 +19,17 @@ public:
     ~Person(){
 
     }
+
+    void dis_search(){
+        cout<<"Name : "<<name<<"\n"<<"Id : "<<id<<"\n"<<"Contact Number : "<<contact<<"\n"<<"Joined club's : "<<"\n"<<club_name<<" : "<<pos<<endl;
+    }
+
+    void copy(Person C){
+        club_name=C.club_name;
+        id=C.id;
+        name=C.name;
+        contact=C.contact;
+        pos=C.pos;
+    }
+
 };
