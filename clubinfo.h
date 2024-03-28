@@ -80,3 +80,76 @@ void Press_info()
     <<"a concept of volition; it is the autonomy of thought and an enticement to ingenuity. We, at the Press Club, aspire to make a"
     <<"difference in the littlest way we can";
 }
+void musicclub_info()
+{
+    cout<<"The Music Club of DA-IICT aims to develop an interest in students towards music and create a healthy music"
+    <<"atmosphere amongst the student community. To achieve this purpose, we organise various Acoustic Nite Lives for" 
+    <<"the students to perform with their friends or other music enthusiasts. We also form teams to compete in various music"
+    <<"competitions in the annual cultural festivals of various prestigious institutes throughout the year. One of the major"
+    <<"events which we perform in is the Ragnarock. Apart from this, we strive to organise various informal jamming sessions"
+    <<"where a group of students just gets together and sings its heart out. The sole vision of the Music Club is to keep"
+    <<"the music taste, talent and atmosphere alive in the music enthusiasts of DAs student community and to provide platforms"
+    <<"to nurture this talent.";
+}
+void DAIICT_Theatreclub_info()
+{
+    cout<<"DAIICT Theatre Group, aka DTG, is a club that conducts and administers theatrics events of DAIICT. There are"
+    <<"no bounds to the form of theatre that we perform, having ventured through stage plays, nukkad natak, mime, mono-acting,"
+    <<"mimicries, musical plays, and what not, for which numerous learning and performing workshops are regularly conducted."
+    <<"We do not only have performers, but also wonderful script writers, directors, composers, etc., but first, we are a group"
+    <<"of crazy and dedicated learners. We live our hearts out on the stage. The club has always been equally enthusiastic to"
+    <<"welcome the new faces as it is with present members. In fact the main essence of DTG is being an open club and thus it"
+    <<"is a family to us rather than just a club. Life is a stage and we all are actors.";
+    }
+    void researchclub_info()
+    {
+        cout<<"DA-IICT boasts of being a research-oriented institute and the Research Club aims to work to foster a"
+        <<"community within the college for those interested in research. It works to help those interested in research,"
+        <<"particularly starting at the Bachelor level; be it to find others working in similar areas or to organize on"
+        <<"-campus seminars and other opportunities for students to get to know the kind of research that is prevalent."
+        <<"The Research Club would eventually like to be a small cog that enables the functioning of an active and interdisciplinary"
+        <<"research community within DA-IICT.";
+    }
+    void chessclub_info()
+    {
+        cout<<"As the name suggests, we are a group of enthusiastic people who are mad about chess. Chess club focuses on"
+        <<"enhancing the skills of the students having interest in chess. We provide them proper guidance about tactics and"
+        <<"other aspects of the game ,We encourage them to develop their skills and provide"
+        <<"them platform by conducting various tournaments and making them participate in inter college tournaments"
+        <<"Chess club focuses on enhancing the skills of the interested members having interest in chess.";
+    }
+    void programmingclub_info()
+    {
+        cout<<"Programming Club has been working to help people explore their hidden passion for programming. We help"
+        <<"students understand some basic concepts and few who stick around enjoy and master the art competitive programming."
+        <<"This includes solving complex problems under some time and space constraints, which is a valued skill in the field"
+        <<"of computer science. Our philosophy is to make programming a fun activity where students come up with problems"
+        <<"and discuss solutions out of their interest. We regularly organize contests and discussion sessions to encourage"
+        <<"participation of the student community. We actively promote students to participate in algorithmically challenging"
+        <<"competitions like ACM ICPC, Facebook Hacker-cup, Google Code Jam, Codechef Snackdown, TCS Codevita, Hackerearth"
+        <<"Collegiate Cup and various others. Students of our club have represented DA-IICT at various such competitions."
+        <<"Programming club continuously strives to uphold and further raise the bar for the programming capabilities of"
+        <<"students at DA-IICT.";
+    }
+    void khelaiyaclub_info()
+    {
+        cout<<"“Folk dance is where the culture breaths.” Khelaiya club- DAIICT provides a medium and platform to express"
+        <<"through the art of folk dance and thus strives to keep the culture of folk dance alive. The khelaiya club organises"
+        <<"workshops for the Garba enthusiasts to engage them in the subtle art of Garba during Navratri. The Khelaiya club"
+        <<"also participates in various events throughout the year. We at Khelaiya club, desire to bring together people"
+        <<"and help them live their dance dream";
+    }
+    void cubingclub_info()
+    {
+        cout<<"It is a community by and for people interested in solving Rubiks Cube and its other cubic and non-cubic"
+         <<"variants. We promote cubing by speedcubing sessions and organizing various competitions(general and WCA affiliated)."
+         <<"We do Mosaic construction using cubes and imitate many renowned artists using the art of cubers at DAIICT, cubing way of" 
+         <<"giving tribute to anyone.";
+    }
+    void PMMC_info()
+    {
+        cout<<"PMMC or Photography and moviemaking club as the name suggest we are the photographer and video makers."
+         <<"We, as the members of the club, seek to display our love of photography through capturing our college’s events and" 
+         <<"festivals. To encourage people we organize Photo and Design Exhibitions, Photography walks, sessions on photography" 
+         <<"and film making, also tries to provide hands on sessions. PMMC strives to capture the happiest moments of our college life.";
+    }
