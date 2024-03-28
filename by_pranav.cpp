@@ -1,343 +1,77 @@
 #include <iostream>
-#include <string>
+#include <unordered_map>
 #include <fstream>
-#include <vector>
+#include <string>
 using namespace std;
 
-class Person{
+// Assumption : file is prechecked. file exist or not
 
-public:
+string club[]={"AI","Dance","Research","Chess","Cubing","Excursion","Microsoft","Radio","DCEI","Sambhav",
+    "Developer_Studen","WebKit","Business","BIS","Debate","Music","Programming","IEEE","Heritage","Headrush_Quizzing Club",
+    "Muse","Press","DAIICT_Theatre","Film","Khelaiya","EHC","PMMC","CINS"};
 
-    string club_name;
-    long long id;
-    string name;
-    long long contact;
-    string pos;
-
-    Person(){
-        club_name="empty";
-        id=0;
-        name="empty";
-        contact=0;
-        pos="empty";
-    }    
-
-    ~Person(){
-
-    }
-
-    void dis_search(){
-        cout<<"Name : "<<name<<"\n"<<"Id : "<<id<<"\n"<<"Contact Number : "<<contact<<"\n"<<"Joined club's : "<<"\n"<<club_name<<" : "<<pos<<endl;
-    }
-
-    void copy(Person C){
-        club_name=C.club_name;
-        id=C.id;
-        name=C.name;
-        contact=C.contact;
-        pos=C.pos;
-    }
-
-};
-
-void search_id(long long a){
-
-    ifstream fi;
-    int k=0;
-    fi.open("test.txt",ios::in);
+unordered_map<string,unordered_map<long long,pair<string,pair<long long,string>>>> load_data(string file_name){ 
     
-    if(!fi){
-        cout<<"File not found"<<endl;
-    }
-    else{
-        int d=0;
-        Person temp;
-        fi>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        while(!fi.eof()){
-            if(temp.id==a && d==0){
-                temp.dis_search();
-                d=1;
-                k=1;
-            }
-            else if(temp.id==a && d==1){
-                cout<<temp.club_name<<" : "<<temp.pos<<endl;
-            }
-            fi>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        }
-        
-        if(k==0){
-            cout<<"Person not found"<<endl;
-        }
-    }
-    fi.close();
-}
-
-void search_contact(long long a){
-
-    int k=0;
     ifstream fin;
-    fin.open("test.txt",ios::in);
-    
-    if(!fin){
-        cout<<"File not found"<<endl;
-    }
-    else{
-        int d=0;
-        Person temp;
-        fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        while(!fin.eof()){
-            if(temp.contact==a && d==0){
-                temp.dis_search();
-                d=1;
-                k=1;
-            }
-            else if(temp.contact==a && d==1){
-                cout<<temp.club_name<<" : "<<temp.pos<<endl;
-            }
-            fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        }
+    fin.open(file_name,ios::in);
 
-        if(k==0){
-            cout<<"Person not found"<<endl;
-        }
+    long long id,number;
+    string name,club_name,position,temp2;
+
+    unordered_map<string,unordered_map<long long,pair<string,pair<long long,string>>>> directory;
+
+    while(fin>>club_name>>id>>name>>temp2>>number>>position){
+
+        name=name+" "+temp2;
+
+        directory[club_name][id]=make_pair(name,make_pair(number,position));
     }
+
     fin.close();
+
+    return directory;
 }
 
-void search_name(string a){
+void mem_club(unordered_map<string,unordered_map<long long,pair<string,pair<long long,string>>>> directory,string club_name){
 
-    ifstream fin;
-    fin.open("test.txt",ios::in);
-
-    if(!fin){
-        cout<<"File not found"<<endl;
+    int n=1;
+    for(auto dir : directory[club_name]){
+        cout<<"Person "<<n<<" :"<<endl;
+        cout<<"Name : "<<dir.second.first<<endl;
+        cout<<"Student ID : "<<dir.first<<endl;
+        cout<<"Contact Number : "<<dir.second.second.first<<endl;
+        cout<<"Position in club : "<<dir.second.second.second<<endl;
+        cout<<endl;
+        n++;
     }
-    else{
-        int d=0,c;
-        long long tem;
-        Person temp;
-
-        fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        while(!fin.eof()){
-            if(d==0 && a==temp.name){
-                tem=temp.id;
-                d=1;
-            }
-            else if(d==1 && (a==temp.name && tem!=temp.id)){
-                cout<<"More than one person available whose name is "<<a<<endl;
-                cout<<"Enter more detais"<<endl;
-                cout<<"Press 1 , 2 , 3 or 4"<<"\n1.Enter student id\n2.Enter Contact number"<<endl;
-                cout<<"3.Enter club name\n4.Get detail of all person whose name is "<<a<<endl;
-                cin>>c;
-                d=2;
-                break;
-            }
-            fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-        }
-        fin.close();
-
-        if(d==0){
-            cout<<"Person not found"<<endl;
-        }
-        else if(d==1){
-            search_id(tem);
-        }
-        else if(d==2){
-
-            switch(c){
-
-                case 1:
-                long long ide;
-                cin>>ide;
-                search_id(ide);
-                break;
-
-                case 2:
-                long long co;
-                cin>>co;
-                search_contact(ide);
-                break;
-
-                case 3:
-                {
-                string cl;
-                cin>>cl;
-                ifstream fin;
-                fin.open("test.txt",ios::in);
-
-                if(!fin){
-                    cout<<"File not found"<<endl;
-                }
-                else{
-                    Person temp;
-                    long long tem;
-                    int d=0,f;
-
-                    fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-                    while(!fin.eof()){
-                        if(d==0 && temp.name==a && temp.club_name==cl){
-                            d=1;
-                            tem=temp.id;
-                        }
-                        else if(d==1 && temp.name==a && temp.club_name==cl && temp.id!=tem){
-                            d=2;
-                            cout<<"More than one person available whose name is "<<a<<endl;
-                            cout<<"Enter more detais"<<endl;
-                            cout<<"Person 1,2 or 3"<<endl;
-                            cout<<"1.Enter id\n2.Enter contact\n3.Get detai of all person whose name is "<<a<<" and who is in club "<<cl<<endl;
-                            cin>>f;
-                        }
-                        fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-                    }
-                    fin.close();
-
-                    if(d==0){
-                        cout<<"Person not found"<<endl;
-                    }
-                    else if(d==1){
-                        search_id(tem);
-                    }
-                    else if(d==2){
-
-                        switch(f){
-                            case 1:
-                            long long ide;
-                            cin>>ide;
-                            search_id(ide);
-                            break;
-
-                            case 2:
-                            long long co;
-                            cin>>co;
-                            search_contact(co);
-                            break;
-
-                            case 3:
-                            ifstream fin;
-                            fin.open("test.txt",ios::in);
-                            long long idf;
-
-                            if(!fin){
-                                cout<<"File not found"<<endl;
-                            }
-                            else{
-                               fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos; 
-                               while(!fin.eof()){
-                                    if(a==temp.name && cl==temp.club_name){
-                                        idf=temp.id;
-                                        search_id(idf);
-                                    }
-                                    fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-                               }
-                            }
-                            fin.close();
-                            break;
-                        }
-                    }
-                }
-                break;
-                }
-
-                case 4:
-                {
-                vector<long long> vec;
-                ifstream fin;
-                long long h;
-                int g=0,av=0;
-                fin.open("test.txt",ios::in);
-
-                if(!fin){
-                    cout<<"File not found"<<endl;
-                }
-                else{
-                    fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-                    while(!fin.eof()){
-                        if(g==0 && a==temp.name){
-                            h=temp.id;
-                            vec.push_back(h);
-                            search_id(h);
-                            g=1;
-                        }
-                        else if(g==1 && a==temp.name){
-                            av=0;
-                            for(int i=0;i<vec.size();++i){
-                                if(temp.id==vec[i]){
-                                    av=1;
-                                    break;
-                                }
-                            }
-
-                            if(av==0){
-                                h=temp.id;
-                                vec.push_back(h);
-                                search_id(h);
-                            }
-                        }
-                        fin>>temp.club_name>>temp.id>>temp.name>>temp.contact>>temp.pos;
-                    }
-                    fin.close();
-                }
-                break;
-                }
-            }
-        }
-    }
+    cout<<endl;
 }
 
-void search(){
-    cout<<"Press 1,2,3 or 4"<<endl;
-    cout<<"1.Enter student id\n2.Enter contact number\n3.Enter name\n4.Enter club name\n"<<endl;
-    int n;
-    cin>>n;
+void get_all_mem(unordered_map<string,unordered_map<long long,pair<string,pair<long long,string>>>> directory){
     
-    switch(n){
-        case 1:
-        {
-        long long ide;
-        cin>>ide;
-        search_id(ide);
-        break;
-        }
-
-        case 2:
-        {
-        long long co;
-        cin>>co;
-        search_contact(co);
-        break;
-        }
-
-        case 3:
-        {
-        string na;
-        cin>>na;
-        search_name(na);
-        break;
-        }
-
-        case 4:
-        {
-        string cl;
-        cin>>cl;
-        //display_club_member(cl); [work remainig]
-        break;
+    int n;
+    for(int i=0;i<28;i++){
+        if(!directory[club[i]].empty()){
+            cout<<club[i]<<" Club :"<<endl;
+            n=1;
+            for(auto dir: directory[club[i]]){
+                cout<<n<<". "<<dir.first<<"   "<<dir.second.first<<"   "<<dir.second.second.first<<"   "<<dir.second.second.second<<endl;
+                n++;
+            }
+            cout<<endl;
         }
     }
 }
-
-class Chess{
-
-private:
-
-    Person member;
-
-public:
-
-
-};
 
 int main(){
 
-    search();
-    
+    unordered_map<string,unordered_map<long long,pair<string,pair<long long,string>>>> directory;
+
+    directory = load_data("test.txt");
+
+    mem_club(directory,"CINS");
+
+    get_all_mem(directory);
+
+    return 0;
 }
