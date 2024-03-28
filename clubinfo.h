@@ -139,6 +139,7 @@ void DAIICT_Theatreclub_info()
         <<"also participates in various events throughout the year. We at Khelaiya club, desire to bring together people"
         <<"and help them live their dance dream";
     }
+
     void cubingclub_info()
     {
         cout<<"It is a community by and for people interested in solving Rubiks Cube and its other cubic and non-cubic"
@@ -146,10 +147,89 @@ void DAIICT_Theatreclub_info()
          <<"We do Mosaic construction using cubes and imitate many renowned artists using the art of cubers at DAIICT, cubing way of" 
          <<"giving tribute to anyone.";
     }
+
     void PMMC_info()
     {
         cout<<"PMMC or Photography and moviemaking club as the name suggest we are the photographer and video makers."
          <<"We, as the members of the club, seek to display our love of photography through capturing our college’s events and" 
          <<"festivals. To encourage people we organize Photo and Design Exhibitions, Photography walks, sessions on photography" 
          <<"and film making, also tries to provide hands on sessions. PMMC strives to capture the happiest moments of our college life.";
+    }
+
+    void excursionclub_info()
+    {
+        cout<<"Excursions are the activities which every engineering student is most awaited of. These"
+        <<"become the most memorable moments of ones life when we travel with our friends. We, the Excursion"
+        <<"club of DA-IICT plan and organise such trips for you and gives you a stack of unforgettable moments"
+        <<"you have spent with your pals.";
+    }
+
+    void electronics_hobby_info()
+    {
+    cout<<"We, the EHC, as a group of enthusiastic electronics students aim to maintain and grow the culture of electronics"
+    <<"in the campus of DA-IICT. We believe that for excellence in any field, it is necessary that student has strong roots in"
+    <<"terms of knowledge. With this idea, we assume basic electronic sessions for freshers in electronics. These hands on sessions,"
+    <<"not only help students to have a thorough understanding of the subject, but also help them developing better understanding"
+    <<"of what they are studying in the lectures. For students, who are thrilled by electronics or have amazing innovative ideas"
+    <<"for projects, we support them for their adventures, in terms of resources, and guidance. We also have our won teams keep"
+    <<"working on interesting projects. Apart from these ventures, we prepare freshers to participate in various university"
+    <<"electronics competitions. With all these efforts, we thrive to motivate students, as a whole community to develop a fresh"
+    <<"perspective for electronics.";
+    }
+
+    void debateclub_info()
+    {
+        cout<<"We are a group of people who like to talk, who believe in the power of words to bring about change,"
+        <<"who promote dissent and discussion. We do this by conducting weekly sessions of Parliamentary Debating and"
+        <<"Group Discussions on all kinds of topics ranging from politics to movies to morality and ethics. We also"
+        <<"have Open Forum Discussions, a platform for the faculty and students to interact on topics affecting both"
+        <<"as well as MUNs (Model United Nations). The Debate Club strives to inculcate a culture of dissension while"
+        <<"everyone has a good time.";
+    }
+
+    void heritageclub_info()
+    {
+        cout<<"Our mission is to “Have every child, experience the inspiration and mysticism embodied in Indian and"
+        <<"world heritage”. We organize different events, categorized into two parts: local events and other events."
+        <<"Local events include workshops, training, demonstrations and other techniques to get the student an idea"
+        <<"on the cultural part of art forms. We believe every child has the capability of some or the other art form."
+        <<"We not only include events on singing and dancing, but also take into consideration the other art forms such"
+        <<"as painting, pottery, poetry etc.";
+    }
+    void headrush_info()
+    {
+        cout<<"Headrush is the quizzing club of DA-IICT. We are a group of quizzing enthusiasts that aim to not"
+        <<"only maintain but perpetually ascertain the growth of the level of comepetitive quizzing in the college"
+        <<"while providing a platform for leisurely quizzers to enjoy intense and entertataining weekly quiz sessions"
+        <<"ranging across a plethora of topics like ent, music, lit, sci-tech, biz etc.";
+    }
+
+    void BISclub_info()
+    {
+        cout<<"You can have the chance of shaping the future of technology and safety. Join the Bureau Of Indian Standards"
+        <<"Club and collaborate with industry experts, contribute to national standards and gain hands-on experience in emerging fields like"
+        <<"drones and robotics. Network, Learn, Lead. BIS Club conducts events related to product standards in technnology and visits"
+        <<"are conducted for the club at different product manufacturing companies";
+    }
+    void IEEEclub_info()
+    {
+        cout<<"IEEE student branch of DAIICT focuses on enhancing the learning experience of the student community. IEEEs"
+        <<"main focus is to foster technological innovation and excellence for the benefit of humanity. We focus on conducting"
+        <<"social and technical activities for students and encourage them to take full advantage of IEEE membership like"
+        <<"scholarships, competitions, seminar and conference grants. We have 2 Special Interest Groups (SIG): SIG- Moblie"
+        <<"Apps and SIG- Embedded. SIG- Moblie Apps conduct weekly workshops on Android application development and SIG- Embedded"
+        <<"conducts weekly sessions on embedded hardware like Arduino. We IEEE SB members at DA-IICT regularly conduct workshops"
+        <<"such as line follower and manual robotics workshop. Women in Engineering(WIE) is also a part of IEEE. It is dedicated"
+        <<"to promoting women engineers and scientists. It is a platform where men and women collectively use their diverse talents"
+        <<"to innovate for the benefit of humanity. Industrial applications society is a global society of IEEE, which provides"
+        <<"industrial exposure to students. We boast our technical fest called i.Fest which we organize every year. It consists"
+        <<"of various challenging and competitive events where students from in and around DA-IICT come to participate.";
+    }
+
+    void museclub_info()
+    {
+        cout<<"Welcome aboard the Muse Club express, where the creative vibes are high and the fun is even higher!"
+        <<"We're a bunch of design fanatics who believe that art is all about letting loose and having a blast. Doodles,"
+        <<"sketches, and art galore - that's our language! We provide you the ultimate chance to flaunt your wild imagination and unique" 
+        <<"style through doodles. Forget rules, forget limits, it's your time to shine!";
     }
