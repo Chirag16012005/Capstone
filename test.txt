@@ -1,62 +1,40 @@
-Webkit Club 202301487 Yug Tejani 8879564723 Member
-CINS Club 202101100 Raj Chauhan 9745236452 Core
-Webkit Club 202301116 Kavya Chauhan 7856942317 Member
-Sambhav 202301260 Nakul Patel 9925136082 Member
-Radio Club 202303017 Riddhish Upadhyay 9909268822 Member
-DSClub 202303059 Avish Jain 7357911142 Member
-Business Club 202303059 Avish Jain 7357911142 Member
-CINS Club 202301270 Aashka Pathak 8879829885 Member
-DCEI Club 202303042 Nikhil Vaghela 9726832275 Member
-Business Club 202001202 Prathav Kevadiya 9327989798 Core
-DSClub 202301167 Harsh Gajjar 9778441144 Member
-DCEI Club 202001001 Raj Shah 9979206425 Core
-Webkit Club 202303007 Dhyey Parekh 8460342552 Member
-Business Club 202303007 Dhyey Parekh 8460342552 Member
-Webkit Club 202101235 Jyot Patel 9872654321 Core
-CINS Club 202101255 Aarsh Bagda 7016689754 Member
-DCEI Club 202301187 Manav Patel 7569823622 Member
-Business Club 202301027 Om Patel 8320740816 Member
-DSClub 202303007 Dhyey Parekh 8460342552 Member
-CINS Club 202001001 Raj Shah 9979206425 Member
-DCEI Club 202303027 Dhruvil Mahida 9979166059 Member
-Business Club 202001189 Krish Dhola 9023768654 Member
-CINS Club 202201083 Sahil Vaghasiya 9724638152 Member
-CINS Club 202101060 Vraj Patel 6354148292 Core
-Webkit Club 202301151 Heet Bhuva 9099201955 Member
+Radio 202303017 Riddhish Upadhyay 9909268822 Member
+DCEI 202301451 Hemal Chavda 9157869787 Member
+Business 202301020 Varshil Patel 9316167755 Member
+Webkit 202301487 Yug Tejani 8879564723 Member
+CINS 202101051 Hirmi Patel 8894562575 Member
 DSClub 202101201 Umang Trivedi 9321566341 Core
-DCEI Club 202301442 Shubham Ramoliya 7600055620 Member
-Webkit Club 202301262 Priyanka Garg 6595425278 Member
-CINS Club 202201269 Tanay Kevalramani 9725734921 Member
-Radio Club 202201269 Tanay Kevalramani 9725734921 Core
-DCEI Club 202001005 Het Shah 7041168801 Core
-Business Club 202301078 Krish Patel 9316643223 Member
-Sambhav 202101224 Ami Pandat 9574322589 Core
-Radio Club 202301269 Jayaditya Shah 8160878889 Member
-DSClub 202101259 Neel Barodiya 9846157322 Core
-DCEI CLub 202001189 Krish Dhola 9023768654 Member
+Sambhav 202301210 Naitik Patel 9313400529 Member
+CINS 202101167 Harsh Gajjar 9778441144 Member
+Radio 202101420 Nishith Parekh 8551262355 Core
+CINS 202201269 Tanay Kevalramani 9725734921 Member
+Webkit 202301151 Heet Bhuva 9099201955 Member
 DSClub 202303027 Dhruvil Mahida 9979166059 Member
-CINS Club 202101051 Hirmi Patel 8894562575 Member
-Business Club 202101201 Umang Trivedi 9321566341 Core
-DCEI Club 202301078 Krish Patel 9316643223 Member
-CINS CLub 202301107 Shambhavi Singh 8700423055 Member
-DCEI Club 202001099 Samay Ashar 9364521387 Core
-DCEI Club 202301241 Jal Khunt 9313466099 Member
-Webkit Club 202201200 Sahil Pandavadra 7600983411 Member
-Radio CLub 202301078 Maulik Khoyani 6353813083 Member
-Sambhav 202301258 Jayansh Gadhe 9824347594 Member
-DCEI Club 202301451 Hemal Chavda 9157869787 Member
-Webkit Club 202301472 Parth Karena 8780732911 Member
-Radio Club 202101420 Nishith Parekh 8551262355 Core
+Webkit 202301262 Priyanka Garg 6595425278 Member
+Business 202001202 Prathav Kevadiya 9327989798 Core
 Sambhav 202301027 Om Patel 8320740816 Member
+DCEI 202001099 Samay Ashar 9364521387 Core
+DCEI 202303042 Nikhil Vaghela 9726832275 Member
+CINS 202303025 Mann Bhatnagar 8279082112 Member
+Webkit 202303007 Dhyey Parekh 8460342552 Member
+Business 202301078 Krish Patel 9316643223 Member
+Radio 202201220 Ruchika Amin 7600173025 Core
+CINS 202101255 Aarsh Bagda 7016689754 Member
+Webkit 202101235 Jyot Patel 9872654321 Core
 DSClub 202301112 Pranshu Patel 8758852366 Member
-Business Club 202301189 Krish Dhola 9023768654 Member
-DCEI Club 202001001 Raj Shah 9979206425 Core
-CINS CLub 202301270 Aashka Pathak 8879829885 Member
-DCEI CLub 202301442 Shubham Ramoliya 7600055620 Member
+Sambhav 202301259 Jayaditya Shah 8160878889 Member
+Sambhav 202301258 Jayansh Gadhe 9824347594 Member
+CINS 202303059 Avish Jain 7357911142 Member
+Business 202301222 Manan Chhabhaya 9875878593 Member
+CINS 202101060 Vraj Patel 6354148292 Core
+CINS 202301270 Aashka Pathak 8879829885 Member
+Webkit 202101166 Abhishek Abbi 9142356785 Member
+Sambhav 202101224 Ami Pandat 9574322589 Core
+DCEI 202301187 Manav Patel 7569823622 Member
+Radio 202301259 Chirag Katkoriya 9016554676 Member
+CINS 202101100 Raj Chauhan 9745236452 Core
+Sambhav 202301260 Nakul Patel 9925136082 Member
+DCEI 202301241 Jal Khunt 9313466099 Member
 DSClub 202301255 Dhruv Jain 9663322558 Member
-Webkit Club 202303007 Dhyey Parekh 8460342552 Member
-Radio Club 202301051 Hirmi Patel 8894562575 Core
-Sambhav 202201269 Tanay Kevalramani 9725734921 Core
-CINS Club 202303025 Mann Bhatnagar 8279082112 Member
-Webkit Club 202201024 Hitharth Bhatt 9856473644 Core
-Business Club 202301161 Darshan Ramani 7567101234 Member
+DCEI 202001005 Het Shah 7041168801 Core
+Business 202201201 Umang Trivedi 9321566341 Core
