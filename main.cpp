@@ -53,7 +53,7 @@ string file_name;
 
         case 2:
         {
-            cout<<"Please enter the club name(You may type the name only and no need for the word CLUB)"<<endl;
+            cout<<"Please enter the club name(You may type the name only and no need for the word CLUB, only for developer student club type DSClub)";
             string club;
             cin>>club;
             mem_club(list,club);
@@ -105,6 +105,5 @@ string file_name;
     cout<<"If you want to enter into DAIICT club manager , press 1 or you may press 0 to exit"<<endl;
     cin>>b;
 }
-
 return 0;
 }

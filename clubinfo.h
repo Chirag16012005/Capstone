@@ -125,82 +125,82 @@ void DAIICT_Theatreclub_info()
         <<"This includes solving complex problems under some time and space constraints, which is a valued skill in the field"
         <<"of computer science. Our philosophy is to make programming a fun activity where students come up with problems"
         <<"and discuss solutions out of their interest. We regularly organize contests and discussion sessions to encourage"
-        <<"participation of the student community. We actively promote students to participate in algorithmically challenging"
-        <<"competitions like ACM ICPC, Facebook Hacker-cup, Google Code Jam, Codechef Snackdown, TCS Codevita, Hackerearth"
+        <<"participation of the student community. We actively promote students to participate in algorithmically challenging "
+        <<"competitions like ACM ICPC, Facebook Hacker-cup, Google Code Jam, Codechef Snackdown, TCS Codevita, Hackerearth "
         <<"Collegiate Cup and various others. Students of our club have represented DA-IICT at various such competitions."
-        <<"Programming club continuously strives to uphold and further raise the bar for the programming capabilities of"
+        <<"Programming club continuously strives to uphold and further raise the bar for the programming capabilities of "
         <<"students at DA-IICT."<<endl;
     }
     void khelaiyaclub_info()
     {
-        cout<<"“Folk dance is where the culture breaths.” Khelaiya club- DAIICT provides a medium and platform to express"
-        <<"through the art of folk dance and thus strives to keep the culture of folk dance alive. The khelaiya club organises"
-        <<"workshops for the Garba enthusiasts to engage them in the subtle art of Garba during Navratri. The Khelaiya club"
-        <<"also participates in various events throughout the year. We at Khelaiya club, desire to bring together people"
+        cout<<"“Folk dance is where the culture breaths.” Khelaiya club- DAIICT provides a medium and platform to express "
+        <<"through the art of folk dance and thus strives to keep the culture of folk dance alive. The khelaiya club organises "
+        <<"workshops for the Garba enthusiasts to engage them in the subtle art of Garba during Navratri. The Khelaiya club "
+        <<"also participates in various events throughout the year. We at Khelaiya club, desire to bring together people "
         <<"and help them live their dance dream"<<endl;
     }
 
     void cubingclub_info()
     {
-        cout<<"It is a community by and for people interested in solving Rubiks Cube and its other cubic and non-cubic"
-         <<"variants. We promote cubing by speedcubing sessions and organizing various competitions(general and WCA affiliated)."
-         <<"We do Mosaic construction using cubes and imitate many renowned artists using the art of cubers at DAIICT, cubing way of" 
+        cout<<"It is a community by and for people interested in solving Rubiks Cube and its other cubic and non-cubic "
+         <<"variants. We promote cubing by speedcubing sessions and organizing various competitions(general and WCA affiliated). "
+         <<"We do Mosaic construction using cubes and imitate many renowned artists using the art of cubers at DAIICT, cubing way of " 
          <<"giving tribute to anyone."<<endl;
     }
 
     void PMMC_info()
     {
         cout<<"PMMC or Photography and moviemaking club as the name suggest we are the photographer and video makers."
-         <<"We, as the members of the club, seek to display our love of photography through capturing our college’s events and" 
-         <<"festivals. To encourage people we organize Photo and Design Exhibitions, Photography walks, sessions on photography" 
+         <<"We, as the members of the club, seek to display our love of photography through capturing our college's events and " 
+         <<"festivals. To encourage people we organize Photo and Design Exhibitions, Photography walks, sessions on photography " 
          <<"and film making, also tries to provide hands on sessions. PMMC strives to capture the happiest moments of our college life."<<endl;
     }
 
     void excursionclub_info()
     {
-        cout<<"Excursions are the activities which every engineering student is most awaited of. These"
-        <<"become the most memorable moments of ones life when we travel with our friends. We, the Excursion"
-        <<"club of DA-IICT plan and organise such trips for you and gives you a stack of unforgettable moments"
+        cout<<"Excursions are the activities which every engineering student is most awaited of. These "
+        <<"become the most memorable moments of ones life when we travel with our friends. We, the Excursion "
+        <<"club of DA-IICT plan and organise such trips for you and gives you a stack of unforgettable moments "
         <<"you have spent with your pals."<<endl;
     }
 
     void electronics_hobby_info()
     {
-    cout<<"We, the EHC, as a group of enthusiastic electronics students aim to maintain and grow the culture of electronics"
-    <<"in the campus of DA-IICT. We believe that for excellence in any field, it is necessary that student has strong roots in"
+    cout<<"We, the EHC, as a group of enthusiastic electronics students aim to maintain and grow the culture of electronics "
+    <<"in the campus of DA-IICT. We believe that for excellence in any field, it is necessary that student has strong roots in "
     <<"terms of knowledge. With this idea, we assume basic electronic sessions for freshers in electronics. These hands on sessions,"
-    <<"not only help students to have a thorough understanding of the subject, but also help them developing better understanding"
-    <<"of what they are studying in the lectures. For students, who are thrilled by electronics or have amazing innovative ideas"
-    <<"for projects, we support them for their adventures, in terms of resources, and guidance. We also have our won teams keep"
-    <<"working on interesting projects. Apart from these ventures, we prepare freshers to participate in various university"
-    <<"electronics competitions. With all these efforts, we thrive to motivate students, as a whole community to develop a fresh"
+    <<"not only help students to have a thorough understanding of the subject, but also help them developing better understanding "
+    <<"of what they are studying in the lectures. For students, who are thrilled by electronics or have amazing innovative ideas "
+    <<"for projects, we support them for their adventures, in terms of resources, and guidance. We also have our won teams keep "
+    <<"working on interesting projects. Apart from these ventures, we prepare freshers to participate in various university "
+    <<"electronics competitions. With all these efforts, we thrive to motivate students, as a whole community to develop a fresh "
     <<"perspective for electronics."<<endl;
     }
 
     void debateclub_info()
     {
-        cout<<"We are a group of people who like to talk, who believe in the power of words to bring about change,"
-        <<"who promote dissent and discussion. We do this by conducting weekly sessions of Parliamentary Debating and"
-        <<"Group Discussions on all kinds of topics ranging from politics to movies to morality and ethics. We also"
-        <<"have Open Forum Discussions, a platform for the faculty and students to interact on topics affecting both"
-        <<"as well as MUNs (Model United Nations). The Debate Club strives to inculcate a culture of dissension while"
+        cout<<"We are a group of people who like to talk, who believe in the power of words to bring about change, "
+        <<"who promote dissent and discussion. We do this by conducting weekly sessions of Parliamentary Debating and "
+        <<"Group Discussions on all kinds of topics ranging from politics to movies to morality and ethics. We also "
+        <<"have Open Forum Discussions, a platform for the faculty and students to interact on topics affecting both "
+        <<"as well as MUNs (Model United Nations). The Debate Club strives to inculcate a culture of dissension while "
         <<"everyone has a good time."<<endl;
     }
 
     void heritageclub_info()
     {
-        cout<<"Our mission is to “Have every child, experience the inspiration and mysticism embodied in Indian and"
-        <<"world heritage”. We organize different events, categorized into two parts: local events and other events."
-        <<"Local events include workshops, training, demonstrations and other techniques to get the student an idea"
-        <<"on the cultural part of art forms. We believe every child has the capability of some or the other art form."
-        <<"We not only include events on singing and dancing, but also take into consideration the other art forms such"
+        cout<<"Our mission is to “Have every child, experience the inspiration and mysticism embodied in Indian and "
+        <<"world heritage”. We organize different events, categorized into two parts: local events and other events. "
+        <<"Local events include workshops, training, demonstrations and other techniques to get the student an idea "
+        <<"on the cultural part of art forms. We believe every child has the capability of some or the other art form. "
+        <<"We not only include events on singing and dancing, but also take into consideration the other art forms such "
         <<"as painting, pottery, poetry etc."<<endl;
     }
     void headrush_info()
     {
-        cout<<"Headrush is the quizzing club of DA-IICT. We are a group of quizzing enthusiasts that aim to not"
-        <<"only maintain but perpetually ascertain the growth of the level of comepetitive quizzing in the college"
-        <<"while providing a platform for leisurely quizzers to enjoy intense and entertataining weekly quiz sessions"
+        cout<<"Headrush is the quizzing club of DA-IICT. We are a group of quizzing enthusiasts that aim to not "
+        <<"only maintain but perpetually ascertain the growth of the level of comepetitive quizzing in the college "
+        <<"while providing a platform for leisurely quizzers to enjoy intense and entertataining weekly quiz sessions "
         <<"ranging across a plethora of topics like ent, music, lit, sci-tech, biz etc."<<endl;
     }
 
@@ -232,4 +232,138 @@ void DAIICT_Theatreclub_info()
         <<"We're a bunch of design fanatics who believe that art is all about letting loose and having a blast. Doodles,"
         <<"sketches, and art galore - that's our language! We provide you the ultimate chance to flaunt your wild imagination and unique" 
         <<"style through doodles. Forget rules, forget limits, it's your time to shine!"<<endl;
+    }
+    void info(int r)
+    {
+        
+        switch(r)
+            {
+                case 1:
+                {
+                    radioclub_info();
+                    break;
+                }
+                case 2:
+                {
+                    sambhav_info();
+                    break;
+                }
+                case 3:
+                {
+                    businessclub_info();
+                    break;
+                }
+                case 4:
+                {
+                    DCEI_info();
+                    break;
+                }
+                case 5:
+                {
+                    CINS_info();
+                    break;
+                }
+                case 6:
+                {
+                    Webkitclub_info();
+                    break;
+                }
+                case 7:
+                {
+                museclub_info();
+                break;
+                }
+                case 8:
+                {
+                    debateclub_info();
+                    break;
+                }
+                case 9:
+                {
+                    musicclub_info();
+                    break;
+                }
+                case 10:
+                {
+                    DSClub_info();
+                    break;
+                }
+                case 11:
+                {
+                    chessclub_info()
+                    ;break;
+                }
+                case 12:
+                {
+                    Press_info();
+                    break;
+                }
+                case 13:
+                {
+                    IEEEclub_info();
+                    break;
+                }
+                case 14:
+                {
+                    filmclub_info();
+                    break;
+                }
+                case 15:
+                {
+                    researchclub_info();
+                    break;
+                }
+                case 16:
+                {
+                    programmingclub_info();
+                    break;
+                }
+                case 17:
+                {
+                    PMMC_info();
+                    break;
+                }
+                case 18:
+                {
+                    khelaiyaclub_info();
+                    break;
+                }
+                case 19:
+                {
+                    cubingclub_info();
+                    break;
+                }
+                case 20:
+                {
+                    excursionclub_info();
+                    break;
+                }
+                case 21:
+                {
+                    BISclub_info();
+                    break;
+                }
+                case 22:
+                {
+                    heritageclub_info();
+                    break;
+                }
+                case 23:
+                {
+                    electronics_hobby_info();
+                    break;
+                }
+                case 24:
+                {
+                    headrush_info();
+                    break;
+                }
+                case 25:
+                {
+                    DAIICT_Theatreclub_info();
+                    break;
+                }
+                
+            }
+            
     }
