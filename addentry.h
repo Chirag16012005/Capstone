@@ -201,7 +201,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>j2;
                 cout<<"Do you want to be a part of Web development contests? (YES - 1 and NO - 0)"<<endl;
                 cin>>j3;
-                if(j1 || j2 || j3)
+                if(j1 && j2 && j3)
                 {
                     add(dire,"DSClub");
                 }
@@ -220,7 +220,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>k2;
                 cout<<"Do you want to be a part of chess contests? (YES - 1 and NO - 0)"<<endl;
                 cin>>k3;
-                if(k1 || k2 || k3)
+                if(k1 && k2 && k3)
                 {
                     add(dire,"Chess");
                 }
@@ -239,7 +239,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>l2;
                 cout<<"Do you want to make a change through reporting and raising voice? (YES - 1 and NO - 0)"<<endl;
                 cin>>l3;
-                if(l1 || l2 || l3)
+                if(l1 && l2 && l3)
                 {
                     add(dire,"Press");
                 }
@@ -258,7 +258,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>l2;
                 cout<<"Do you want to be a part of workshops of electronics and Arduino? (YES - 1 and NO - 0)"<<endl;
                 cin>>l3;
-                if(l1 || l2 || l3)
+                if(l1 && l2 && l3)
                 {
                     add(dire,"IEEE");
                 }
@@ -277,7 +277,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>m2;
                 cout<<"Do you want to organise movie nights for your friends? (YES - 1 and NO - 0)"<<endl;
                 cin>>m3;
-                if(m1 || m2 || m3)
+                if(m1 && m2 && m3)
                 {
                     add(dire,"film");
                 }
@@ -296,7 +296,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>n2;
                 cout<<"Have you made any research based projects earlier also? (YES - 1 and NO - 0)"<<endl;
                 cin>>n3;
-                if(n1 || n2 || n3)
+                if(n1 && n2 && n3)
                 {
                     add(dire,"Research");
                 }
@@ -315,7 +315,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>n2;
                 cout<<"Do you want to make career in coding? (YES - 1 and NO - 0)"<<endl;
                 cin>>n3;
-                if(n1 || n2 || n3)
+                if(n1 && n2 && n3)
                 {
                     add(dire,"Programming");
                 }
@@ -334,7 +334,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>o2;
                 cout<<"Are you interested in making detailed documentaries and editing videos? (YES - 1 and NO - 0)"<<endl;
                 cin>>o3;
-                if(o1 || o2 || o3)
+                if(o1 && o2 || o3)
                 {
                     add(dire,"PMMC");
                 }
@@ -353,7 +353,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>p2;
                 cout<<"Do you play Garba on every occasion ? (YES - 1 and NO - 0)"<<endl;
                 cin>>p3;
-                if(p1 || p2 || p3)
+                if(p1 && p2 || p3)
                 {
                     add(dire,"Khelaiya");
                 }
@@ -372,13 +372,127 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>q2;
                 cout<<"Do you think you can represent DAIICT cubing club infront of other colleges ? (YES - 1 and NO - 0)"<<endl;
                 cin>>q3;
-                if(q1 || q2 || q3)
+                if(q1 && q2 && q3)
                 {
                     add(dire,"Cubing");
                 }
                 else
                 {
-                    cout<<"Sorry you are not eligible for Cubing at DAIICT"<<endl;
+                    cout<<"Sorry you are not eligible for Cubing Club at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 20:
+            {
+                int r1,r2,r3;
+                cout<<"Do you want to create unforgettable memories? (YES - 1 and NO - 0)"<<endl;
+                cin>>r1;
+                cout<<"Do you want to organise trips ? (YES - 1 and NO - 0)"<<endl;
+                cin>>r2;
+                cout<<"Do you want to be part of excursion club? (YES - 1 and NO - 0)"<<endl;
+                cin>>r3;
+                if(r1 && r2 && r3)
+                {
+                    add(dire,"Excursion");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for Excursion Club at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 21:
+            {
+                int r1,r2,r3;
+                cout<<"Do you want to learn more about Bureau of Indian Standards? (YES - 1 and NO - 0)"<<endl;
+                cin>>r1;
+                cout<<"Do you want to be part of workshops and industrial visits ? (YES - 1 and NO - 0)"<<endl;
+                cin>>r2;
+                cout<<"Do you want to be part of BIS club? (YES - 1 and NO - 0)"<<endl;
+                cin>>r3;
+                if(r1 && r2 && r3)
+                {
+                    add(dire,"BIS");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for BIS Club at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 22:
+            {
+            int s1,s2,s3;
+                cout<<"Do you want to rediscover architectural heritage of India? (YES - 1 and NO - 0)"<<endl;
+                cin>>s1;
+                cout<<"Do you want to unearth new facts and discover new things ? (YES - 1 and NO - 0)"<<endl;
+                cin>>s2;
+                cout<<"Do you want to uphold your heritage? (YES - 1 and NO - 0)"<<endl;
+                cin>>s3;
+                if(s1 && s2 && s3)
+                {
+                    add(dire,"Heritage");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for Heritage Club at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 23:
+            {
+                int t1,t2,t3;
+                cout<<"Do you want to play with Arduino, Nodemcu? (YES - 1 and NO - 0)"<<endl;
+                cin>>t1;
+                cout<<"Do you want to work on IoT projects ? (YES - 1 and NO - 0)"<<endl;
+                cin>>t2;
+                cout<<"Do you want to make hardware and electronics based projects? (YES - 1 and NO - 0)"<<endl;
+                cin>>t3;
+                if(t1 && t2 && t3)
+                {
+                    add(dire,"EHC");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for Electronics Hobby Centre at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 24:
+            {
+                int u1,u2,u3;
+                cout<<"Do you love quizes? (YES - 1 and NO - 0)"<<endl;
+                cin>>u1;
+                cout<<"Do you like to grasp new topics through intense quizes? (YES - 1 and NO - 0)"<<endl;
+                cin>>u2;
+                cout<<"Do you want to conduct intense quiz? (YES - 1 and NO - 0)"<<endl;
+                cin>>u3;
+                if(u1 && u2 && u3)
+                {
+                    add(dire,"Headrush_Quizzing");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for Headrush Quizzing Club at DAIICT"<<endl;
+                }
+                break;
+            }
+            case 25:
+            {
+                int v1,v2,v3;
+                cout<<"Do you love plays? (YES - 1 and NO - 0)"<<endl;
+                cin>>v1;
+                cout<<"Do you like acting and playing different roles ? (YES - 1 and NO - 0)"<<endl;
+                cin>>v2;
+                cout<<"Do you like to express yourself through unique dialogue delivery? (YES - 1 and NO - 0)"<<endl;
+                cin>>v3;
+                if(v1 && v2 && v3)
+                {
+                    add(dire,"DAIICT_Theatre");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for DAIICT Theatre Group at DAIICT"<<endl;
                 }
                 break;
             }
@@ -393,5 +507,15 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
 }
 void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> directory,string club_name)
 {
-
+cout<<"Welcome to the "<<club_name<< "club"<<endl;
+cout<<"Enter your full name"<<endl;
+string name;
+getline(cin,name);
+cout<<"Enter ID"<<endl;
+long long id,contact;
+cin>>id;
+cout<<"Enter Contact Number"<<endl;
+cin>>contact;
+string pos="Member";
+directory[club_name][id]=make_pair(name,make_pair(contact,pos));
 }
