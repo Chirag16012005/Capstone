@@ -243,7 +243,7 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
             else if(c==2){
                 cout<<"We got more than one person with same name present in "<<cl<<endl;
                 cout<<"We want some additional information"<<endl;
-
+                
                 cout<<"Press 1 to show all result"<<endl;
                 cout<<"Press 2 to give id"<<endl;
                 cout<<"Press 3 to give contact number"<<endl;
@@ -303,6 +303,48 @@ void search(unordered_map<string, unordered_map<long long, pair<string, pair<lon
         long long number;
         cin>>number;
         find_by_contact(directory,number);
+    }
+}
+
+void reload_data(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory,string file_name){
+    ofstream fout;
+    fout.open(file_name,ios::out);
+    string name,position;
+    long long id,number;
+
+    for(int i=0;i<28;++i){
+
+        if(!directory[club[i]].empty()){
+
+            for(auto person : directory[club[i]]){
+
+                id=person.first;
+                name=person.second.first;
+                number=person.second.second.first;
+                position=person.second.second.second;
+
+                fout<<club[i]<<" "<<id<<" "<<name<<" "<<number<<" "<<position<<endl;
+            }
+        }
+    }
+    fout.close();
+}
+
+void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory){
+    string temp,club;
+    cout<<"What made you to leave this club"<<endl;
+    getline(cin, temp);
+    long long id;
+    label:
+    cout<<"Please enter your id and club name"<<endl;
+    cin>>id;
+    cin>>club;
+    if(directory[club].find(id) != directory[club].end()){
+        directory[club].erase(id);
+    }
+    else{
+        cout<<"You have entered wrong club name or id"<<endl;
+        goto label;
     }
 }
 

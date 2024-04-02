@@ -13,7 +13,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
             <<"14.Film Club  15.Research Club  16.Programming Club  17.PMMC"<<endl
             <<"18.Khelaiya Club  19.Cubing Club  20.Excursion Club  21.BIS club"<<endl
             <<"22.Heritage Club  23.Electronic Hobby Centre  24.Headrush-quizzing"<<endl
-            <<"25.DAIICT Theatre Group"<<endl;
+            <<"25.DAIICT Theatre Group 26.AI Club"<<endl;
         int c2;
         int x;
         cin>>x;
@@ -279,7 +279,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>m3;
                 if(m1 && m2 && m3)
                 {
-                    add(dire,"film");
+                    add(dire,"Film");
                 }
                 else
                 {
@@ -505,7 +505,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
 
     
 }
-void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> directory,string club_name)
+void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory,string club_name)
 {
 cout<<"Welcome to the "<<club_name<< "club"<<endl;
 cout<<"Enter your full name"<<endl;
