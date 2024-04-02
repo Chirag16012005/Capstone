@@ -306,7 +306,23 @@ void search(unordered_map<string, unordered_map<long long, pair<string, pair<lon
     }
 }
 
-
+void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory){
+    string temp,club;
+    cout<<"What made you to leave this club"<<endl;
+    getline(cin, temp);
+    long long id;
+    lable:
+    cout<<"Please enter your id and club name"<<endl;
+    cin>>id;
+    cin>>club;
+    if(directory[club].find(id) != directory[club].end()){
+        directory[club].erase(id);
+    }
+    else{
+        cout<<"You have entered wrong club name or id"<<endl;
+        goto lable;
+    }
+}
 
 int main()
 {
