@@ -100,6 +100,15 @@ string file_name;
 
                 break;
             }
+            case 6:
+            {
+                addentry(list);
+                break;
+            }
+            case 7:
+            {
+                del_entry(list);
+            }
     }
 
     cout<<"If you want to enter into DAIICT club manager , press 1 or you may press 0 to exit"<<endl;
