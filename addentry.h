@@ -203,7 +203,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>j3;
                 if(j1 && j2 && j3)
                 {
-                    add(dire,"DSClub");
+                    add(dire,"Developer_Studen");
                 }
                 else
                 {
@@ -493,6 +493,25 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 else
                 {
                     cout<<"Sorry you are not eligible for DAIICT Theatre Group at DAIICT"<<endl;
+                }
+                break;
+            }
+            case  26:
+            {
+                int v1,v2,v3;
+                cout<<"Do you like playing with AI through different prompts? (YES - 1 and NO - 0)"<<endl;
+                cin>>v1;
+                cout<<"Do you like to generate crazy stuff ? (YES - 1 and NO - 0)"<<endl;
+                cin>>v2;
+                cout<<"Do you like to learn science behind AI? (YES - 1 and NO - 0)"<<endl;
+                cin>>v3;
+                if(v1 && v2 && v3)
+                {
+                    add(dire,"AI");
+                }
+                else
+                {
+                    cout<<"Sorry you are not eligible for AI Club at DAIICT"<<endl;
                 }
                 break;
             }
