@@ -45,7 +45,7 @@ string file_name;
     while(b==1)
     {
     cout<<"Please follow the following menu \n 2. All club members of a particular club. \n 3. To get the details of all members."
-    <<"\n 4. To get details of club \n 5. To search any club member."<<endl;
+    <<"\n 4. To get details of club \n 5. To search any club member. \n 6. To become a member in any club \n 7. To leave any club \n 8. To reload data in any file."<<endl;
     int menu;
     cin>>menu;
     switch (menu)
@@ -108,7 +108,17 @@ string file_name;
             case 7:
             {
                 del_entry(list);
+               break;
             }
+             case 8:
+          {
+             cout<<"Please enter the name of file, in which you want to reload data.(Please use extension .txt)"<<endl;
+             string file;
+             cin>>file;
+             reload_data(list,file);
+             break;
+                
+          }
     }
 
     cout<<"If you want to enter into DAIICT club manager , press 1 or you may press 0 to exit"<<endl;
