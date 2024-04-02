@@ -311,7 +311,7 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
     cout<<"What made you to leave this club"<<endl;
     getline(cin, temp);
     long long id;
-    lable:
+    label:
     cout<<"Please enter your id and club name"<<endl;
     cin>>id;
     cin>>club;
@@ -320,7 +320,7 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
     }
     else{
         cout<<"You have entered wrong club name or id"<<endl;
-        goto lable;
+        goto label;
     }
 }
 
