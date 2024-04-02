@@ -279,7 +279,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>m3;
                 if(m1 && m2 && m3)
                 {
-                    add(dire,"film");
+                    add(dire,"Film");
                 }
                 else
                 {
@@ -505,7 +505,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
 
     
 }
-void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> directory,string club_name)
+void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory,string club_name)
 {
 cout<<"Welcome to the "<<club_name<< "club"<<endl;
 cout<<"Enter your full name"<<endl;
