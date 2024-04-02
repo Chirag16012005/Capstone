@@ -203,7 +203,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>j3;
                 if(j1 && j2 && j3)
                 {
-                    add(dire,"Developer_Studen");
+                    add(dire,"Developer_Student");
                 }
                 else
                 {
