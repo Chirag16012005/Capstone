@@ -232,6 +232,13 @@ void museclub_info()
          << "sketches, and art galore - that's our language! We provide you the ultimate chance to flaunt your wild imagination and unique"
          << "style through doodles. Forget rules, forget limits, it's your time to shine!" << endl;
 }
+
+void AIclub_info()
+{
+    cout << "We are on a mission to educate others about AI and its applications. We are a bunch of ML(Machine Learning) Enthusiasts"
+         << ". We also arrange prompt conteests in which studentss may imagine the wildest, most impossible scenarios and then "
+         << "convert them into digital art. We try to build a healthy community of AI/ML practitioners at DAIICT." << endl;
+}
 void info(int r)
 {
 
@@ -360,6 +367,11 @@ void info(int r)
     case 25:
     {
         DAIICT_Theatreclub_info();
+        break;
+    }
+    case 26:
+    {
+        AIclub_info();
         break;
     }
     }
