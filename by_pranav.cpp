@@ -334,6 +334,7 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
     string temp,club;
     cout<<"What made you to leave this club"<<endl;
     getline(cin, temp);
+    cin.ignore();
     long long id;
     label:
     cout<<"Please enter your id and club name"<<endl;
