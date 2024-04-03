@@ -333,8 +333,8 @@ void reload_data(unordered_map<string, unordered_map<long long, pair<string, pai
 void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory){
     string temp,club;
     cout<<"What made you to leave this club"<<endl;
-    getline(cin, temp);
     cin.ignore();
+    getline(cin, temp);
     long long id;
     label:
     cout<<"Please enter your id and club name"<<endl;
