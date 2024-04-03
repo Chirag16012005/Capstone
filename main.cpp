@@ -47,8 +47,8 @@ label:
         std::cout << "Please follow the following menu" << endl;
         std::cout << "--------------------------------" << endl;
         std::cout << " 1. All club members of a particular club. \n 2. To get the details of all members."
-                  << "\n 3. To get details of club \n 4. To search any club member. \n 5. To become a member in any club \n 6. To leave any club \n 7. To reload data in any file." << endl;
-        std::cout << " 8. to exit" << endl;
+                  << "\n 3. To get details of club \n 4. To search any club member. \n 5. To become a member in any club \n 6. To leave any club ." << endl;
+        std::cout << " 7. to exit" << endl;
         std::cout << "Enter Choice: ";
         int menu;
         cin >> menu;
@@ -116,14 +116,7 @@ label:
         }
         case 7:
         {
-            std::cout << "Please enter the name of file, in which you want to reload data.(Please use extension .txt)" << endl;
-            string file;
-            cin >> file;
-            reload_data(list, file);
-            break;
-        }
-        case 8:
-        {
+            reload_data(list,file_name);
             return 0;
         }
         }
