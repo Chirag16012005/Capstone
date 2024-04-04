@@ -3,6 +3,7 @@
 #include "by_pranav.cpp"
 #include <fstream>
 #include "clubinfo.h"
+#include "addentry.h"
 using namespace std;
 
 int main()
