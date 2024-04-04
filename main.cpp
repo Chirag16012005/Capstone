@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "by_pranav.cpp"
+#include "functions.cpp"
 #include <fstream>
 #include "clubinfo.h"
 #include "addentry.h"
@@ -93,7 +93,7 @@ label:
                 int r;
                 std::cout << "Enter Your choice: ";
                 cin >> r;
-                // info(r);
+                info(r);
                 std::cout << "If you again want information, press 1 or Press 0 if you do not want any info: ";
                 cin >> c1;
             } while (c1 == 1);
