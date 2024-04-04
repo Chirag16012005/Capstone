@@ -106,7 +106,7 @@ label:
         }
         case 5:
         {
-            // addentry(list);
+            addentry(list);
             break;
         }
         case 6:
