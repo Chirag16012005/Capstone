@@ -530,6 +530,7 @@ cout<<"Welcome to the "<<club_name<< "club"<<endl;
 cout<<"Enter your full name"<<endl;
 string name;
 getline(cin,name);
+cin.ignore();
 cout<<"Enter ID"<<endl;
 long long id,contact;
 cin>>id;
