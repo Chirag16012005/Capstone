@@ -8,16 +8,21 @@ string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Mic
                  "Developer_Studen", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
 
-class Event{
+class Event
+{
 
 public:
 
     string name;
     string date;
     string time;
+    string venue;
     int rating;
     string in1;
     string in2;
+    string rule1;
+    string rule2;
+    string rule3;
 
 };
 
@@ -34,97 +39,57 @@ data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","Thi
 letter to your favourite chracacter.","Show your creativity and express your admiration for the characters who left an indelible mark on your mind 
 through an open letter to them."}});
 
-data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","In this event, creativity and technology converge in an extraordinary way.","In this 
-challenge, you will be provided with images and prompts, and with power of AI, you will transform these prompts into AI artwork and show your AI 
-creativity."}});
+data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","In this event, creativity and technology converge in an 
+extraordinary way.","In this challenge, you will be provided with images and prompts, and with power of AI, you will transform 
+these prompts into AI artwork and show your AI creativity."}});
 
-data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","AI Club is holding an event where you will send prompts based on wildest and out of 
-box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The most interesting prompts will be awarded."}});
+data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","AI Club is holding an event where you will send prompts based 
+on wildest and out of box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The 
+most interesting prompts will be awarded."}});
 
-data["Chess"].insert({{}});
+data["Chess"].insert({11,{"Chess64","04/11/2024","12:00 to 14:00","5","All the chess enthusiasts out there, get ready with your 
+amazing strategies and cool tactics.","We all want you to participate in Chess64, where you can unleash your inner Grandmaster 
+and show off your strategic brilliance."}});
 
-    // by this way store the data
+data["Chess"].insert({1,{"Rapid Chess Tournament","16/01/2024","21:00 to 23:00","4","This rapid tournament for all the chess 
+experts and enthusiasts out there. You can bring your A game to the table.","Everyone will be suggested to install the chess 
+clock application on your mobile."}});
 
     return data;
 }
 
-void event(){
+data["Music"].insert({2,{"RAAGA AND RHAPSODY","24/02/2024","16:00 to 18:00","4","We are thrilled to extend an invitation to 
+you for our prestigious singing competition, RAAGA AND RHAPSODY as part of Synapse. Whether you're a solo performer, 
+a dynamic duet, or a harmonious group, this event promises to showcase your vocal talents","Join us in celebrating music's 
+magic and make your mark in this unforgettable experience."}});
 
-    unordered_map<string, unordered_multimap<int,Event>> data;
+data["PMMC"].insert({2,{"Festive Frames Photography Contest","22/02/2024","10:00 to 18:00","4","We're thrilled to announce a 
+captivating opportunity for all the shutterbugs and photography enthusiasts out there! PMMC is organizing a brand new contest 
+titled Festive Frames","The theme of this exciting contest revolves around capturing the vibrant essence of our college fest 
+through your lens"}});
 
-    data = ev_load();
-
-    cout<<"Press 1 to get info of all events of an club "<<endl;
-    cout<<"Press 2 to get info of all events in a particular month "<<endl;
-    cout<<"Press 3 to get info of all events of an club in a particular month "<<endl;
-    cout<<"Press 4 to get info of all events of daiict "<<endl;
+data["PMMC"].insert({12,{"Rolling Shutter(Videography)","17/12/2024","1 month","3","We are thrilled to invite you to participate 
+in Rolling Shutter, our month-long videography challenge tailored for storytellers and visionaries. This challenge aims to 
+showcase your creativity in narrating compelling visual tales through the lens of your camera.","Capture the essence of your 
+entire break, showcasing the variety of activities and experiences that define your vacation."}});
     
-    
-    int n;
-    cin>>n;
-    cin.ignore();
+data["Khelaiya"].insert({9,{"Garba Night","14/09/2024","21:00 to 22:45",5,"The time for a lively Garba Night has arrived! It's 
+an opportunity for all of us to come together and enjoy a night filled with dance, music, and fun.","From the splendid beauty 
+of Ras Garba to energetic Dakla, from Titodo to Timli, from Sanedo to Bhai Bhai - it's time to celebrate and enjoy the night at 
+its fullest."}});
 
-    switch(n){
+data["Khelaiya"].insert({9,{"Sheri Garba","15/09/2024","22:00 to 23:00","5","We are excited to invite you to a night filled 
+with joy, music, and dance as we kick off the Garba night with Sheri Garba.","Get set to dance the night away at our Sheri 
+Garba event! We're bringing the lively sounds of traditional dhol and sharnai to make the evening unforgettable! "}});
 
-        case 1:
+data["Film"].insert({3,{"IPL Screening","31/03/2024","19:00 to 23:00","5","Join us for an evening filled with the electrifying 
+atmosphere of cricket as we gather together to witness the battle between two formidable teams.","Whether you're a die-hard 
+fan or just looking for a fun night of cricket, this event promises to be a memorable one."}});
 
-        string cl;
-        cout<<"Enter the name of the club"<<endl;
-        getline(cin,cl);
-        cin.ignore();
+data["Film"].insert({1,{"Movie Screening","10/01/2024","21:00 to 23:59","5","Get ready for a night of cinematic brilliance 
+because this week, we're bringing you the unforgettable Inglourious Basterds! It's time to take a break from the daily grind 
+and immerse yourself in Tarantino's world of action, humor, and pure adrenaline.","We will hosts more such movie nights."}});
 
-        for(auto eve : data[cl]){
-            cout<<"Event name : "<<eve.second.name<<endl;
-        }
-
-        //print like this
-
-
-        break;
-
-        case 2:
-
-        int mn;
-        cout<<"Enter number of month"<<endl;
-        cin>>mn;
-
-        for(int i=0;i<28;++i){
-            auto temp = data[club[i]].equal_range(mn);
-
-            for(auto person = temp.first ; person != temp.second ; ++person){
-                cout<<"Event name :"<<person->second.name<<endl;
-
-                //print like this
-            }
-        }
-
-        break;
-
-        case 3:
-
-        int mn;
-        string cl;
-        cout<<"Enter name of the club and month"<<endl;
-        getline(cin,cl);
-        cin.ignore();
-        cin>>mn;
-
-        auto temp = data[cl].equal_range(mn);
-        for(auto person = temp.first ; person != temp.second ; ++person){
-            //print
-        }
-        break;
-
-        case 4:
-
-        cout<<"Here is detail of all events"<<endl;
-
-        for(int i=0;i<28;++i){
-            for(auto eve : data[club[i]]){
-            cout<<"Event name : "<<eve.second.name<<endl;
-        }
-        }
-
-    }
+return data;
 
 }
