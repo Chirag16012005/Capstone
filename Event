@@ -31,47 +31,50 @@ unordered_map<string, unordered_multimap<int,Event>> ev_load()
 
 unordered_map<string, unordered_multimap<int,Event>> data;
     
-data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Radio Room(CEP)","Every Year, the world celebrates the art of poetry writing 
-in April, since 1996 and so it is called National Poetry Writing Month.","We invite all poets to share their unique perspectives through the poetry and share 
-poem through recording or in written form","1. Poem should not intend anyone anyone's feelings or faith.","2. Avoid the use of 
-vulgar language.","3. Please submit your creations before the submission date."}});
+data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Radio Room(CEP)",
+"Every Year, the world celebrates the art of poetry writing in April, since 1996 and so it is called National Poetry Writing Month.",
+"We invite all poets to share their unique perspectives through the poetry and share poem through recording or in written form",
+"1. Poem should not intend anyone anyone's feelings or faith.",
+"2. Avoid the use of vulgar language.","3. Please submit your creations before the submission date."}});
 
-data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","Online","This contest is our exclusive event where you can pour your heart out in a 
-letter to your favourite chracacter.","Show your creativity and express your admiration for the characters who left an indelible mark on your mind 
-through an open letter to them.","1. Your letter should not intend anyone anyone's feelings or faith.","2. Avoid the use of 
-vulgar language.","3. Please submit your creations before the submission date."}});
+data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","Online",
+"This contest is our exclusive event where you can pour your heart out in a letter to your favourite chracacter.",
+"Show your creativity and express your admiration for the characters who left an indelible mark on your mind through an open letter to them.",
+"1. Your letter should not intend anyone anyone's feelings or faith.","2. Avoid the use of vulgar language.",
+"3. Please submit your creations before the submission date."}});
 
-data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","CEP 110","In this event, creativity and technology converge in an 
-extraordinary way.","In this challenge, you will be provided with images and prompts, and with power of AI, you will transform 
-these prompts into AI artwork and show your AI creativity.","1. Your creativity should not intend anyone anyone's feelings or 
-faith.","2. Please avoid any art which contains objectionable things","3. Please submit your work before 04/11/2024."}});
+data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","CEP 110","In this event, creativity and technology converge in an extraordinary way.",
+"In this challenge, you will be provided with images and prompts, and with power of AI, you will transform these prompts into AI artwork and show your AI creativity.",
+"1. Your creativity should not intend anyone anyone's feelings or faith.",
+"2. Please avoid any art which contains objectionable things","3. Please submit your work before 04/11/2024."}});
 
-data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","Online","AI Club is holding an event where you will send prompts based 
-on wildest and out of box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The 
-most interesting prompts will be awarded.","1. Your creativity should not intend anyone anyone's feelings or 
-faith.","2. Please avoid any art which contains objectionable things","3. Please submit your work before 20/08/2024."}});
+data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","Online",
+"AI Club is holding an event where you will send prompts based on wildest and out of box scenarios and you may also onvert it into AI framework.",
+"Let the horse of imagination run. The most interesting prompts will be awarded.","1. Your creativity should not intend anyone anyone's feelings or faith.",
+"2. Please avoid any art which contains objectionable things","3. Please submit your work before 20/08/2024."}});
 
-data["Chess"].insert({11,{"Chess64","04/11/2024","12:00 to 14:00","5","OAT","All the chess enthusiasts out there, get ready with your 
-amazing strategies and cool tactics.","We all want you to participate in Chess64, where you can unleash your inner Grandmaster 
-and show off your strategic brilliance.","1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in 
-hands of judges.","3. You will be given specific time limit and you cannot exceed that."}});
+data["Chess"].insert({11,{"Chess64","04/11/2024","12:00 to 14:00","5","OAT","All the chess enthusiasts out there, get ready with your amazing strategies and cool tactics.",
+"We all want you to participate in Chess64, where you can unleash your inner Grandmaster and show off your strategic brilliance.",
+"1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in hands of judges.",
+"3. You will be given specific time limit and you cannot exceed that."}});
 
-data["Chess"].insert({1,{"Rapid Chess Tournament","16/01/2024","21:00 to 23:00","4","CEP-106","This rapid tournament for all the chess 
-experts and enthusiasts out there. You can bring your A game to the table.","Everyone will be suggested to install the chess 
-clock application on your mobile.","1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in 
-hands of judges.","3. You will be given specific time limit and you cannot exceed that."}});
+data["Chess"].insert({1,{"Rapid Chess Tournament","16/01/2024","21:00 to 23:00","4",
+"CEP-106","This rapid tournament for all the chess experts and enthusiasts out there. You can bring your A game to the table.",
+"Everyone will be suggested to install the chess clock application on your mobile.",
+"1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in hands of judges.",
+"3. You will be given specific time limit and you cannot exceed that."}});
 
-data["Music"].insert({2,{"RAAGA AND RHAPSODY","24/02/2024","16:00 to 18:00","4","OAT","We are thrilled to extend an invitation to 
-you for our prestigious singing competition, RAAGA AND RHAPSODY as part of Synapse. Whether you're a solo performer, 
-a dynamic duet, or a harmonious group, this event promises to showcase your vocal talents","Join us in celebrating music's 
-magic and make your mark in this unforgettable experience.","1. You should report 30 mins prior to thee event.","2. Time Limit 
-for solo/duet category is 5-7 mins and for team, it is 8-10 mins.","3. Team can be of maximum 4 members"}});
+data["Music"].insert({2,{"RAAGA AND RHAPSODY","24/02/2024","16:00 to 18:00","4","OAT",
+"We are thrilled to extend an invitation to you for our prestigious singing competition, RAAGA AND RHAPSODY as part of Synapse. Whether you're a solo performer, a dynamic duet, or a harmonious group, this event promises to showcase your vocal talents",
+"Join us in celebrating music's magic and make your mark in this unforgettable experience.",
+"1. You should report 30 mins prior to thee event.","2. Time Limit for solo/duet category is 5-7 mins and for team, it is 8-10 mins.",
+"3. Team can be of maximum 4 members"}});
 
-data["PMMC"].insert({2,{"Festive Frames Photography Contest","22/02/2024","10:00 to 18:00","4","Online","We're thrilled to announce a 
-captivating opportunity for all the shutterbugs and photography enthusiasts out there! PMMC is organizing a brand new contest 
-titled Festive Frames","The theme of this exciting contest revolves around capturing the vibrant essence of our college fest 
-through your lens","1. Photoshopped, heavily edited entries will be rejected.","2. Multiple entries are not allowed. 
-3. Your submission should include your Name, contact number."}});
+data["PMMC"].insert({2,{"Festive Frames Photography Contest","22/02/2024","10:00 to 18:00","4","Online",
+"We're thrilled to announce a captivating opportunity for all the shutterbugs and photography enthusiasts out there! PMMC is organizing a brand new contest titled Festive Frames",
+"The theme of this exciting contest revolves around capturing the vibrant essence of our college fest through your lens",
+"1. Photoshopped, heavily edited entries will be rejected.","2. Multiple entries are not allowed.", 
+"3. Your submission should include your Name, contact number."}});
 
 data["PMMC"].insert({12,{"Rolling Shutter(Videography)","17/12/2024","1 month","3","Online","We are thrilled to invite you to participate 
 in Rolling Shutter, our month-long videography challenge tailored for storytellers and visionaries. This challenge aims to 
