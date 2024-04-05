@@ -2,6 +2,24 @@
 #include<unordered_map>
 #include<string>
 using namespace std;
+
+void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory,string club_name)
+{
+cout<<"Welcome to the "<<club_name<< "club"<<endl;
+cout<<"Enter your full name"<<endl;
+string name;
+getline(cin,name);
+cin.ignore();
+cout<<"Enter ID"<<endl;
+long long id,contact;
+cin>>id;
+cout<<"Enter Contact Number"<<endl;
+cin>>contact;
+string pos="Member";
+directory[club_name][id]=make_pair(name,make_pair(contact,pos));
+}
+
+
 void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> dire)
 {
     cout<<"Enter the number of the club in which you want to get added"<<endl;
@@ -523,19 +541,4 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
         while(c2==1);
 
     
-}
-void add(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory,string club_name)
-{
-cout<<"Welcome to the "<<club_name<< "club"<<endl;
-cout<<"Enter your full name"<<endl;
-string name;
-getline(cin,name);
-cin.ignore();
-cout<<"Enter ID"<<endl;
-long long id,contact;
-cin>>id;
-cout<<"Enter Contact Number"<<endl;
-cin>>contact;
-string pos="Member";
-directory[club_name][id]=make_pair(name,make_pair(contact,pos));
 }
