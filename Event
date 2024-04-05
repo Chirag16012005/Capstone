@@ -5,7 +5,7 @@
 using namespace std;
 
 string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
-                 "Developer_Studen", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
+                 "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
 
 class Event
@@ -31,64 +31,137 @@ unordered_map<string, unordered_multimap<int,Event>> ev_load()
 
 unordered_map<string, unordered_multimap<int,Event>> data;
     
-data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Every Year, the world celebrates the art of poetry writing 
+data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Radio Room(CEP)","Every Year, the world celebrates the art of poetry writing 
 in April, since 1996 and so it is called National Poetry Writing Month.","We invite all poets to share their unique perspectives through the poetry and share 
-poem through recording or in written form"}});
+poem through recording or in written form","1. Poem should not intend anyone anyone's feelings or faith.","2. Avoid the use of 
+vulgar language.","3. Please submit your creations before the submission date."}});
 
-data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","This contest is our exclusive event where you can pour your heart out in a 
+data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","Online","This contest is our exclusive event where you can pour your heart out in a 
 letter to your favourite chracacter.","Show your creativity and express your admiration for the characters who left an indelible mark on your mind 
-through an open letter to them."}});
+through an open letter to them.","1. Your letter should not intend anyone anyone's feelings or faith.","2. Avoid the use of 
+vulgar language.","3. Please submit your creations before the submission date."}});
 
-data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","In this event, creativity and technology converge in an 
+data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","CEP 110","In this event, creativity and technology converge in an 
 extraordinary way.","In this challenge, you will be provided with images and prompts, and with power of AI, you will transform 
-these prompts into AI artwork and show your AI creativity."}});
+these prompts into AI artwork and show your AI creativity.","1. Your creativity should not intend anyone anyone's feelings or 
+faith.","2. Please avoid any art which contains objectionable things","3. Please submit your work before 04/11/2024."}});
 
-data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","AI Club is holding an event where you will send prompts based 
+data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","Online","AI Club is holding an event where you will send prompts based 
 on wildest and out of box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The 
-most interesting prompts will be awarded."}});
+most interesting prompts will be awarded.","1. Your creativity should not intend anyone anyone's feelings or 
+faith.","2. Please avoid any art which contains objectionable things","3. Please submit your work before 20/08/2024."}});
 
-data["Chess"].insert({11,{"Chess64","04/11/2024","12:00 to 14:00","5","All the chess enthusiasts out there, get ready with your 
+data["Chess"].insert({11,{"Chess64","04/11/2024","12:00 to 14:00","5","OAT","All the chess enthusiasts out there, get ready with your 
 amazing strategies and cool tactics.","We all want you to participate in Chess64, where you can unleash your inner Grandmaster 
-and show off your strategic brilliance."}});
+and show off your strategic brilliance.","1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in 
+hands of judges.","3. You will be given specific time limit and you cannot exceed that."}});
 
-data["Chess"].insert({1,{"Rapid Chess Tournament","16/01/2024","21:00 to 23:00","4","This rapid tournament for all the chess 
+data["Chess"].insert({1,{"Rapid Chess Tournament","16/01/2024","21:00 to 23:00","4","CEP-106","This rapid tournament for all the chess 
 experts and enthusiasts out there. You can bring your A game to the table.","Everyone will be suggested to install the chess 
-clock application on your mobile."}});
+clock application on your mobile.","1. Please do not cheat or indulge in any unfair practices.","2. The final decision is in 
+hands of judges.","3. You will be given specific time limit and you cannot exceed that."}});
 
-data["Music"].insert({2,{"RAAGA AND RHAPSODY","24/02/2024","16:00 to 18:00","4","We are thrilled to extend an invitation to 
+data["Music"].insert({2,{"RAAGA AND RHAPSODY","24/02/2024","16:00 to 18:00","4","OAT","We are thrilled to extend an invitation to 
 you for our prestigious singing competition, RAAGA AND RHAPSODY as part of Synapse. Whether you're a solo performer, 
 a dynamic duet, or a harmonious group, this event promises to showcase your vocal talents","Join us in celebrating music's 
-magic and make your mark in this unforgettable experience."}});
+magic and make your mark in this unforgettable experience.","1. You should report 30 mins prior to thee event.","2. Time Limit 
+for solo/duet category is 5-7 mins and for team, it is 8-10 mins.","3. Team can be of maximum 4 members"}});
 
-data["PMMC"].insert({2,{"Festive Frames Photography Contest","22/02/2024","10:00 to 18:00","4","We're thrilled to announce a 
+data["PMMC"].insert({2,{"Festive Frames Photography Contest","22/02/2024","10:00 to 18:00","4","Online","We're thrilled to announce a 
 captivating opportunity for all the shutterbugs and photography enthusiasts out there! PMMC is organizing a brand new contest 
 titled Festive Frames","The theme of this exciting contest revolves around capturing the vibrant essence of our college fest 
-through your lens"}});
+through your lens","1. Photoshopped, heavily edited entries will be rejected.","2. Multiple entries are not allowed. 
+3. Your submission should include your Name, contact number."}});
 
-data["PMMC"].insert({12,{"Rolling Shutter(Videography)","17/12/2024","1 month","3","We are thrilled to invite you to participate 
+data["PMMC"].insert({12,{"Rolling Shutter(Videography)","17/12/2024","1 month","3","Online","We are thrilled to invite you to participate 
 in Rolling Shutter, our month-long videography challenge tailored for storytellers and visionaries. This challenge aims to 
 showcase your creativity in narrating compelling visual tales through the lens of your camera.","Capture the essence of your 
-entire break, showcasing the variety of activities and experiences that define your vacation."}});
+entire break, showcasing the variety of activities and experiences that define your vacation.","1.Time limit: Entries 
+should be of length between 60 Sec and 3 Minutes. Maximum Team size: 3",
+"2. Entries can be submitted by individuals or by teams of a maximum size", 
+"3. The deadline to submit your entry is 17th January 11:59 PM."}});
     
-data["Khelaiya"].insert({9,{"Garba Night","14/09/2024","21:00 to 22:45",5,"The time for a lively Garba Night has arrived! It's 
+data["Khelaiya"].insert({9,{"Garba Night","14/09/2024","21:00 to 22:45",5,"OAT","The time for a lively Garba Night has arrived! It's 
 an opportunity for all of us to come together and enjoy a night filled with dance, music, and fun.","From the splendid beauty 
 of Ras Garba to energetic Dakla, from Titodo to Timli, from Sanedo to Bhai Bhai - it's time to celebrate and enjoy the night at 
-its fullest."}});
+its fullest.","1. Please wear traditional clothes.","2. Please arrive on time.","3. Please maintain decorum and cleanliness."}});
 
-data["Khelaiya"].insert({9,{"Sheri Garba","15/09/2024","22:00 to 23:00","5","We are excited to invite you to a night filled 
+data["Khelaiya"].insert({9,{"Sheri Garba","15/09/2024","22:00 to 23:00","5","SAC Ground","We are excited to invite you to a night filled 
 with joy, music, and dance as we kick off the Garba night with Sheri Garba.","Get set to dance the night away at our Sheri 
-Garba event! We're bringing the lively sounds of traditional dhol and sharnai to make the evening unforgettable! "}});
+Garba event! We're bringing the lively sounds of traditional dhol and sharnai to make the evening unforgettable!
+","1. Please wear traditional clothes.","2. Please arrive on time.","3. Please maintain decorum and cleanliness."}});
 
-data["Film"].insert({3,{"IPL Screening","31/03/2024","19:00 to 23:00","5","Join us for an evening filled with the electrifying 
+data["Film"].insert({3,{"IPL Screening","31/03/2024","19:00 to 23:00","5","LT2","Join us for an evening filled with the electrifying 
 atmosphere of cricket as we gather together to witness the battle between two formidable teams.","Whether you're a die-hard 
-fan or just looking for a fun night of cricket, this event promises to be a memorable one."}});
+fan or just looking for a fun night of cricket, this event promises to be a memorable one.","1. Please arrive on time to enjoy 
+to the fullest.","2. Please maintain the infrastructure of LT and do not break anything","3. Please maintain decorum and peace."}});
 
-data["Film"].insert({1,{"Movie Screening","10/01/2024","21:00 to 23:59","5","Get ready for a night of cinematic brilliance 
+data["Film"].insert({1,{"Movie Screening","10/01/2024","21:00 to 23:59","5","LT2","Get ready for a night of cinematic brilliance 
 because this week, we're bringing you the unforgettable Inglourious Basterds! It's time to take a break from the daily grind 
-and immerse yourself in Tarantino's world of action, humor, and pure adrenaline.","We will hosts more such movie nights."}});
+and immerse yourself in Tarantino's world of action, humor, and pure adrenaline.","We will hosts more such movie nights."
+,"1. Please arrive on time to enjoy to the fullest.","2. Please maintain the infrastructure of LT and do not break anything",
+"3. Please maintain decorum and peace."}});
 
-return data;
+data["Press"].insert({10,{"Comic Carnival: A Comic Making Challenge","17/10/2024","Whole day","5","Online","This is an opportunity to 
+bring your imagination to life through comics.","A picture speaks a thousand words, and likewise, a great comic strip can contain 
+stories that would otherwise span paragraphs. So if you can depict a relatable anecdote in a humorous manner or rather 
+something touching, send us your entries!","1. You have to form a team of two members.", "2. Your comic strip can span 
+multiple panels or it could be a single panel as well.", "3. There is a maximum page limit of 6, but no cap on the number of 
+panels."}});
 
+data["Press"].insert({2,{"Valentine's Poetry Contest","13/02/2024","Whole Day","4","Online","As you might be aware, 
+Valentine's week is going on. And we hope you have a better half to share roses, chocolates and gifts with. 
+Those who don't, no worries, your Valentine can be anyone you truly love (your parents).","To celebrate this occasion, 
+what better medium of expression can there be to convey your boundless love to your beloved than poetry.","1. Entries can be 
+in 3 languages: English, Hindi, Gujarati","2. Submissions after deadline won't be accepted.","3. One entry per person is allowed."}});
+
+data["Research"].insert({11,{" i.Papyrus","04/11/2024","17:00 to 19:00","5","CEP-110","Research Club DAIICT, in association 
+with i.Fest, invites you all to participate in our annual poster presentation competition, i.Papyrus!!","Winners would be 
+rewarded with prizes from the pool of 3.5k+!! So channel your inner researcher and participate in this amazing competition.",
+"1. Each team can only submit a single poster.","2. The allowed team size is 1-3.","3. Each team must have all members unique 
+and no other team sharing a common member, failure to do so will immediately disqualify the team(s)"}});
+
+data["Cubing"].insert({2,{"SYNOCUBIX","24/02/2024","17:00 to 19:00","4","LT-3","It is a great event which is part of official WCA 
+i.cube.","Cubers will have the chance to flaunt their cubing skills in front of everyone and will strive to make the most of their
+ skill.","1. One person can register only once.","2. You need not bring your own cube.","3. Please check your email ID while 
+ registering."}});
+
+data["Cubing"].insert({1,{"Mosaic Construction: Republic Day","24/01/2024","10:00 to 12:00","5","SAC Foyer","As we approach 
+the Republic Day of India, we are delighted to invite you to participate in crafting a Rubik's Cube mosaic, serving as 
+a symbol of our collective unity, diversity, and the indomitable spirit of innovation.","No prior experience with Rubik's Cubes 
+is necessary; all skill levels are welcome! We will provide guidance and assistance throughout the event.","1. Please come 
+on time.","2. Please maintain decorum throughout the whole event","3. You need not bring your own cube."}});
+
+//Excursion club has no events
+data["DCEI"].insert({11,{"SellOut","04/11/2024","16:00 to 18:00","5","LT1"," SellOut that is open for everyone willing to 
+show their creativity, entrepreneurial skills, and imagination."," The event being a fun event also gives glimpses of 
+how real-world dealings happen.","1. One participant can only register once.","2. You must have the registration for the ifest."
+,"3. Evaluation will be done on the basis of the answers given. Evaluation will be done by team DCEI."}});
+
+data["Sambhav"].insert({4,{"Blood Donation Camp","05/04/2024","14:00 to 17:00","4","Faculty Mess(Near K++)","We are pleased 
+to announce that we are organizing a Blood Donation Camp in association with the Indian Red Cross Society.","Even the 
+slightest bit of help is welcome and greatly appreciated. ","1.  You are advised to follow the COVID protocols.","2. Please get 
+a basic medical checkup done.","3. Please inform the doctor if you are suffering from any disease."}});
+
+data["Developer_Student"].insert({1,{"India Regional Bootcamp","21/01/2024","Unknown","5","Online","This is your opportunity to 
+solve real world problems, help users in real time and get recognised for the same!","The India Regional Bootcamp is cherry 
+on the cake, to elevate your projects and get guidance from industry experts","1. Only one team member per team is allowed to 
+join the regional bootcamp.","2. In case you are not shortlisted, we will not be able to share the exact reasons.","3. 
+GDSC India Team reserves the right to invite, shortlist and confirm your participation for the same. The shortlisting 
+criteria is subjected to various factors and will not be disclosed."}});
+
+data["Developer_Student"].insert({1,{"GoLang Session","16/01/2005","21:00 to 23:00","5","CEP 106","We are excited to invite 
+you to our upcoming GoLang session at GDSC, where we will delve into the world of Go programming language and its applications."
+,"Whether you are a seasoned developer or just curious about new technologies, this session is tailored for everyone 
+interested in exploring the capabilities of GoLang.","1. Bring your laptops","2. Please register before coming.","3. Please 
+maintain the decorum."}});
+
+//WebKit club, no events found
+
+
+
+
+ return data;
 }
 
 void event(unordered_map<string, unordered_multimap<int,Event>> &data){
