@@ -21,11 +21,25 @@ public:
 
 };
 
-unordered_map<string, unordered_multimap<int,Event>> ev_load(){
+unordered_map<string, unordered_multimap<int,Event>> ev_load()
+{
 
     unordered_map<string, unordered_multimap<int,Event>> data;
     
-    data["Radio"].insert({1,{"dcsd","sfd","dfsdd",5,"fsdfsdf","dfsdfd"}});
+data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Every Year, the world celebrates the art of poetry writing 
+in April, since 1996 and so it is called National Poetry Writing Month.","We invite all poets to share their unique perspectives through the poetry and share 
+poem through recording or in written form"}});
+
+data["Radio"].insert({10,{"Ink Chronicles","20/1/2024","20:00 to 22:00","4","This contest is our exclusive event where you can pour your heart out in a 
+letter to your favourite chracacter.","Show your creativity and express your admiration for the characters who left an indelible mark on your mind 
+through an open letter to them."}});
+
+data["AI"].insert({11,{"iPrompt","05/11/2024","14:00 to 16:00","5","In this event, creativity and technology converge in an extraordinary way.","In this 
+challenge, you will be provided with images and prompts, and with power of AI, you will transform these prompts into AI artwork and show your AI 
+creativity."}});
+
+data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","AI Club is holding an event where you will send prompts based on wildest and out of 
+box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The most interesting prompts will be awarded."}});
 
     // by this way store the data
 
