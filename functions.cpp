@@ -12,25 +12,43 @@ string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Mic
                  "Developer_Studen", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
 
-unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> load_data(string file_name)
+pair<unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>>,unordered_multimap<string,long long>> load_data(string file_name)
 {
     ifstream fin;
     fin.open(file_name, ios::in);
 
+    int c,a;
     long long id, number;
     string name, club_name, position, temp2;
 
     unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> directory;
+    unordered_multimap<string,long long> na_id;
 
     while (fin >> club_name >> id >> name >> temp2 >> number >> position)
     {
         name = name + " " + temp2;
         directory[club_name][id] = make_pair(name, make_pair(number, position));
+
+        a=0;
+        c= na_id.count(name);
+        if(c>0){
+            auto range = na_id.equal_range(name);
+
+            for(auto person = range.first ; person != range.second ; ++person){
+                if(person->second==id){
+                    a=1;
+                }
+            }
+        }
+
+        if(c==0 ||  a==0){
+            na_id.insert({name,id});
+        }
     }
 
     fin.close();
 
-    return directory;
+    return make_pair(directory,na_id);
 }
 
 void mem_club(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory, string club_name)
@@ -147,36 +165,12 @@ void find_by_contact(unordered_map<string, unordered_map<long long, pair<string,
     }
 }
 
-void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory, string name)
+void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory, string name,unordered_multimap<string,long long> &na_id)
 {
     long long id;
-    int count = 0;
-    for (int i = 0; i < 28; i++)
-    {
-        for (auto element : directory[club[i]])
-        {
-            if (name == element.second.first)
-            {
-                if (count == 0)
-                {
-                    id = element.first;
-                    count++;
-                }
-                else if (count == 1)
-                {
-                    if (id != element.first)
-                    {
-                        count++;
-                        break;
-                    }
-                }
-            }
-        }
-        if (count == 2)
-        {
-            break;
-        }
-    }
+    int count;
+
+    count= na_id.count(name);
 
     if (count == 0)
     {
@@ -186,7 +180,9 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
     }
     else if (count == 1)
     {
-        find_by_id(directory, id);
+        auto temp = na_id.find(name);
+        id = temp->second;
+        find_by_id(directory,id);
     }
     else if (count == 2)
     {
@@ -205,35 +201,13 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
         cin >> a;
         if (a == 1)
         {
-            int k;
-            vector<long long> vec;
-            for (int i = 0; i < 28; ++i)
-            {
-                for (auto element : directory[club[i]])
-                {
-                    if (name == element.second.first)
-                    {
-                        k = 0;
-                        for (int j = 0; j < vec.size(); ++j)
-                        {
-                            if (element.first == vec[j])
-                            {
-                                k = 1;
-                                break;
-                            }
-                        }
-                        if (k == 0)
-                        {
-                            vec.push_back(element.first);
-                        }
-                    }
-                }
+            auto temp = na_id.equal_range(name);
+
+            for(auto person = temp.first; person != temp.second;++person){
+                id=person->second;
+                find_by_id(directory,id);
             }
 
-            for (int i = 0; i < vec.size(); ++i)
-            {
-                find_by_id(directory, vec[i]);
-            }
         }
         else if (a == 2)
         {
@@ -332,7 +306,7 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
     }
 }
 
-void search(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory)
+void search(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory ,unordered_multimap<string,long long> &na_id)
 {
     std::cout << endl;
     std::cout << "1. to search by id" << endl;
@@ -359,7 +333,7 @@ void search(unordered_map<string, unordered_map<long long, pair<string, pair<lon
         string name;
         getline(cin, name);
         std::cout << endl;
-        find_by_name(directory, name);
+        find_by_name(directory, name,na_id);
     }
     else if (a == 3)
     {
