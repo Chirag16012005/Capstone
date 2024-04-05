@@ -46,5 +46,85 @@ data["Chess"].insert({{}});
     // by this way store the data
 
     return data;
+}
+
+void event(){
+
+    unordered_map<string, unordered_multimap<int,Event>> data;
+
+    data = ev_load();
+
+    cout<<"Press 1 to get info of all events of an club "<<endl;
+    cout<<"Press 2 to get info of all events in a particular month "<<endl;
+    cout<<"Press 3 to get info of all events of an club in a particular month "<<endl;
+    cout<<"Press 4 to get info of all events of daiict "<<endl;
+    
+    
+    int n;
+    cin>>n;
+    cin.ignore();
+
+    switch(n){
+
+        case 1:
+
+        string cl;
+        cout<<"Enter the name of the club"<<endl;
+        getline(cin,cl);
+        cin.ignore();
+
+        for(auto eve : data[cl]){
+            cout<<"Event name : "<<eve.second.name<<endl;
+        }
+
+        //print like this
+
+
+        break;
+
+        case 2:
+
+        int mn;
+        cout<<"Enter number of month"<<endl;
+        cin>>mn;
+
+        for(int i=0;i<28;++i){
+            auto temp = data[club[i]].equal_range(mn);
+
+            for(auto person = temp.first ; person != temp.second ; ++person){
+                cout<<"Event name :"<<person->second.name<<endl;
+
+                //print like this
+            }
+        }
+
+        break;
+
+        case 3:
+
+        int mn;
+        string cl;
+        cout<<"Enter name of the club and month"<<endl;
+        getline(cin,cl);
+        cin.ignore();
+        cin>>mn;
+
+        auto temp = data[cl].equal_range(mn);
+        for(auto person = temp.first ; person != temp.second ; ++person){
+            //print
+        }
+        break;
+
+        case 4:
+
+        cout<<"Here is detail of all events"<<endl;
+
+        for(int i=0;i<28;++i){
+            for(auto eve : data[club[i]]){
+            cout<<"Event name : "<<eve.second.name<<endl;
+        }
+        }
+
+    }
 
 }
