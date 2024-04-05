@@ -24,7 +24,7 @@ public:
 unordered_map<string, unordered_multimap<int,Event>> ev_load()
 {
 
-    unordered_map<string, unordered_multimap<int,Event>> data;
+unordered_map<string, unordered_multimap<int,Event>> data;
     
 data["Radio"].insert({4,{"Weekly Poetry Writing Challenge","07/04/2024","19:00 to 21:00",5,"Every Year, the world celebrates the art of poetry writing 
 in April, since 1996 and so it is called National Poetry Writing Month.","We invite all poets to share their unique perspectives through the poetry and share 
@@ -40,6 +40,8 @@ creativity."}});
 
 data["AI"].insert({8,{"Prompt-A-Thon","21/08/2024","19:00 to 21:00","5","AI Club is holding an event where you will send prompts based on wildest and out of 
 box scenarios and you may also onvert it into AI framework.","Let the horse of imagination run. The most interesting prompts will be awarded."}});
+
+data["Chess"].insert({{}});
 
     // by this way store the data
 
