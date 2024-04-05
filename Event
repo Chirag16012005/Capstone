@@ -90,3 +90,112 @@ and immerse yourself in Tarantino's world of action, humor, and pure adrenaline.
 return data;
 
 }
+
+void event(unordered_map<string, unordered_multimap<int,Event>> &data){
+
+    cout<<"Press 1 to get info of any particular event"<<endl;
+    cout<<"Press 2 to get info of all events of an club "<<endl;
+    cout<<"Press 3 to get info of all events in a particular month "<<endl;
+    cout<<"Press 4 to get info of all events of an club in a particular month "<<endl;
+    cout<<"Press 5 if you don't know how many events conducted by clubs of daiict \nYou will get info of all events"<<endl;
+    
+    
+    int n;
+    cin>>n;
+    cin.ignore();
+
+    switch(n){
+
+        case 1:
+
+        string evna;
+        getline(cin,evna);
+
+        it:
+
+        cin.ignore();
+        int a=0;
+
+        for(int i=0;i<28;++i){
+            for(auto eve : data[club[i]]){
+                if(eve.second.name==evna){
+                    //print it's detail
+                    a=1;
+                    break;
+                }    
+            }
+        }
+
+        if(a==0){
+            cout<<"You provided wrong event name"<<endl;
+            cout<<"Press 1 to enter name again or 0 to leave"<<endl;
+            int n;
+            cin>>n;
+            if(n==0){
+                goto it;
+            }
+        }
+        
+        break;
+        
+        case 2:
+
+        string cl;
+        cout<<"Enter the name of the club"<<endl;
+        getline(cin,cl);
+        cin.ignore();
+
+        for(auto eve : data[cl]){
+            cout<<"Event name : "<<eve.second.name<<endl;
+        }
+
+        //print like this
+
+
+        break;
+
+        case 3:
+
+        int mn;
+        cout<<"Enter number of month"<<endl;
+        cin>>mn;
+
+        for(int i=0;i<28;++i){
+            auto temp = data[club[i]].equal_range(mn);
+
+            for(auto person = temp.first ; person != temp.second ; ++person){
+                cout<<"Event name :"<<person->second.name<<endl;
+
+                //print like this
+            }
+        }
+
+        break;
+
+        case 4:
+
+        int mn;
+        string cl;
+        cout<<"Enter name of the club and month"<<endl;
+        getline(cin,cl);
+        cin.ignore();
+        cin>>mn;
+
+        auto temp = data[cl].equal_range(mn);
+        for(auto person = temp.first ; person != temp.second ; ++person){
+            //print
+        }
+        break;
+
+        case 5:
+
+        cout<<"Here is detail of all events"<<endl;
+
+        for(int i=0;i<28;++i){
+            for(auto eve : data[club[i]]){
+            cout<<"Event name : "<<eve.second.name<<endl;
+        }
+        }
+    }
+}
+
