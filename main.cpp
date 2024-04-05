@@ -12,7 +12,7 @@ int main()
     std::cout << "======================================= Welcome to DA_IICT CLUB MANAGER =======================================" << endl;
     string file_name;
 
-label:
+item:
     std::cout << endl;
     std::cout << "Enter the file name from which data will be loaded into the programme. (Use the extension .txt also): ";
     cin >> file_name;
@@ -33,7 +33,7 @@ label:
         }
         else
         {
-            goto label;
+            goto item;
         }
     }
 
