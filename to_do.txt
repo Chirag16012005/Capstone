@@ -1,0 +1,7 @@
+1.brief intro()-club names............
+2.make_color()-mayank
+3. synapse,concurs,ifest
+4. ask for participate in event
+5. change in edit_ev
+6. use rating
+7. error on event file
