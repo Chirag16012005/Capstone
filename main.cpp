@@ -38,8 +38,14 @@ item:
     }
 
     unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> list;
+    unordered_multimap<string,long long> na_id;
 
-    list = load_data(file_name); // All the data from file gets loaded into the unordered map
+    auto temp = load_data(file_name); // All the data from file gets loaded into the unordered map
+
+    list = temp.first;
+
+    na_id = temp.second;
+
     int b = 1;
     cout << "File Uploaded successfully..!!" << endl;
     while (b == 1)
@@ -102,7 +108,7 @@ item:
 
         case 4:
         {
-            search(list);
+            search(list,na_id);
             break;
         }
         case 5:
