@@ -1,0 +1,34 @@
+#include <iostream>
+#include <unordered_map>
+#include <string>
+
+using namespace std;
+
+string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
+                 "Developer_Studen", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
+                 "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
+
+class Event{
+
+public:
+
+    string name;
+    string date;
+    string time;
+    int rating;
+    string in1;
+    string in2;
+
+};
+
+unordered_map<string, unordered_multimap<int,Event>> ev_load(){
+
+    unordered_map<string, unordered_multimap<int,Event>> data;
+    
+    data["Radio"].insert({1,{"dcsd","sfd","dfsdd",5,"fsdfsdf","dfsdfd"}});
+
+    // by this way store the data
+
+    return data;
+
+}
