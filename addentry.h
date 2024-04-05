@@ -8,8 +8,8 @@ void add(unordered_map<string, unordered_map<long long, pair<string, pair<long l
 cout<<"Welcome to the "<<club_name<< "club"<<endl;
 cout<<"Enter your full name"<<endl;
 string name;
-getline(cin,name);
 cin.ignore();
+getline(cin,name);
 cout<<"Enter ID"<<endl;
 long long id,contact;
 cin>>id;
