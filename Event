@@ -172,7 +172,7 @@ data["Debate"].insert({2,{"Shipwreck and Prized British Parliamentary Debate!","
 "1. You shall not hurt anybody's feelings intentionally","2. The langauge used shall be respectable.",
 "3. Please don't harm any infrastructure."}});
 
-data["Programming"].insert({{}});
+data["Programming"].insert({{ }});
 
 
 
