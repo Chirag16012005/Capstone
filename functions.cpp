@@ -352,13 +352,12 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
     string temp, club;
     std::cout << "What made you to leave this club: ";
     std::getline(cin, temp);
-    std::cin.ignore();
     long long id;
 label:
     std::cout << endl;
     std::cout << "Please enter your id: ";
     cin >> id;
-    cout << "Please enter Your name: ";
+    cout << "Please enter Your club name: ";
     cin >> club;
     if (directory[club].find(id) != directory[club].end())
     {
@@ -367,7 +366,16 @@ label:
     else
     {
         std::cout << "You have entered wrong club name or id..!!" << endl;
-        goto label;
+        cout<<"Press 1 to re-enter or 0 to exit : ";
+        int k;
+        cin>>k;
+        cin.ignore();
+        if(k==1){
+            goto label;
+        }
+        else{
+            return;
+        }
     }
 }
 

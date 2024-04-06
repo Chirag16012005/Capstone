@@ -59,6 +59,7 @@ item:
         std::cout << "Enter Choice: ";
         int menu;
         cin >> menu;
+        cin.ignore();
         switch (menu)
         {
 
