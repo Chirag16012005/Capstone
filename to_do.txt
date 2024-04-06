@@ -4,4 +4,9 @@
 4. ask for participate in event
 5. change in edit_ev
 6. use rating
+<<<<<<< HEAD
+7. error on event file
+8. ask (are you first time visiting console -> show user guide line)
+=======
 7. ask (are you first time visiting console -> show user guid line)
+>>>>>>> 6fd7b21ed5772ac4c6ebf340fd003c7072e9a03a
