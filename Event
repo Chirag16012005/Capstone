@@ -5,7 +5,7 @@
 using namespace std;
 
 string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
-                 "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing Club",
+                 "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
 
 class Event
@@ -211,7 +211,7 @@ data["Heritage"].insert({11,{"Rangoli Competition: Unleash Your Creativity!","6/
 "1.Form a team of 3-6 individuals to participate.","2.Only include 1 kg of white color and 500g each of six vibrant colors.",
 "3. Do not spoil others art."}});
 
-data["Headrush_Quizzing Club"].insert({11,{"i.Quiz","05/11/2024","9:00 to 10:30",5,"CEP-110",
+data["Headrush_Quizzing"].insert({11,{"i.Quiz","05/11/2024","9:00 to 10:30",5,"CEP-110",
 "Headrush in association with i.Fest is organizing a science and technology quiz, i.Quiz, where your knowledge in the 
 domains of physics, chemistry, biology and information technology will be put to a test.",
 "It will be exciting.",
