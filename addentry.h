@@ -487,7 +487,7 @@ void addentry(unordered_map<string, unordered_map<long long, pair<string, pair<l
                 cin>>u3;
                 if(u1 && u2 && u3)
                 {
-                    add(dire,"Headrush_Quizzing Club");
+                    add(dire,"Headrush_Quizzing");
                 }
                 else
                 {
