@@ -217,8 +217,57 @@ domains of physics, chemistry, biology and information technology will be put to
 "It will be exciting.",
 "1. Do not use internet.","2. Maintain decorum in the hall","3.Don't forget to bring a sheet of paper and a pen."}});
 
+data["Dance"].insert({3,{"WALTZ","12/03/2024","21:00 to 22:30",4,"OAT",
+"This event promises to be an electrifying celebration of dance, talent, and creativity.",
+"We cordially invite you all to participate and showcase your skills on the dance floor.",
+"1. Only one member per team is required to fill out the form for team registration.",
+"2. On-the-spot registrations won't be entertained.","3. Any kind of obscenity will not be entertained under any circumstances."}});
 
- return data;
+data["IEEE"].insert({2,{"Public Speaking Workshop","17/02/2024","16:00 to 19:00",5,"CEP-110",
+"We cordially invite you to participate in the Public Speaking Workshop organized by the IEEE Student Branch DAIICT.",
+"This workshop aims to equip participants with essential public speaking skills crucial for various aspects of personal 
+and professional life.",
+"1. There is no fees.","2. Please arrive in the workshop on time.","3. Please email if you have any doubts."}});
+
+data["IEEE"].insert({3,{"DA-IICT MUN","10/03/2024","16:00 to 21:00",5,"LT2",
+"IEEE SB DAIICT along with DebSoc DA-IICT and the expertise of the Turning Point community brings to you, DA-IICT MUN.",
+"“Model United Nations” or MUN is an educational simulation in which students learn about diplomacy, and international 
+relations and get a chance to experience and understand the workings of the United Nations.",
+"1. ₹1000 per delegate for non-IEEE members","2.₹800 for IEEE members",
+"3. You need to attend the pre-MUN Training Workshop."}});
+
+data["EHC"].insert({10,{"EHC Session on Arduino","06/10/2024","18:30 to 19:45",5,"LT2",
+"The Electronics Hobby Center is dedicated to fostering a passion for electronics, providing hands-on experience, and 
+creating a supportive community for all those interested in the field.",
+"Join us for an exciting Arduino session tailored for beginners!",
+"1. Please join us on time.","2. You may ask questions if you have doubt by raising hands.","3. You need to regisster first."}});
+
+data["CINS"].insert({2,{"Cyber Samvad","24/02/2024","10:00 to 11:00",3,"LT1",
+"Given the rising instances of cybercrimes, understanding the fundamentals of staying safe online has become paramount.", 
+"With this in mind, the CINS club is excited to announce the  Cyber Samvad.",
+"1. You need to register before joining the event.","2. Please arrive on time.","3. Following the discussion, there will be a 
+Q&A session where the audience can have their queries addressed"}});
+
+data["DAIICT_Theatre"].insert({4,{"Krishna Leela Auditions","02/04/2024","21:00 to 22:45",4,"LT1",
+"DTG is all set to bring back one of the biggest celebrations of DAIICT. Krishna Leela is happening and we will leave no 
+stone unturned to give you an experience of a lifetime.",
+"As we start preparing, we will be taking auditions for all roles for Krishna Leela once again.",
+"1. You can participate only as an actor or writer.","2. Auditions are compulsory to take part in Leela",
+"3. For any queries, you can revert to us"}});
+
+data["DAIICT_Theatre"].insert({1,{"Rangmanch - The Drama Night","01/01/2024","21:00 to 23:45",4,"OAT",
+"We have three main categories for the event - Stage Play, Felicity and Mono Act.",
+" Put on your thinking caps, jot down a tale that mesmerizes the audience and captivates every mind!",
+"1. Anyone can develop one's own script and send their team details.","2.To contact DTG, drop a mail at theatres@daiict.ac.in.",
+"3. The deadline for submitting the Entry form is extended to 10th Jan 2024"}});
+
+data["Muse"].insert({4,{"Museliversary","04/04/2024","17:00 to 19:00",5,"Cafeteria",
+"To mark this special anniversary, we prepare an array of exciting activities every year on this day."
+"We're celebrating three years of creativity, innovation, and unforgettable moments that have brought us together as a community.",
+"1. Please maintain the decorum while celebrating","2. Please arrive on time.",
+"3. Please maintain cleanliness in the cafeteria."}});
+
+return data;
 }
 
 void event(unordered_map<string, unordered_multimap<int,Event>> &data){
