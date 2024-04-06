@@ -270,114 +270,208 @@ data["Muse"].insert({4,{"Museliversary","04/04/2024","17:00 to 19:00",5,"Cafeter
 return data;
 }
 
-void event(unordered_map<string, unordered_multimap<int,Event>> &data){
+void event(unordered_map<string, unordered_multimap<int, Event>> &data)
+{
 
-    cout<<"Press 1 to get info of any particular event"<<endl;
-    cout<<"Press 2 to get info of all events of an club "<<endl;
-    cout<<"Press 3 to get info of all events in a particular month "<<endl;
-    cout<<"Press 4 to get info of all events of an club in a particular month "<<endl;
-    cout<<"Press 5 if you don't know how many events conducted by clubs of daiict \nYou will get info of all events"<<endl;
-    
-    
+    std::cout << "1.to get info of any particular event" << endl;
+    std::cout << "2.to get info of all events of an club " << endl;
+    std::cout << "3.to get info of all events in a particular month " << endl;
+    std::cout << "4.to get info of all events of an club in a particular month " << endl;
+    std::cout << "5.if you don't know how many events conducted by clubs of daiict You will get info of all events" << endl;
+    std::cout << "Enter Choice: ";
     int n;
-    cin>>n;
-    cin.ignore();
+    std::cin >> n;
+    std::cin.ignore();
 
-    switch(n){
+    switch (n)
+    {
 
-        case 1:
-        {
+    case 1:
+    {
+        cout<<"Enter Event name: ";
         string evna;
-        getline(cin,evna);
-
-        it:
-
-        cin.ignore();
-        int a=0;
-
-        for(int i=0;i<28;++i){
-            for(auto eve : data[club[i]]){
-                if(eve.second.name==evna){
-                    //print it's detail
-                    a=1;
+        std::getline(cin, evna);
+    it:
+        int a = 0;
+        for (int i = 0; i < 28; ++i)
+        {
+            for (auto eve : data[club[i]])
+            {
+                if (eve.second.name == evna)
+                {
+                    std::cout << endl;
+                    std::cout << "------------------------------" << endl;
+                    std::cout << "Event Detials: " << endl;
+                    std::cout << "------------------------------" << endl;
+                    std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
+                    std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
+                    std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
+                    std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
+                    std::cout << left << setw(10) << "Venue" << ": " << eve.second.vanue << endl;
+                    std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+                    std::cout << "------------------------------" << endl;
+                    std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
+                    std::cout << "              " << eve.second.in2 << endl;
+                    std::cout << endl;
+                    std::cout << left << setw(12) << "Rules" << ": " << eve.second.rule1 << endl;
+                    std::cout << "              " << eve.second.rule2 << endl;
+                    std::cout << "              " << eve.second.rule3 << endl;
+                    std::cout << "------------------------------" << endl;
+                    std::cout << endl;
+                    a = 1;
                     break;
-                }    
+                }
             }
         }
 
-        if(a==0){
-            cout<<"You provided wrong event name"<<endl;
-            cout<<"Press 1 to enter name again or 0 to leave"<<endl;
+        if (a == 0)
+        {
+            std::cout << "You provided wrong event name" << endl;
+            std::cout << "Press 1 to enter name again or 0 to leave" << endl;
             int n;
-            cin>>n;
-            if(n==0){
+            std::cin >> n;
+            if (n == 0)
+            {
                 goto it;
             }
         }
-        
         break;
-        }
-        
-        case 2:
-        {
+    }
+
+    case 2:
+    {
         string cl;
-        cout<<"Enter the name of the club"<<endl;
-        getline(cin,cl);
-        cin.ignore();
+        std::cout << "Enter the name of the club: ";
+        std::getline(cin, cl);
 
-        for(auto eve : data[cl]){
-            cout<<"Event name : "<<eve.second.name<<endl;
-        }
-
-        //print like this
-
-
-        break;
-        }
-
-        case 3:
+        for (auto eve : data[cl])
         {
-        int mn;
-        cout<<"Enter number of month"<<endl;
-        cin>>mn;
+            std::cout << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << "Event Detials: " << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << left << setw(10) << "Club Name" << ": " << cl << endl;
+            std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
+            std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
+            std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
+            std::cout << left << setw(10) << "Venue" << ": " << eve.second.vanue << endl;
+            std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
+            std::cout << "              " << eve.second.in2 << endl;
+            std::cout << endl;
+            std::cout << left << setw(12) << "Rules" << ": " << eve.second.rule1 << endl;
+            std::cout << "              " << eve.second.rule2 << endl;
+            std::cout << "              " << eve.second.rule3 << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << endl;
+        }
+        break;
+    }
 
-        for(int i=0;i<28;++i){
+    case 3:
+    {
+
+        int mn;
+        std::cout << "Enter number of month(in integer): ";
+        std::cin >> mn;
+
+        for (int i = 0; i < 28; ++i)
+        {
             auto temp = data[club[i]].equal_range(mn);
 
-            for(auto person = temp.first ; person != temp.second ; ++person){
-                cout<<"Event name :"<<person->second.name<<endl;
-
-                //print like this
+            for (auto person = temp.first; person != temp.second; ++person)
+            {
+                std::cout << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << "Event Details: " << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
+                std::cout << left << setw(10) << "Name" << ": " << person->second.name << endl;
+                std::cout << left << setw(10) << "Date" << ": " << person->second.date << endl;
+                std::cout << left << setw(10) << "Time" << ": " << person->second.time << endl;
+                std::cout << left << setw(10) << "Venue" << ": " << person->second.vanue << endl;
+                std::cout << left << setw(10) << "Rating" << ": " << person->second.rating << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << left << setw(12) << "Information" << ": " << person->second.in1 << endl;
+                std::cout << "              " << person->second.in2 << endl;
+                std::cout << endl;
+                std::cout << left << setw(12) << "Rules" << ": " << person->second.rule1 << endl;
+                std::cout << "              " << person->second.rule2 << endl;
+                std::cout << "              " << person->second.rule3 << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << endl;
             }
         }
+
         break;
-        }
-        case 4:
-        {
+    }
+
+    case 4:
+    {
+
         int mn;
         string cl;
-        cout<<"Enter name of the club and month"<<endl;
-        getline(cin,cl);
-        cin.ignore();
-        cin>>mn;
+        std::cout << "Enter name of the club and month: ";
+        std::getline(cin, cl);
+        cin >> mn;
 
         auto temp = data[cl].equal_range(mn);
-        for(auto person = temp.first ; person != temp.second ; ++person){
-            //print
+        for (auto person = temp.first; person != temp.second; ++person)
+        {
+            std::cout << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << "Event Details: " << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << left << setw(10) << "Club Name" << ": " << cl << endl;
+            std::cout << left << setw(10) << "Name" << ": " << person->second.name << endl;
+            std::cout << left << setw(10) << "Date" << ": " << person->second.date << endl;
+            std::cout << left << setw(10) << "Time" << ": " << person->second.time << endl;
+            std::cout << left << setw(10) << "Venue" << ": " << person->second.vanue << endl;
+            std::cout << left << setw(10) << "Rating" << ": " << person->second.rating << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << left << setw(12) << "Information" << ": " << person->second.in1 << endl;
+            std::cout << "              " << person->second.in2 << endl;
+            std::cout << endl;
+            std::cout << left << setw(12) << "Rules" << ": " << person->second.rule1 << endl;
+            std::cout << "              " << person->second.rule2 << endl;
+            std::cout << "              " << person->second.rule3 << endl;
+            std::cout << "------------------------------" << endl;
+            std::cout << endl;
         }
         break;
-        }
+    }
+    case 5:
+    {
 
-        case 5:
+        std::cout << "Here is detail of all events" << endl;
+
+        for (int i = 0; i < 28; ++i)
         {
-        cout<<"Here is detail of all events"<<endl;
-
-        for(int i=0;i<28;++i){
-            for(auto eve : data[club[i]]){
-            cout<<"Event name : "<<eve.second.name<<endl;
+            for (auto eve : data[club[i]])
+            {
+                std::cout << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << "Event Detials: " << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
+                std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
+                std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
+                std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
+                std::cout << left << setw(10) << "Venue" << ": " << eve.second.vanue << endl;
+                std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
+                std::cout << "              " << eve.second.in2 << endl;
+                std::cout << endl;
+                std::cout << left << setw(12) << "Rules" << ": " << eve.second.rule1 << endl;
+                std::cout << "              " << eve.second.rule2 << endl;
+                std::cout << "              " << eve.second.rule3 << endl;
+                std::cout << "------------------------------" << endl;
+                std::cout << endl;
+            }
         }
-        }
-        }
+    }
     }
 }
 
