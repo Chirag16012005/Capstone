@@ -172,8 +172,50 @@ data["Debate"].insert({2,{"Shipwreck and Prized British Parliamentary Debate!","
 "1. You shall not hurt anybody's feelings intentionally","2. The langauge used shall be respectable.",
 "3. Please don't harm any infrastructure."}});
 
-data["Programming"].insert({{ }});
+data["Programming"].insert({3,{"Holi Long Programming Contest","For 7 Days","15:00 to 19:00",5,"Online",
+"This is an exciting opportunity for all coding enthusiasts to come together and test their skills in a fun and challenging 
+environment.", 
+"Starting on 25th March, this contest will span over 7 days, featuring a new question each day, gradually building up 
+the excitement and challenge.",
+"1. On the first day, it will have 4 questions and for the next 6 days, we will have 1 question coming up at 3:00 pm exactly",
+"2. There are prizes for the first solver.",
+"3. You can submit one question only once."}});
 
+data["Programming"].insert({2,{"IPC","01/02/2024","21:00 to 23:00",5,"Online"
+"The Programming Club is here with the 5th IPC of the academic year.",
+"Seize this opportunity to showcase your programming skills and improve your capabilities.",
+"1. It is forbidden to use somebody else's code in the solution.",
+"2. It is allowed to use any sources of information on the Internet (but it is forbidden to copy-paste somebody else's code).",
+"3. The programming Club has the right to monitor the contestants' honesty in behavior using different methods and disqualify 
+the contestant if violations are found."}});
+
+data["Microsoft"].insert({3,{"Face Off 4.0","11/03/2024","15:00 to 18:00",5,"Online",
+"MSTC is back again with a blast. We are thrilled to officially announce the upcoming Face Off 4.0, a highly anticipated 
+1v1 Competitive Programming.",
+" If you are someone who has been delving into the deep worlds of Competitive Programming and DSA, this is something you 
+don't want to miss.",
+"1. You will have to register in your applied category.","2. You will have to register on the codeforces before the contest.",
+"3. Each category will witness 5 competitive rounds with the first round being open to all for the participant of 
+respective categories from which 32 top participants will be selected to compete in a 1v1 format."}});
+
+data["Microsoft"].insert({12,{"Winter Of Code","30/12/2024","1 month",5,"Online",
+" As the winter chill sets in, we are thrilled to announce the opening of registrations for the highly anticipated Winter of Code", 
+"It is a month-long program where you will get a chance to learn a new tech-stack from scratch without spending a single penny."
+"1.It is forbidden to use somebody else's code in the solution.",
+"2.You may use third-party prewritten code, like the template of some algorithms.",
+"But you are not allowed to use the whole code with the logic of others."}});
+
+data["Heritage"].insert({11,{"Rangoli Competition: Unleash Your Creativity!","6/11/2024","18:30 to 19:30",5,"OAT",
+"The Heritage Club is thrilled to announce an upcoming Rangoli Competition", 
+"This competition promises to be an exciting event where your creativity can shine.",
+"1.Form a team of 3-6 individuals to participate.","2.Only include 1 kg of white color and 500g each of six vibrant colors.",
+"3. Do not spoil others art."}});
+
+data["Headrush_Quizzing Club"].insert({11,{"i.Quiz","05/11/2024","9:00 to 10:30",5,"CEP-110",
+"Headrush in association with i.Fest is organizing a science and technology quiz, i.Quiz, where your knowledge in the 
+domains of physics, chemistry, biology and information technology will be put to a test.",
+"It will be exciting.",
+"1. Do not use internet.","2. Maintain decorum in the hall","3.Don't forget to bring a sheet of paper and a pen."}});
 
 
  return data;
