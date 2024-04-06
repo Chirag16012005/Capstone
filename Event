@@ -272,7 +272,6 @@ return data;
 
 void event(unordered_map<string, unordered_multimap<int, Event>> &data)
 {
-
     std::cout << "1.to get info of any particular event" << endl;
     std::cout << "2.to get info of all events of an club " << endl;
     std::cout << "3.to get info of all events in a particular month " << endl;
@@ -282,16 +281,14 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     int n;
     std::cin >> n;
     std::cin.ignore();
-
     switch (n)
     {
-
     case 1:
     {
-        cout<<"Enter Event name: ";
+    it:
+        cout << "Enter Event name: ";
         string evna;
         std::getline(cin, evna);
-    it:
         int a = 0;
         for (int i = 0; i < 28; ++i)
         {
@@ -327,23 +324,23 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         if (a == 0)
         {
             std::cout << "You provided wrong event name" << endl;
-            std::cout << "Press 1 to enter name again or 0 to leave" << endl;
+            std::cout << "Press 1 to enter name again or 0 to leave: ";
             int n;
             std::cin >> n;
-            if (n == 0)
+            if (n == 1)
             {
                 goto it;
             }
         }
         break;
     }
-
     case 2:
     {
+    it1:
         string cl;
         std::cout << "Enter the name of the club: ";
         std::getline(cin, cl);
-
+        int a = 0;
         for (auto eve : data[cl])
         {
             std::cout << endl;
@@ -365,17 +362,28 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
             std::cout << "              " << eve.second.rule3 << endl;
             std::cout << "------------------------------" << endl;
             std::cout << endl;
+            a++;
+        }
+        if (a == 0)
+        {
+            std::cout << "You provided wrong event name" << endl;
+            std::cout << "Press 1 to enter name again or 0 to leave: ";
+            int n;
+            std::cin >> n;
+            if (n == 1)
+            {
+                goto it1;
+            }
         }
         break;
     }
-
     case 3:
     {
-
+    it2:
         int mn;
         std::cout << "Enter number of month(in integer): ";
         std::cin >> mn;
-
+        int a = 0;
         for (int i = 0; i < 28; ++i)
         {
             auto temp = data[club[i]].equal_range(mn);
@@ -403,19 +411,28 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
                 std::cout << endl;
             }
         }
-
+        if (a == 0)
+        {
+            std::cout << "You provided wrong event name" << endl;
+            std::cout << "Press 1 to enter month again or 0 to leave: ";
+            int n;
+            std::cin >> n;
+            if (n == 1)
+            {
+                goto it2;
+            }
+        }
         break;
     }
-
     case 4:
     {
-
+    it3:
         int mn;
         string cl;
         std::cout << "Enter name of the club and month: ";
         std::getline(cin, cl);
         cin >> mn;
-
+        int a = 0;
         auto temp = data[cl].equal_range(mn);
         for (auto person = temp.first; person != temp.second; ++person)
         {
@@ -439,13 +456,24 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
             std::cout << "------------------------------" << endl;
             std::cout << endl;
         }
+        if (a == 0)
+        {
+            std::cout << "You provided wrong event name" << endl;
+            std::cout << "Press 1 to Enter name of the club and month again or 0 to leave: ";
+            int n;
+            std::cin >> n;
+            if (n == 1)
+            {
+                goto it3;
+            }
+        }
         break;
     }
     case 5:
     {
-
+    it4:
         std::cout << "Here is detail of all events" << endl;
-
+        int a = 0;
         for (int i = 0; i < 28; ++i)
         {
             for (auto eve : data[club[i]])
@@ -471,10 +499,21 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
                 std::cout << endl;
             }
         }
+        if (a == 0)
+        {
+            std::cout << "You provided wrong event name" << endl;
+            std::cout << "Press 1 to Enter name of the club and month again or 0 to leave: ";
+            int n;
+            std::cin >> n;
+            if (n == 1)
+            {
+                goto it4;
+            }
+        }
+        break;
     }
     }
 }
-
 void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory)
 {
     std::cout << "Enter your id" << endl;
