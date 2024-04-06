@@ -114,7 +114,7 @@ data["Press"].insert({2,{"Valentine's Poetry Contest","13/02/2024","Whole Day",4
 "To celebrate this occasion, what better medium of expression can there be to convey your boundless love to your beloved than poetry.",
 "1. Entries can be in 3 languages: English, Hindi, Gujarati","2. Submissions after deadline won't be accepted.","3. One entry per person is allowed."}});
 
-data["Research"].insert({11,{" i.Papyrus","04/11/2024","17:00 to 19:00",5,"CEP-110",
+data["Research"].insert({11,{"i.Papyrus","04/11/2024","17:00 to 19:00",5,"CEP-110",
 "Research Club DAIICT, in association with i.Fest, invites you all to participate in our annual poster presentation competition, i.Papyrus!!",
 "Winners would be rewarded with prizes from the pool of 3.5k+!! So channel your inner researcher and participate in this amazing competition.",
 "1. Each team can only submit a single poster.","2. The allowed team size is 1-3.",
