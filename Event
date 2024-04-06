@@ -173,34 +173,28 @@ data["Debate"].insert({2,{"Shipwreck and Prized British Parliamentary Debate!","
 "3. Please don't harm any infrastructure."}});
 
 data["Programming"].insert({3,{"Holi Long Programming Contest","For 7 Days","15:00 to 19:00",5,"Online",
-"This is an exciting opportunity for all coding enthusiasts to come together and test their skills in a fun and challenging 
-environment.", 
-"Starting on 25th March, this contest will span over 7 days, featuring a new question each day, gradually building up 
-the excitement and challenge.",
+"This is an exciting opportunity for all coding enthusiasts to come together and test their skills in a fun and challenging environment.", 
+"Starting on 25th March, this contest will span over 7 days, featuring a new question each day, gradually building up the excitement and challenge.",
 "1. On the first day, it will have 4 questions and for the next 6 days, we will have 1 question coming up at 3:00 pm exactly",
 "2. There are prizes for the first solver.",
 "3. You can submit one question only once."}});
 
-data["Programming"].insert({2,{"IPC","01/02/2024","21:00 to 23:00",5,"Online"
+data["Programming"].insert({2,{"IPC","01/02/2024","21:00 to 23:00",5,"Online",
 "The Programming Club is here with the 5th IPC of the academic year.",
 "Seize this opportunity to showcase your programming skills and improve your capabilities.",
 "1. It is forbidden to use somebody else's code in the solution.",
 "2. It is allowed to use any sources of information on the Internet (but it is forbidden to copy-paste somebody else's code).",
-"3. The programming Club has the right to monitor the contestants' honesty in behavior using different methods and disqualify 
-the contestant if violations are found."}});
+"3. The programming Club has the right to monitor the contestants' honesty in behavior using different methods and disqualify the contestant if violations are found."}});
 
 data["Microsoft"].insert({3,{"Face Off 4.0","11/03/2024","15:00 to 18:00",5,"Online",
-"MSTC is back again with a blast. We are thrilled to officially announce the upcoming Face Off 4.0, a highly anticipated 
-1v1 Competitive Programming.",
-" If you are someone who has been delving into the deep worlds of Competitive Programming and DSA, this is something you 
-don't want to miss.",
+"MSTC is back again with a blast. We are thrilled to officially announce the upcoming Face Off 4.0, a highly anticipated 1v1 Competitive Programming.",
+" If you are someone who has been delving into the deep worlds of Competitive Programming and DSA, this is something you don't want to miss.",
 "1. You will have to register in your applied category.","2. You will have to register on the codeforces before the contest.",
-"3. Each category will witness 5 competitive rounds with the first round being open to all for the participant of 
-respective categories from which 32 top participants will be selected to compete in a 1v1 format."}});
+"3. Each category will witness 5 competitive rounds with the first round being open to all for the participant of respective categories from which 32 top participants will be selected to compete in a 1v1 format."}});
 
 data["Microsoft"].insert({12,{"Winter Of Code","30/12/2024","1 month",5,"Online",
 " As the winter chill sets in, we are thrilled to announce the opening of registrations for the highly anticipated Winter of Code", 
-"It is a month-long program where you will get a chance to learn a new tech-stack from scratch without spending a single penny."
+"It is a month-long program where you will get a chance to learn a new tech-stack from scratch without spending a single penny.",
 "1.It is forbidden to use somebody else's code in the solution.",
 "2.You may use third-party prewritten code, like the template of some algorithms.",
 "But you are not allowed to use the whole code with the logic of others."}});
@@ -212,8 +206,7 @@ data["Heritage"].insert({11,{"Rangoli Competition: Unleash Your Creativity!","6/
 "3. Do not spoil others art."}});
 
 data["Headrush_Quizzing"].insert({11,{"i.Quiz","05/11/2024","9:00 to 10:30",5,"CEP-110",
-"Headrush in association with i.Fest is organizing a science and technology quiz, i.Quiz, where your knowledge in the 
-domains of physics, chemistry, biology and information technology will be put to a test.",
+"Headrush in association with i.Fest is organizing a science and technology quiz, i.Quiz, where your knowledge in the domains of physics, chemistry, biology and information technology will be put to a test.",
 "It will be exciting.",
 "1. Do not use internet.","2. Maintain decorum in the hall","3.Don't forget to bring a sheet of paper and a pen."}});
 
@@ -225,8 +218,7 @@ data["Dance"].insert({3,{"WALTZ","12/03/2024","21:00 to 22:30",4,"OAT",
 
 data["IEEE"].insert({2,{"Public Speaking Workshop","17/02/2024","16:00 to 19:00",5,"CEP-110",
 "We cordially invite you to participate in the Public Speaking Workshop organized by the IEEE Student Branch DAIICT.",
-"This workshop aims to equip participants with essential public speaking skills crucial for various aspects of personal 
-and professional life.",
+"This workshop aims to equip participants with essential public speaking skills crucial for various aspects of personal and professional life.",
 "1. There is no fees.","2. Please arrive in the workshop on time.","3. Please email if you have any doubts."}});
 
 data["IEEE"].insert({3,{"DA-IICT MUN","10/03/2024","16:00 to 21:00",5,"LT2",
@@ -237,20 +229,18 @@ relations and get a chance to experience and understand the workings of the Unit
 "3. You need to attend the pre-MUN Training Workshop."}});
 
 data["EHC"].insert({10,{"EHC Session on Arduino","06/10/2024","18:30 to 19:45",5,"LT2",
-"The Electronics Hobby Center is dedicated to fostering a passion for electronics, providing hands-on experience, and 
-creating a supportive community for all those interested in the field.",
+"The Electronics Hobby Center is dedicated to fostering a passion for electronics, providing hands-on experience, and creating a supportive community for all those interested in the field.",
 "Join us for an exciting Arduino session tailored for beginners!",
 "1. Please join us on time.","2. You may ask questions if you have doubt by raising hands.","3. You need to regisster first."}});
 
 data["CINS"].insert({2,{"Cyber Samvad","24/02/2024","10:00 to 11:00",3,"LT1",
 "Given the rising instances of cybercrimes, understanding the fundamentals of staying safe online has become paramount.", 
 "With this in mind, the CINS club is excited to announce the  Cyber Samvad.",
-"1. You need to register before joining the event.","2. Please arrive on time.","3. Following the discussion, there will be a 
-Q&A session where the audience can have their queries addressed"}});
+"1. You need to register before joining the event.","2. Please arrive on time.",
+"3. Following the discussion, there will be a Q&A session where the audience can have their queries addressed"}});
 
 data["DAIICT_Theatre"].insert({4,{"Krishna Leela Auditions","02/04/2024","21:00 to 22:45",4,"LT1",
-"DTG is all set to bring back one of the biggest celebrations of DAIICT. Krishna Leela is happening and we will leave no 
-stone unturned to give you an experience of a lifetime.",
+"DTG is all set to bring back one of the biggest celebrations of DAIICT. Krishna Leela is happening and we will leave no stone unturned to give you an experience of a lifetime.",
 "As we start preparing, we will be taking auditions for all roles for Krishna Leela once again.",
 "1. You can participate only as an actor or writer.","2. Auditions are compulsory to take part in Leela",
 "3. For any queries, you can revert to us"}});
@@ -258,13 +248,15 @@ stone unturned to give you an experience of a lifetime.",
 data["DAIICT_Theatre"].insert({1,{"Rangmanch - The Drama Night","01/01/2024","21:00 to 23:45",4,"OAT",
 "We have three main categories for the event - Stage Play, Felicity and Mono Act.",
 " Put on your thinking caps, jot down a tale that mesmerizes the audience and captivates every mind!",
-"1. Anyone can develop one's own script and send their team details.","2.To contact DTG, drop a mail at theatres@daiict.ac.in.",
+"1. Anyone can develop one's own script and send their team details.",
+"2.To contact DTG, drop a mail at theatres@daiict.ac.in.",
 "3. The deadline for submitting the Entry form is extended to 10th Jan 2024"}});
 
 data["Muse"].insert({4,{"Museliversary","04/04/2024","17:00 to 19:00",5,"Cafeteria",
-"To mark this special anniversary, we prepare an array of exciting activities every year on this day."
+"To mark this special anniversary, we prepare an array of exciting activities every year on this day.",
 "We're celebrating three years of creativity, innovation, and unforgettable moments that have brought us together as a community.",
-"1. Please maintain the decorum while celebrating","2. Please arrive on time.",
+"1. Please maintain the decorum while celebrating",
+"2. Please arrive on time.",
 "3. Please maintain cleanliness in the cafeteria."}});
 
 return data;
