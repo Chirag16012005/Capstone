@@ -82,24 +82,29 @@ item:
          std::cout << endl;
          std::cout <<BOLD_MAGENTA<< "Please follow the following menu" <<RESET<< endl;
          std::cout <<BOLD_MAGENTA<< "--------------------------------" <<RESET<< endl;
-         std::cout << BLUE << BOLD << "1. All club members of a particular club." << RESET << endl;
-         std::cout << BLUE << BOLD << "2. To get the details of all members." << RESET << endl;
-         std::cout << BLUE << BOLD << "3. To get details of club." << RESET << endl;
-         std::cout << BLUE << BOLD << "4. To search any club member." << RESET << endl;
-         std::cout << BLUE << BOLD << "5. To become a member in any club." << RESET << endl;
-         std::cout << BLUE << BOLD << "6. To leave any club." << RESET << endl;
-         std::cout << BLUE << BOLD << "7. To get detials for Events" << RESET << endl;
-         std::cout << BLUE << BOLD << "8. to edit event detials" << RESET << endl;
-         std::cout << BLUE << BOLD << "9. to Participate any Event" << RESET << endl;
-         std::cout << BLUE << BOLD << "10.To get ditials of festivals" << RESET << endl;
-         std::cout << BLUE << BOLD << "11.to exit" << RESET << endl;
+         std::cout << BLUE << BOLD << "1. to get brief intro  of all clubs" << RESET << endl;
+         std::cout << BLUE << BOLD << "2. All club members of a particular club." << RESET << endl;
+         std::cout << BLUE << BOLD << "3. To get the details of all members." << RESET << endl;
+         std::cout << BLUE << BOLD << "4. To get details of club." << RESET << endl;
+         std::cout << BLUE << BOLD << "5. To search any club member." << RESET << endl;
+         std::cout << BLUE << BOLD << "6. To become a member in any club." << RESET << endl;
+         std::cout << BLUE << BOLD << "7. To leave any club." << RESET << endl;
+         std::cout << BLUE << BOLD << "8. To get detials for Events" << RESET << endl;
+         std::cout << BLUE << BOLD << "9. to edit event detials" << RESET << endl;
+         std::cout << BLUE << BOLD << "10. to Participate any Event" << RESET << endl;
+         std::cout << BLUE << BOLD << "11.To get ditials of festivals" << RESET << endl;
+         std::cout << BLUE << BOLD << "12.to exit" << RESET << endl;
          std::cout << "Enter Choice: ";
         int menu;
         cin >> menu;
         switch (menu)
         {
-
         case 1:
+        {
+            intro();
+            break;
+        }
+        case 2:
         {
             std::cout << endl;
             std::cout <<BRIGHT_RED<< "Please enter the club name(You may type the name only and no need for the word CLUB, only for developer student club type DSClub): "<<RESET<<endl;
@@ -110,14 +115,14 @@ item:
             break;
         }
 
-        case 2:
+        case 3:
         {
             std::cout <<YELLOW<< "All the club member details are as follows: " <<<RESET< endl;
             get_all_mem(list);
             break;
         }
 
-        case 3:
+        case 4:
         {
             std::cout << endl;
             std::cout <<BOLD_BLUE<< "Please follow the following menu to fetch information about any club: " <<RESET<< endl;
@@ -143,14 +148,20 @@ item:
             break;
         }
 
-        case 4:
+        case 5:
         {
             search(list,na_id);
             break;
         }
-        case 5:
+        case 6:
         {
             addentry(list);
+            break;
+        }
+        case 7:
+        {
+            cout << endl;
+            event(data);
             break;
         }
         case 8:
@@ -165,13 +176,25 @@ item:
             ev_par(par_detials, data, s);
             break;
         }
+        case 9:
+        {
+            cout << endl;
+            edit_ev(data, list);
+            break;
+        }
         case 10:
+        {
+            cout << endl;
+            ev_par(par_detials, data, s);
+            break;
+        }
+        case 11:
         {
             cout << endl;
             mj_event();
             break;
         }
-        case 11:
+        case 12:
         {
             reload_data(list, file_name);
             return 0;
