@@ -5,6 +5,14 @@
 
 using namespace std;
 
+string ev[]= {"Weekly Poetry Writing Challenge","Ink Chronicles","iPrompt","Prompt-A-Thon","Chess64","Rapid Chess Tournament",
+"RAAGA AND RHAPSODY","Festive Frames Photography Contest","Rolling Shutter(Videography)","Garba Night","Sheri Garba","Movie Scrrening","IPL Screening",
+"Comic Carnival: A Comic Making Challenge","Valentine's Poetry Contest","i.Papyrus","SYNOCUBIX","Mosaic Construction: Republic Day","SellOut",
+"Blood Donation Camp","India Regional Bootcamp","GoLang Session","echai","Shaping Tomorrow's Sustainability Standards","Online Lecture Series",
+"Shipwreck and Prized British Parliamentary Debate!","Holi Long Programming Contest","IPC","Face Off 4.0","Winter Of Code",
+"Rangoli Competition: Unleash Your Creativity!","i.Quiz","WALTZ","Public Speaking Workshop","DA-IICT MUN","EHC Session on Arduino",
+"Cyber Samvad","Krishna Leela Auditions","Rangmanch - The Drama Night","Museliversary"};
+
 string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
                  "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
