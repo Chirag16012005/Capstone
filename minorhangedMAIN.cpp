@@ -157,15 +157,22 @@ item:
             addentry(list);
             break;
         }
-        case 6:
+        case 8:
         {
-            del_entry(list);
+            cout << endl;
+            edit_ev(data, list);
             break;
         }
-        case 7:
+        case 9:
         {
             reload_data(list,file_name);
             return 0;
+        }
+        default:
+        {
+            cout << endl;
+            std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+            break;
         }
         }
     }
