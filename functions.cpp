@@ -9,7 +9,7 @@ using namespace std;
 // Assumption : file is prechecked. file exist or not
 
 string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
-                 "Developer_Studen", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing",
+                 "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing",
                  "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
 
 pair<unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>>,unordered_multimap<string,long long>> load_data(string file_name)
