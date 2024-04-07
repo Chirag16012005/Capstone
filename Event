@@ -811,195 +811,230 @@ unordered_map<string,unordered_map<string,Person>> par_load(string file_name){
 
 }
 
-void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_map<string, unordered_multimap<int,Event>> &info,string file_name){
+void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordered_map<string, unordered_multimap<int, Event>> &info, string file_name)
+{
 
     char temp;
-    cout<<"Have you registered yourself ??  (Enter Y/N): ";
-    cin>>temp;
-    cout<<endl;
+    cout << "Have you registered yourself ?? (Enter Y/N): ";
+    cin >> temp;
+    cout << endl;
     cin.ignore();
 
     Person A;
-    string uname,tem,evname;
+    string uname, tem, evname;
 
-    if(temp=='N'){
+    if (temp == 'N')
+    {
 
-        cout<<"You are new candidate please register yourself"<<endl;
-        cout<<endl;
+        cout << "You are new candidate please register yourself" << endl;
+        cout << "----------------------------------------------" << endl;
+        cout << setw(20) << "Please enter your name : ";
+        getline(cin, A.name);
+        cout << setw(20) << "Enter your contact number: ";
+        cin >> A.contact;
+        cout << setw(20) << "Enter your email id: ";
+        cin >> A.emid;
+    la:
+        cout << setw(20) << "Now create your user name: ";
+        cin >> uname;
 
-        cout<<"Please enter your name : ";
-        getline(cin,A.name);
-        cout<<endl;
-        cout<<"Enter your contact number: ";
-        cin>>A.contact;
-        cout<<endl;
-        cout<<"Enter your email id: ";
-        cin>>A.emid;
-        cout<<endl;
-        cout<<"Now create your user name: ";
-        la:
-        cin>>uname;
-        cout<<endl;
-        
-        for(int i=0;i<ev->size();++i){
+        for (int i = 0; i < ev->size(); ++i)
+        {
             auto person = data[ev[i]].find(uname);
-            if(person !=data[ev[i]].end()){
-                cout<<"This user name already exist"<<endl;
-                cout<<"Please enter new username"<<endl;
+            if (person != data[ev[i]].end())
+            {
+                cout << endl;
+                cout << "This user name already exist" << endl;
+                cout << "Please enter new username" << endl;
+                cout << endl;
                 goto la;
             }
         }
 
-        la1:
-        cout<<"Now create password: ";
-        cin>>A.password;
-        cout<<endl;
-        cout<<"Please enter your password again:";
-        cin>>tem;
-        cout<<endl;
+    la1:
+        cout << setw(20) << "Now create password: ";
+        cin >> A.password;
+        cout << setw(20) << "Please enter your password again:";
+        cin >> tem;
+        cout << endl;
 
-        if(tem!=A.password){
-            cout<<"Both password are not matching, Please make your password again"<<endl;
-            cout<<endl;
+        if (tem != A.password)
+        {
+            cout << "Both password are not matching, Please make your password again" << endl;
+            cout << endl;
             goto la1;
         }
 
-        cout<<"You are registration completed sucessfully"<<endl;
+        cout << "You are registration completed sucessfully" << endl;
     }
-    else{
-        la3:
-        int a=0;
-        cout<<"Enter your username: ";
-        cin>>uname;
-        cout<<endl;
-        cout<<"Now enter your password: ";
-        cin>>A.password;
-        cout<<endl;
+    else
+    {
+    la3:
+        int a = 0;
+        cout << setw(20) << "Enter your username: ";
+        cin >> uname;
+        cout << setw(20) << "Now enter your password: ";
+        cin >> A.password;
+        cout << endl;
 
-        for(int i=0;i<ev->size();++i){
+        for (int i = 0; i < ev->size(); ++i)
+        {
             auto person = data[ev[i]].find(uname);
-            if(person != data[ev[i]].end()){
-                if(person->second.password==A.password){
-                    a=1;
-                    A.contact=person->second.contact;
-                    A.emid=person->second.emid;
-                    A.name=person->second.name;
-                    A.password=person->second.password;
+            if (person != data[ev[i]].end())
+            {
+                if (person->second.password == A.password)
+                {
+                    a = 1;
+                    A.contact = person->second.contact;
+                    A.emid = person->second.emid;
+                    A.name = person->second.name;
+                    A.password = person->second.password;
                     break;
                 }
             }
         }
 
-        if(a==0){
-            cout<<"Incorrect user-name or password"<<endl;
+        if (a == 0)
+        {
+            cout << "Incorrect user-name or password" << endl;
             int k;
-            cout<<"Press 1 to re-enter or 0 to exit : ";
-            cin>>k;
-            if(k==1){
+            cout << "Press 1 to re-enter or 0 to exit: ";
+            cin >> k;
+            if (k == 1)
+            {
+                cout << endl;
                 goto la3;
             }
-            else{
+            else
+            {
                 return;
             }
         }
 
-        cout<<"You are succesfully login"<<endl;
+        cout << "You are succesfully login" << endl;
     }
 
     Event B;
-    la4: 
-    int k=0;
-    cout<<"Enter the name of the event you want to participate : ";
+la4:
+    int k = 0;
+    cout << endl;
+    cout << "Here all events names :=" << endl;
+    cout << "------------------------" << endl;
+    for (int i = 0; i < ev->size(); i = i + 2)
+    {
+        cout << left << setw(50) << ev[i] << " " << setw(50) << ev[i + 1] << endl;
+    }
+    cout << endl;
+    cout << "Enter the name of the event you want to participate: ";
     cin.ignore();
-    getline(cin,evname);
-    cout<<endl;
+    getline(cin, evname);
+    cout << endl;
 
-    for(int i=0;i<28;++i){
-        for(auto person : info[club[i]]){
-            if(person.second.name==evname){
-                B.rule1=person.second.rule1;
-                B.rule2=person.second.rule2;
-                B.rule3=person.second.rule3;
-                k=1;
+    for (int i = 0; i < 28; ++i)
+    {
+        for (auto person : info[club[i]])
+        {
+            if (person.second.name == evname)
+            {
+                B.rule1 = person.second.rule1;
+                B.rule2 = person.second.rule2;
+                B.rule3 = person.second.rule3;
+                k = 1;
             }
         }
     }
 
-    if(k==0){
-        cout<<"No event found, Please eneter correct name of the event"<<endl;
-        cout<<"Enter 1 to re-enter or 0 to leave"<<endl;
+    if (k == 0)
+    {
+        cout << "No event found, Please eneter correct name of the event" << endl;
+        cout << "Enter 1 to re-enter or 0 to leave: ";
         int b;
-        cin>>b;
+        cin >> b;
+        cout << endl;
         goto la4;
     }
 
-    cout<<"Rules for this event is as below "<<endl;
-    cout<<endl;
+    cout << "Rules for this event is as below " << endl;
+    cout << "--------------------------------" << endl;
+    cout << B.rule1 << endl;
+    cout << B.rule2 << endl;
+    cout << B.rule3 << endl;
+    cout << endl;
 
-    cout<<B.rule1<<endl;
-    cout<<B.rule2<<endl;
-    cout<<B.rule3<<endl;
-    cout<<endl;
-
-    cout<<"Are you still want to join this event, Please enter Y|N: ";
+    cout << "Are you still want to join this event, Please enter Y|N: ";
     char t;
-    cin>>t;
+    cin >> t;
 
-    if(t=='Y'){
-        cout<<"You registered succesfully for "<<evname<<endl;
+    if (t == 'Y')
+    {
+        cout << "You registered succesfully for " << evname << endl;
 
         ofstream fout;
         fout.open(file_name, ios::app);
-        fout<<endl;
-        fout<<A.name<<" "<<A.contact<<" "<<A.emid<<" "<<uname<<" "<<A.password<<" "<<evname;
+        fout << endl;
+        fout << A.name << " " << A.contact << " " << A.emid << " " << uname << " " << A.password << " " << evname;
         fout.close();
 
-        data[evname][uname]=A;
+        data[evname][uname] = A;
 
-        cout<<endl;
+        cout << endl;
 
-        cout<<"Do you want list of the person who is participated in this event"<<endl;
-        cout<<"Enter Y|N: ";
+        cout << "Do you want list of the person who is participated in this event" << endl;
+        cout << "Enter Y|N: ";
         char t;
-        cin>>t;
-        cout<<endl;
+        cin >> t;
+        cout << endl;
 
-        if(t=='Y'){
-
-            for(auto person : data[evname]){
-                cout<<"--------------------------------------"<<endl;
+        if (t == 'Y')
+        {
+            cout << "--------------------------------------------------" << endl;
+            cout << left << setw(20) << "Participate Name " << setw(20) << "Participate Username " << endl;
+            cout << "--------------------------------------------------" << endl;
+            for (auto person : data[evname])
+            {
+                cout << left << setw(20) << person.first << setw(20) << person.second.name << endl;
             }
+            cout << "--------------------------------------------------" << endl;
         }
 
-        cout<<"Do you want list of the events name in which you participate"<<endl;
-        cout<<"Enter Y|N : ";
-        cin>>t;
-        cout<<endl;
+        cout << "Do you want list of the events name in which you participate" << endl;
+        cout << "Enter Y|N : ";
+        cin >> t;
+        cout << endl;
 
-        int n=1;
-        if(t=='Y'){
-            for(int i=0;i<ev->size();++i){
+        int n = 1;
+        if (t == 'Y')
+        {
+            cout << "You Participed in those group:- " << endl;
+            cout << "-------------------------------" << endl;
+            for (int i = 0; i < ev->size(); ++i)
+            {
                 auto person = data[ev[i]].find(uname);
-                if(person!=data[ev[i]].end()){
-                    cout<<n<<". "<<ev[i]<<endl;
+                if (person != data[ev[i]].end())
+                {
+                    cout << n << ". " << ev[i] << endl;
                     n++;
                 }
             }
+            cout << "-------------------------------" << endl;
         }
-        cout<<endl;
+        cout << endl;
     }
-    else{
-        cout<<"Press 1 to participate in any other event or 0 to leave : ";
+    else
+    {
+        cout << "Press 1 to participate in any other event or 0 to leave: ";
         int k;
-        cin>>k;
-        if(k==0){
+        cin >> k;
+        if (k == 0)
+        {
             return;
         }
-        else{
+        else
+        {
+            cout << endl;
             goto la4;
         }
     }
-
 }
 
 void mj_event(){
@@ -1251,7 +1286,4 @@ void mj_event(){
     A.time="19:00";
     A.venue="SAC Ground";
     data["Concours"]["Volleyball"]=A;
-
-
-
 }

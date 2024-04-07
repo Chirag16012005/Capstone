@@ -48,13 +48,14 @@ item:
     auto temp = load_data(file_name); // All the data from file gets loaded into the unordered map
 
     list = temp.first;
-
     na_id = temp.second;
-
     int b = 1;
     cout << "File Uploaded successfully..!!" << endl;
     unordered_map<string, unordered_multimap<int, Event>> data;
     data = ev_load();
+    unordered_map<string, unordered_map<string, Person>> par_detials;
+    string s = "participate.txt";
+    par_detials = par_load(s);
     while (b == 1)
     {
         std::cout << endl;
@@ -142,6 +143,12 @@ item:
             break;
         }
         case 9:
+        {
+            cout << endl;
+            ev_par(par_detials, data, s);
+            break;
+        }
+        case 10:
         {
             reload_data(list,file_name);
             return 0;
