@@ -4,12 +4,14 @@
 #include <fstream>
 #include "clubinfo.h"
 #include "addentry.h"
+#include "intoduction.h"
 using namespace std;
 
 int main()
 {
     std::cout << endl;
     std::cout << "======================================= Welcome to DA_IICT CLUB MANAGER =======================================" << endl;
+    intro();
     string file_name;
 
 item:
