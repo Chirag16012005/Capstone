@@ -1008,7 +1008,7 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
 {
     std::cout << endl;
     string temp, club;
-    std::cout << "What made you to leave this club: ";
+    std::cout <<BRIGHT_MAGENTA<< "What made you to leave this club: "<<RESET<<endl;
     std::getline(cin, temp);
     std::cin.ignore();
     long long id;
@@ -1025,7 +1025,16 @@ label:
     else
     {
         std::cout <<RED<< "You have entered wrong club name or id..!!" <<RESET<< endl;
-        goto label;
+        cout<<"Press 1 to re-enter or 0 to exit : ";
+        int k;
+        cin>>k;
+        cin.ignore();
+        if(k==1){
+            goto label;
+        }
+        else{
+            return;
+        }
     }
 }
 

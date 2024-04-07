@@ -59,9 +59,9 @@ void mem_club(unordered_map<string, unordered_map<long long, pair<string, pair<l
     {
         if (n == 0)
         {
-            std::cout << "================ " << club_name << " Club member detials ================" << endl;
-            std::cout << left << setw(20) << "Name" << setw(15) << "Student ID" << setw(15) << "Contact Number" << setw(20) << "Position" << endl;
-            std::cout << "-----------------------------------------------------------" << endl;
+            std::cout <<CYAN<< "================ "<< club_name << CYAN<< " Club member detials ================" <<RESET<< endl;
+            std::cout <<YELLOW<< left << setw(20) << "Name" << setw(15) << "Student ID" << setw(15) << "Contact Number" << setw(20) << "Position" <<RESET<< endl;
+            std::cout <<BRIGHT_GREEN<< "-----------------------------------------------------------" <<RESET<< endl;
             std::cout << setw(20) << dir.second.first << setw(15) << dir.first << setw(15) << dir.second.second.first << setw(20) << dir.second.second.second << endl;
             n++;
         }
@@ -73,7 +73,7 @@ void mem_club(unordered_map<string, unordered_map<long long, pair<string, pair<l
     }
     if (n == 0)
     {
-        std::cout << "There are no member in " << club_name << " ..!!" << endl;
+        std::cout <<LIGHT_YELLOW<< "There are no member in " << club_name << " ..!!" <<RESET<< endl;
     }
     std::cout << "------------//--------------//-------------//--------------" << endl;
     std::cout << endl
@@ -88,9 +88,9 @@ void get_all_mem(unordered_map<string, unordered_map<long long, pair<string, pai
     {
         if (!directory[club[i]].empty())
         {
-            std::cout << "=> " << club[i] << " Club :" << endl;
-            std::cout << left << setw(20) << "Name" << setw(15) << "Student ID" << setw(15) << "Contact Number" << setw(20) << "Position" << endl;
-            std::cout << "-----------------------------------------------------------" << endl;
+            std::cout <<YELLLOW<< "=> " << club[i] << " Club :" <<RESET<< endl;
+            std::cout <<BLUE<< left << setw(20) << "Name" << setw(15) << "Student ID" << setw(15) << "Contact Number" << setw(20) << "Position" <<RESET<< endl;
+            std::cout <<MAGENTA<< "-----------------------------------------------------------" <<RESET<< endl;
             n = 1;
             for (auto dir : directory[club[i]])
             {
@@ -116,8 +116,8 @@ void find_by_id(unordered_map<string, unordered_map<long long, pair<string, pair
             a++;
             if (a == 1)
             {
-                std::cout << "===============================Student Detials================================" << endl;
-                std::cout << left << setw(15) << "Student ID" << setw(20) << "Student Name" << setw(20) << "Contact Number" << setw(15) << "Joined Club" << setw(15) << "Position" << endl;
+                std::cout <<BOLD_BLUE<< "===============================Student Detials================================" <<RESET<< endl;
+                std::cout <<GREEN<< left << setw(15) << "Student ID" << setw(20) << "Student Name" << setw(20) << "Contact Number" << setw(15) << "Joined Club" << setw(15) << "Position" <<RESET<< endl;
                 std::cout << "------------------------------------------------------------------------------" << endl;
                 std::cout << setw(15) << person->first << setw(20) << person->second.first << setw(20) << person->second.second.first << setw(15) << club[i] << setw(15) << person->second.second.second << endl;
                 n++;
@@ -131,7 +131,7 @@ void find_by_id(unordered_map<string, unordered_map<long long, pair<string, pair
     }
     if (a == 0)
     {
-        std::cout << "Person not found..!!" << endl;
+        std::cout <<RED<< "Person not found..!!" <<RESET<< endl;
         return;
     }
     std::cout << "------//----------//----------//-----------//-----------//-----------//-------";
@@ -160,7 +160,7 @@ void find_by_contact(unordered_map<string, unordered_map<long long, pair<string,
     }
     if (count == 0)
     {
-        std::cout << "Person Not Found..!!" << endl;
+        std::cout <<RED<< "Person Not Found..!!" <<RESET<< endl;
         std::cout << endl;
     }
 }
@@ -174,7 +174,7 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
 
     if (count == 0)
     {
-        std::cout << "Person not found..!!" << endl;
+        std::cout <<RED<< "Person not found..!!" <<RESET<< endl;
         std::cout << endl;
         return;
     }
@@ -186,16 +186,16 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
     }
     else if (count == 2)
     {
-        std::cout << "Here we got more than one result..!!" << endl;
-        std::cout << "We want some additional information" << endl;
+        std::cout <<BRIGHT_YELLOW<< "Here we got more than one result..!!" <<RESET<< endl;
+        std::cout <<BRIGHT_YELLOW<< "We want some additional information" <<RESET<< endl;
         std::cout << endl;
 
     lable:
 
-        std::cout << "1. to show all results" << endl;
-        std::cout << "2. to find through id" << endl;
-        std::cout << "3. to find through contact number" << endl;
-        std::cout << "4. to find through club name" << endl;
+        std::cout <<BRIGHT_CYAN<< "1. to show all results" <<RESET<< endl;
+        std::cout <<BRIGHT_CYAN<< "2. to find through id" <<RESET<< endl;
+        std::cout <<BRIGHT_CYAN<< "3. to find through contact number" <<RESET<< endl;
+        std::cout <<BRIGHT_CYAN<< "4. to find through club name" <<RESET<< endl;
         std::cout << "Enter Choice: ";
         int a;
         cin >> a;
@@ -254,8 +254,8 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
             if (c == 0)
             {
                 std::cout << endl;
-                std::cout << "You provided wrong club name" << endl;
-                std::cout << "Please enter some other detail" << endl;
+                std::cout <<YELLOW<< "You provided wrong club name" <<RESET<< endl;
+                std::cout <<YELLOW<< "Please enter some other detail" <<RESET<< endl;
                 std::cout << endl;
                 goto lable;
             }
@@ -269,9 +269,9 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
                 std::cout << "We got more than one person with same name present in " << cl << " club " << endl;
                 std::cout << "We want some additional information" << endl;
                 std::cout << endl;
-                std::cout << "1. to show all result" << endl;
-                std::cout << "2. to give id" << endl;
-                std::cout << "3. to give contact number" << endl;
+                std::cout <<BRIGHT_GREEN<< "1. to show all result"<<RESET<< endl;
+                std::cout <<BRIGHT_GREEN<< "2. to give id" <<RESET<< endl;
+                std::cout <<BRIGHT_GREEN<< "3. to give contact number" <<RESET<< endl;
                 std::cout << "Enter choice: ";
                 int g;
                 cin >> g;
@@ -309,9 +309,9 @@ void find_by_name(unordered_map<string, unordered_map<long long, pair<string, pa
 void search(unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory ,unordered_multimap<string,long long> &na_id)
 {
     std::cout << endl;
-    std::cout << "1. to search by id" << endl;
-    std::cout << "2. to search by name" << endl;
-    std::cout << "3. to search by contact number" << endl;
+    std::cout <<MAGENTA<< "1. to search by id" <<RESET<< endl;
+    std::cout <<MAGENTA<< "2. to search by name" <<RESET<< endl;
+    std::cout <<MAGENTA<< "3. to search by contact number" <<RESET<< endl;
     std::cout << "Enter choice: ";
     int a;
     cin >> a;
@@ -350,14 +350,15 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
 {
     std::cout << endl;
     string temp, club;
-    std::cout << "What made you to leave this club: ";
+    std::cout <<BRIGHT_MAGENTA<< "What made you to leave this club: "<<RESET<<endl;
     std::getline(cin, temp);
+    std::cin.ignore();
     long long id;
 label:
     std::cout << endl;
     std::cout << "Please enter your id: ";
     cin >> id;
-    cout << "Please enter Your club name: ";
+    cout << "Please enter Your name: ";
     cin >> club;
     if (directory[club].find(id) != directory[club].end())
     {
@@ -365,7 +366,7 @@ label:
     }
     else
     {
-        std::cout << "You have entered wrong club name or id..!!" << endl;
+        std::cout <<RED<< "You have entered wrong club name or id..!!" <<RESET<< endl;
         cout<<"Press 1 to re-enter or 0 to exit : ";
         int k;
         cin>>k;
