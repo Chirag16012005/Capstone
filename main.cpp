@@ -50,6 +50,8 @@ item:
 
     int b = 1;
     cout << "File Uploaded successfully..!!" << endl;
+    unordered_map<string, unordered_multimap<int, Event>> data;
+    data = ev_load();
     while (b == 1)
     {
         std::cout << endl;
@@ -126,8 +128,26 @@ item:
         }
         case 7:
         {
+            cout << endl;
+            event(data);
+            break;
+        }
+        case 8:
+        {
+            cout << endl;
+            edit_ev(data, list);
+            break;
+        }
+        case 9:
+        {
             reload_data(list,file_name);
             return 0;
+        }
+        default:
+        {
+            cout << endl;
+            std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+            break;
         }
         }
     }

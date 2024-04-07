@@ -496,84 +496,95 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     }
     }
 }
-
-
 void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> &directory)
 {
-    std::cout << "Enter your id" << endl;
+    std::cout << "Enter your id: ";
     long long id;
     string cl;
     cin >> id;
-    std::cout << "Enter the name of the club name whose event you want to change" << endl;
+    std::cout << "Enter the name of the club name whose event you want to change: ";
     cin >> cl;
     cin.ignore();
-    int a = 0;
+    int b = 0;
 
     for (int i = 0; i < 28; ++i)
     {
-        auto person = directory[club[i]].find(id);
-        if (person != directory[club[i]].end())
+        auto person = directory[cl].find(id);
+        if (person != directory[cl].end())
         {
-            if (person->second.second.second == "Core" && club[i] == cl)
+            if (person->second.second.second == "Core")
             {
-                a = 1;
+                b = 1;
+                break;
             }
-            break;
         }
     }
 
-    if (a == 0)
+    if (b == 0)
     {
+        cout << endl;
         std::cout << "You are not a core member of " << cl << " club, so you can't edit its events" << endl;
     }
     else
     {
+        cout << endl;
+        int a = 0;
         std::cout << "You are a core member of " << cl << ", so you can make changes to its events" << endl;
-        std::cout << "Enter the name of the event you want to edit" << endl;
+        cout << endl;
+        cout << "Here all events which are held by " << cl << endl;
+        int i = 1;
+        for (auto eve : data[cl])
+        {
+            std::cout << left << setw(2) << i << ": " << eve.second.name << endl;
+            i++;
+        }
+        cout << endl;
+        std::cout << "Enter the name of the event you want to edit: ";
         string evna;
         getline(cin, evna);
-        cin.ignore();
         for (int i = 0; i < 28; ++i)
         {
-            for (auto &eve : data[club[i]])
+            for (auto &eve : data[cl])
             {
                 if (eve.second.name == evna)
                 {
                 label:
+                    cout << endl;
                     std::cout << "Enter the new details for the event " << evna << endl;
                     std::cout << "Which type of information you want to edit: " << endl
                               << "1.to Modify Date" << endl
                               << "2.to Modify Time" << endl
                               << "3.to Modify Venue" << endl
-                              << "4.to Modify date time Venue" << endl;
+                              << "4.to Modify date time Venue" << endl
+                              << "5.to exit" << endl;
                     std::cout << "Enter Choice: ";
                     int x;
                     cin >> x;
+                    cin.ignore();
                     switch (x)
                     {
                     case 1:
                     {
+                        cout << endl;
                         string newdata;
-                        std::cout << "Date: ";
+                        std::cout << "Date(dd/mm/yyyy): ";
                         getline(cin, newdata);
-                        cin.ignore();
                         for (int j = 0; j < 28; ++j)
                         {
                             for (auto &other_eve : data[club[j]])
                             {
-                                if (other_eve.second.name != evna &&
-                                    other_eve.second.date == eve.second.date &&
+                                if (other_eve.second.name != eve.second.name &&
+                                    other_eve.second.date == newdata &&
                                     other_eve.second.time == eve.second.time &&
                                     other_eve.second.venue == eve.second.venue)
                                 {
-                                    std::cout << "That Time or date other event be held" << endl;
+                                    std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
                                     cin >> choice;
                                     if (choice == 'y' || choice == 'Y')
                                     {
                                         goto label;
-                                        break;
                                     }
                                     else
                                     {
@@ -582,32 +593,39 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                 }
                             }
                         }
+                        if (newdata == eve.second.date)
+                        {
+                            cout << endl;
+                            cout << "Enter new date which is different from Previous date..!!";
+                            cout << endl;
+                            goto label;
+                        }
                         eve.second.date = newdata;
                         break;
                     }
                     case 2:
                     {
+                        cout << endl;
                         string newdata;
                         std::cout << "Time: ";
                         getline(cin, newdata);
-                        cin.ignore();
                         for (int j = 0; j < 28; ++j)
                         {
                             for (auto &other_eve : data[club[j]])
                             {
-                                if (other_eve.second.name != evna &&
+                                if (other_eve.second.name != eve.second.name &&
                                     other_eve.second.date == eve.second.date &&
-                                    other_eve.second.time == eve.second.time &&
+                                    other_eve.second.time == newdata &&
                                     other_eve.second.venue == eve.second.venue)
                                 {
-                                    std::cout << "That Time or date other event be held" << endl;
+                                    cout << endl;
+                                    std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
                                     cin >> choice;
                                     if (choice == 'y' || choice == 'Y')
                                     {
                                         goto label;
-                                        break;
                                     }
                                     else
                                     {
@@ -615,6 +633,13 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                     }
                                 }
                             }
+                        }
+                        if (newdata == eve.second.time)
+                        {
+                            cout << endl;
+                            cout << "Enter new time which is different from Previous time..!!";
+                            cout << endl;
+                            goto label;
                         }
                         eve.second.time = newdata;
                         break;
@@ -624,24 +649,24 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                         string newdata;
                         std::cout << "Venue: ";
                         getline(cin, newdata);
-                        cin.ignore();
                         for (int j = 0; j < 28; ++j)
                         {
                             for (auto &other_eve : data[club[j]])
                             {
-                                if (other_eve.second.name != evna &&
+                                cout << endl;
+                                if (other_eve.second.name != eve.second.name &&
                                     other_eve.second.date == eve.second.date &&
                                     other_eve.second.time == eve.second.time &&
-                                    other_eve.second.venue == eve.second.venue)
+                                    other_eve.second.venue == newdata)
                                 {
-                                    std::cout << "That Time or date other event be held" << endl;
+                                    cout << endl;
+                                    std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
                                     cin >> choice;
                                     if (choice == 'y' || choice == 'Y')
                                     {
                                         goto label;
-                                        break;
                                     }
                                     else
                                     {
@@ -649,41 +674,43 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                     }
                                 }
                             }
+                        }
+                        if (newdata == eve.second.venue)
+                        {
+                            cout << endl;
+                            cout << "Enter new venue which is different from Previous venue..!!";
+                            cout << endl;
+                            goto label;
                         }
                         eve.second.venue = newdata;
                         break;
                     }
                     case 4:
                     {
-                        string newdata1;
-                        std::cout << "Date: ";
+                        string newdata1, newdata2, newdata3;
+                        std::cout << "Date(dd/mm/yyyy): ";
                         getline(cin, newdata1);
-                        cin.ignore();
-                        string newdata2;
                         std::cout << "Time: ";
                         getline(cin, newdata2);
-                        cin.ignore();
-                        string newdata3;
                         std::cout << "Venue: ";
                         getline(cin, newdata3);
-                        cin.ignore();
                         for (int j = 0; j < 28; ++j)
                         {
                             for (auto &other_eve : data[club[j]])
                             {
-                                if (other_eve.second.name != evna &&
-                                    other_eve.second.date == eve.second.date &&
-                                    other_eve.second.time == eve.second.time &&
-                                    other_eve.second.venue == eve.second.venue)
+                                cout << endl;
+                                if (other_eve.second.name != eve.second.name &&
+                                    other_eve.second.date == newdata1 &&
+                                    other_eve.second.time == newdata2 &&
+                                    other_eve.second.venue == newdata3)
                                 {
-                                    std::cout << "That Time or date other event be held" << endl;
+                                    std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
                                     cin >> choice;
                                     if (choice == 'y' || choice == 'Y')
                                     {
                                         goto label;
-                                        break;
                                     }
                                     else
                                     {
@@ -692,10 +719,21 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                 }
                             }
                         }
+                        if (newdata1 == eve.second.date && newdata2 == eve.second.time && newdata3 == eve.second.venue)
+                        {
+                            cout << endl;
+                            cout << "Enter new data which is different from Previous date..!!";
+                            cout << endl;
+                            goto label;
+                        }
                         eve.second.date = newdata1;
                         eve.second.time = newdata2;
                         eve.second.venue = newdata3;
                         break;
+                    }
+                    case 5:
+                    {
+                        return;
                     }
                     }
                     std::cout << "Event " << evna << " has been updated" << endl;
@@ -708,6 +746,7 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
         }
         if (a == 0)
         {
+            cout << endl;
             std::cout << "Event " << evna << " not found" << endl;
         }
     }
