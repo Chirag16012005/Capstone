@@ -292,11 +292,11 @@ return data;
 
 void event(unordered_map<string, unordered_multimap<int, Event>> &data)
 {
-    std::cout << "1.to get info of any particular event" << endl;
-    std::cout << "2.to get info of all events of an club " << endl;
-    std::cout << "3.to get info of all events in a particular month " << endl;
-    std::cout << "4.to get info of all events of an club in a particular month " << endl;
-    std::cout << "5.if you don't know how many events conducted by clubs of daiict You will get info of all events" << endl;
+    std::cout <<BLUE<< "1.to get info of any particular event" <<RESET<< endl;
+    std::cout <<BLUE<< "2.to get info of all events of an club " <<RESET<< endl;
+    std::cout <<BLUE<< "3.to get info of all events in a particular month " <<RESET<< endl;
+    std::cout <<BLUE<< "4.to get info of all events of an club in a particular month " <<RESET<< endl;
+    std::cout <<BLUE<< "5.if you don't know how many events conducted by clubs of daiict You will get info of all events" <<RESET<< endl;
     std::cout << "Enter Choice: ";
     int n;
     std::cin >> n;
@@ -308,24 +308,24 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     it:
         cout << "Enter Event name: ";
         string evna;
-        std::getline(cin, evna);
+        std::getline(cin, evna)<< 
         int a = 0;
         for (int i = 0; i < 28; ++i)
         {
-            for (auto eve : data[club[i]])
+            for (auto eve : data[club[i]]<< 
             {
                 if (eve.second.name == evna)
                 {
                     std::cout << endl;
-                    std::cout << "------------------------------" << endl;
-                    std::cout << "Event Detials: " << endl;
-                    std::cout << "------------------------------" << endl;
-                    std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
-                    std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
-                    std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
-                    std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
-                    std::cout << left << setw(10) << "Venue" << ": " << eve.second.venue << endl;
-                    std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+                    std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+                    std::cout <<BOLD_GREEN<< "Event Detials: " <<RESET<< endl;
+                    std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << club[i] <<RESET<< endl;
+                    std::cout <<CYAN< left << setw(10) << "Name" << ": " << eve.second.name <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Date" << ": " << eve.second.date <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Time" << ": " << eve.second.time <<RESET<< endl;
+                    std::cout <<<CYAN< left << setw(10) << "Venue" << ": " << eve.second.venue <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << eve.second.rating <<RESET<< endl;
                     std::cout << "------------------------------" << endl;
                     std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
                     std::cout << "              " << eve.second.in2 << endl;
@@ -334,7 +334,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
                     std::cout << "              " << eve.second.rule2 << endl;
                     std::cout << "              " << eve.second.rule3 << endl;
                     std::cout << "------------------------------" << endl;
-                    std::cout << endl;
+                    std::cout << endl<< 
                     a = 1;
                     break;
                 }
@@ -359,9 +359,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     {
     it1:
         string cl;
-        std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
-        std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
-        std::cout << "and for DTG, type DAIICT_Theatre";
+        std::cout << "Enter the name of the club: ";
         std::getline(cin, cl);
         int a = 0;
         if(!data[cl].empty()){
@@ -369,16 +367,16 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         {
             if(a==0){
             std::cout << endl;
-            std::cout << "------------------------------" << endl;
-            std::cout << "Event Detials: " << endl;
+            std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+            std::cout <<BOLD_GREEN<< "Event Detials: " <<RESET<< endl;
             }
-            std::cout << "------------------------------" << endl;
-            std::cout << left << setw(10) << "Club Name" << ": " << cl << endl;
-            std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
-            std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
-            std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
-            std::cout << left << setw(10) << "Venue" << ": " << eve.second.venue << endl;
-            std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+            std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << cl <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Name" << ": " << eve.second.name <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Date" << ": " << eve.second.date <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Time" << ": " << eve.second.time <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Venue" << ": " << eve.second.venue <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << eve.second.rating <<RESET<< endl;
             std::cout << "------------------------------" << endl;
             std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
             std::cout << "              " << eve.second.in2 << endl;
@@ -388,7 +386,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         }}
         else
         {
-            std::cout << "You provided wrong club name or you may given the word club." << endl;
+            std::cout << "You provided wrong club name" << endl;
             std::cout << "Press 1 to enter name again or 0 to leave: ";
             int n;
             std::cin >> n;
@@ -416,16 +414,16 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
             {
                 if(a==0){
                 std::cout << endl;
-                std::cout << "------------------------------" << endl;
-                std::cout << "Event Details: " << endl;
+                std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+                std::cout <<BOLD_GREEN<< "Event Details: " <<RESET<< endl;
                 }
-                std::cout << "------------------------------" << endl;
-                std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
-                std::cout << left << setw(10) << "Name" << ": " << person->second.name << endl;
-                std::cout << left << setw(10) << "Date" << ": " << person->second.date << endl;
-                std::cout << left << setw(10) << "Time" << ": " << person->second.time << endl;
-                std::cout << left << setw(10) << "Venue" << ": " << person->second.venue << endl;
-                std::cout << left << setw(10) << "Rating" << ": " << person->second.rating << endl;
+                std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << club[i] <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Name" << ": " << person->second.name <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Date" << ": " << person->second.date <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Time" << ": " << person->second.time <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Venue" << ": " << person->second.venue <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << person->second.rating <<RESET<< endl;
                 std::cout << "------------------------------" << endl;
                 std::cout << left << setw(12) << "Information" << ": " << person->second.in1 << endl;
                 std::cout << "              " << person->second.in2 << endl;
@@ -436,7 +434,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         }
         if (a == 0)
         {
-            std::cout << "Sorry there is no event in this month" << endl;
+            std::cout <<RED<< "Sorry there is no event in this month" <<RESET<< endl;
             std::cout << "Press 1 to enter month again or 0 to leave: ";
             int n;
             std::cin >> n;
@@ -453,8 +451,8 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     it3:
         int mn;
         string cl;
-        std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
-        std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
+        std::cout << "Enter name of the club and month: ";
+         std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
         std::cout << "and for DTG, type DAIICT_Theatre and enter the month number afterwards.";
         std::getline(cin, cl);
         cin >> mn;
@@ -464,16 +462,16 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         {
             if(a==0){
             std::cout << endl;
-            std::cout << "------------------------------" << endl;
-            std::cout << "Event Details: " << endl;
+            std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+            std::cout <<BOLD_GREEN<< "Event Details: " <<RESET<< endl;
             }
-            std::cout << "------------------------------" << endl;
-            std::cout << left << setw(10) << "Club Name" << ": " << cl << endl;
-            std::cout << left << setw(10) << "Name" << ": " << person->second.name << endl;
-            std::cout << left << setw(10) << "Date" << ": " << person->second.date << endl;
-            std::cout << left << setw(10) << "Time" << ": " << person->second.time << endl;
-            std::cout << left << setw(10) << "Venue" << ": " << person->second.venue << endl;
-            std::cout << left << setw(10) << "Rating" << ": " << person->second.rating << endl;
+            std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << cl << endl;
+            std::cout <<CYAN<< left << setw(10) << "Name" << ": " << person->second.name <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Date" << ": " << person->second.date <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Time" << ": " << person->second.time <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Venue" << ": " << person->second.venue <<RESET<< endl;
+            std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << person->second.rating <<RESET<< endl;
             std::cout << "------------------------------" << endl;
             std::cout << left << setw(12) << "Information" << ": " << person->second.in1 << endl;
             std::cout << "              " << person->second.in2 << endl;
@@ -498,21 +496,21 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     case 5:
     {
         std::cout << "Here is detail of all events" << endl;
-        std::cout << "------------------------------" << endl;
-        std::cout << "Event Detials: " << endl;
+        std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+        std::cout <<BOLD_GREEN<< "Event Detials: " <<RESET<< endl;
         
         for (int i = 0; i < 28; ++i)
         {
             for (auto eve : data[club[i]])
             {
                 std::cout << endl;
-                std::cout << "------------------------------" << endl;
-                std::cout << left << setw(10) << "Club Name" << ": " << club[i] << endl;
-                std::cout << left << setw(10) << "Name" << ": " << eve.second.name << endl;
-                std::cout << left << setw(10) << "Date" << ": " << eve.second.date << endl;
-                std::cout << left << setw(10) << "Time" << ": " << eve.second.time << endl;
-                std::cout << left << setw(10) << "Venue" << ": " << eve.second.venue << endl;
-                std::cout << left << setw(10) << "Rating" << ": " << eve.second.rating << endl;
+                std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << club[i] <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Name" << ": " << eve.second.name <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Date" << ": " << eve.second.date <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Time" << ": " << eve.second.time <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Venue" << ": " << eve.second.venue <<RESET<< endl;
+                std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << eve.second.rating <<RESET<< endl;
                 std::cout << "------------------------------" << endl;
                 std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
                 std::cout << "              " << eve.second.in2 << endl;
@@ -534,7 +532,7 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
     long long id;
     string cl;
     cin >> id;
-    std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
+    std::cout << "Enter the name of the club name whose event you want to change: ";
     std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
     std::cout << "and for DTG, type DAIICT_Theatre";
     cin >> cl;
@@ -584,13 +582,13 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                 {
                 label:
                     cout << endl;
-                    std::cout << "Enter the new details for the event " << evna << endl;
-                    std::cout << "Which type of information you want to edit: " << endl
-                              << "1.to Modify Date" << endl
-                              << "2.to Modify Time" << endl
-                              << "3.to Modify Venue" << endl
-                              << "4.to Modify date time Venue" << endl
-                              << "5.to exit" << endl;
+                    std::cout <<BOLD_BLUE<< "Enter the new details for the event " << evna <<RESET<< endl;
+                    std::cout <<BOLD_BLUE<< "Which type of information you want to edit: " <<RESET<< endl
+                              <<BRIGHT_MAGENTA<< "1.to Modify Date" <<RESET<< endl
+                              <<BRIGHT_MAGENTA<< "2.to Modify Time" <<RESET<< endl
+                              <<BRIGHT_MAGENTA<< "3.to Modify Venue" <<RESET<< endl
+                              <<BRIGHT_MAGENTA<< "4.to Modify date time Venue" <<RESET<< endl
+                              <<BRIGHT_MAGENTA<< "5.to exit" <<RESET<< endl;
                     std::cout << "Enter Choice: ";
                     int x;
                     cin >> x;
@@ -730,6 +728,7 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                         {
                             for (auto &other_eve : data[club[j]])
                             {
+                                cout << endl;
                                 if (other_eve.second.name != eve.second.name &&
                                     other_eve.second.date == newdata1 &&
                                     other_eve.second.time == newdata2 &&
@@ -782,7 +781,6 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
         }
     }
 }
-
 unordered_map<string,unordered_map<string,Person>> par_load(string file_name){
 
     unordered_map<string,unordered_map<string,Person>> detail;
@@ -835,16 +833,15 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
         cout << setw(20) << "Now create your user name: ";
         cin >> uname;
 
-        for (const auto& event : data) {
+         for (const auto& event : data) {
             const auto& participants = event.second;
             auto person = participants.find(uname);
             if (person != participants.end()) {
-                cout << "This username already exists in event: " << event.first << endl;
-                cout << "Please enter a new username" << endl;
-                goto la;
+            cout <<RED<< "This username already exists in event: " << event.first <<RESET<< endl;
+            cout <<RED<< "Please enter a new username" <<RESET<< endl;
+            goto la;
             }
         }
-
     la1:
         cout << setw(20) << "Now create password: ";
         cin >> A.password;
@@ -854,12 +851,12 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
 
         if (tem != A.password)
         {
-            cout << "Both password are not matching, Please make your password again" << endl;
+            cout <<YELLOW<< "Both password are not matching!, Please make your password again" <<RESET<< endl;
             cout << endl;
             goto la1;
         }
 
-        cout << "You are registration completed sucessfully" << endl;
+        cout <<GREEN<< "You are registration completed sucessfully" <<RESET<< endl;
     }
     else
     {
@@ -890,7 +887,7 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
 
         if (a == 0)
         {
-            cout << "Incorrect user-name or password" << endl;
+            cout <<BRIGHT_RED<< "Incorrect user-name or password" <<RESET<< endl;
             int k;
             cout << "Press 1 to re-enter or 0 to exit: ";
             cin >> k;
@@ -905,7 +902,7 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
             }
         }
 
-        cout << "You are succesfully login" << endl;
+        cout <<GREEN<< "You are succesfully login" <<RESET<< endl;
     }
 
     Event B;
@@ -961,7 +958,7 @@ la4:
 
     if (t == 'Y')
     {
-        cout << "You registered succesfully for " << evname << endl;
+        cout <<GREEN<< "You registered succesfully for " << evname <<RESET<< endl;
 
         ofstream fout;
         fout.open(file_name, ios::app);
@@ -981,14 +978,14 @@ la4:
 
         if (t == 'Y')
         {
-            cout << "--------------------------------------------------" << endl;
-            cout << left << setw(20) << "Participate Name " << setw(20) << "Participate Username " << endl;
-            cout << "--------------------------------------------------" << endl;
+            cout <<BOLD_BLUE<< "--------------------------------------------------" <<RESET<< endl;
+            cout << left << setw(20) <<BRIGHT_CYAN<< "Participate Name " << setw(20) << "Participate Username " <<RESET<< endl;
+            cout <<BOLD_BLUE<< "--------------------------------------------------" <<RESET<< endl;
             for (auto person : data[evname])
             {
                 cout << left << setw(20) << person.first << setw(20) << person.second.name << endl;
             }
-            cout << "--------------------------------------------------" << endl;
+            cout <<BOLD_BLUE<< "--------------------------------------------------" <<RESET<< endl;
         }
 
         cout << "Do you want list of the events name in which you participate" << endl;
