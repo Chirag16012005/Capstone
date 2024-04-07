@@ -652,7 +652,6 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                     other_eve.second.time == newdata &&
                                     other_eve.second.venue == eve.second.venue)
                                 {
-                                    cout << endl;
                                     std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
@@ -693,7 +692,6 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                                     other_eve.second.time == eve.second.time &&
                                     other_eve.second.venue == newdata)
                                 {
-                                    cout << endl;
                                     std::cout << "Another event is already scheduled at that time or date" << endl;
                                     std::cout << "Do you want to retry with different details? (y/n): ";
                                     char choice;
@@ -732,7 +730,6 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
                         {
                             for (auto &other_eve : data[club[j]])
                             {
-                                cout << endl;
                                 if (other_eve.second.name != eve.second.name &&
                                     other_eve.second.date == newdata1 &&
                                     other_eve.second.time == newdata2 &&
