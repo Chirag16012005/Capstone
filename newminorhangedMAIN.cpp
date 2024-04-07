@@ -2434,15 +2434,12 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
         cout << setw(20) << "Now create your user name: ";
         cin >> uname;
 
-        for (int i = 0; i < ev->size(); ++i)
-        {
-            auto person = data[ev[i]].find(uname);
-            if (person != data[ev[i]].end())
-            {
-                cout << endl;
-                cout <<RED<< "This user name already exist" <<RESET<< endl;
-                cout <<RED<< "Please enter new username" <<RESET<< endl;
-                cout << endl;
+        for (const auto& event : data) {
+            const auto& participants = event.second;
+            auto person = participants.find(uname);
+            if (person != participants.end()) {
+                cout <<RED<< "This username already exists in event: " << event.first <<RESET<< endl;
+                cout <<RED<< "Please enter a new username" <<RESET<< endl;
                 goto la;
             }
         }
