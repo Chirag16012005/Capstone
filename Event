@@ -27,6 +27,26 @@ public:
 
 };
 
+class mj_Event{
+
+public:
+
+    int day;
+    string time;
+    string venue;
+    string info;
+};
+
+class Person{
+
+public:
+
+    string name;
+    string emid;
+    long long contact;
+    string password;
+};
+
 unordered_map<string, unordered_multimap<int,Event>> ev_load()
 {
 
@@ -756,4 +776,26 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
             std::cout << "Event " << evna << " not found" << endl;
         }
     }
+}
+
+void mj_event(){
+    cout<<"There is three major event conducted by clubs and committiees"<<endl;
+    cout<<"1.Synapse    2.iFest    3.Concours"<<endl;
+    
+    unordered_map<string,unordered_map<string,mj_Event>> data;
+
+    mj_Event A;
+    
+    A.day=3;
+    A.info="info";
+    A.time="time";
+    A.venue="venue";
+    data["Synapse"]["event name1"] = A;
+
+    A.day=3;
+    A.info="info";
+    A.time="time";
+    A.venue="venue";
+    data["Synapse"]["event name2"] = A;
+
 }
