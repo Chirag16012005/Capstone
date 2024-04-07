@@ -331,7 +331,9 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     {
     it1:
         string cl;
-        std::cout << "Enter the name of the club: ";
+        std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
+        std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
+        std::cout << "and for DTG, type DAIICT_Theatre";
         std::getline(cin, cl);
         int a = 0;
         if(!data[cl].empty()){
@@ -358,7 +360,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
         }}
         else
         {
-            std::cout << "You provided wrong club name" << endl;
+            std::cout << "You provided wrong club name or you may given the word club." << endl;
             std::cout << "Press 1 to enter name again or 0 to leave: ";
             int n;
             std::cin >> n;
@@ -423,7 +425,9 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     it3:
         int mn;
         string cl;
-        std::cout << "Enter name of the club and month: ";
+        std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
+        std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
+        std::cout << "and for DTG, type DAIICT_Theatre and enter the month number afterwards.";
         std::getline(cin, cl);
         cin >> mn;
         int a = 0;
@@ -502,7 +506,9 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
     long long id;
     string cl;
     cin >> id;
-    std::cout << "Enter the name of the club name whose event you want to change: ";
+    std::cout << "Enter the name of the club:(Please don't use the word 'club' instead just use the name with first letter as Capital) "<<endl;
+    std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
+    std::cout << "and for DTG, type DAIICT_Theatre";
     cin >> cl;
     cin.ignore();
     int b = 0;
