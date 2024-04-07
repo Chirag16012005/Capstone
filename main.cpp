@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "function.cpp"
+#include "functions.cpp"
 #include "Event.cpp"
 #include <fstream>
 #include "clubinfo.h"
