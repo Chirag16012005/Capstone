@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
-#include "functions.cpp"
+#include "function.cpp"
+#include "Event.cpp"
 #include <fstream>
 #include "clubinfo.h"
 #include "addentry.h"
-#include "intoduction.h"
+#include "introduction.h"
 using namespace std;
 
 #define RESET   "\033[0m"
@@ -69,7 +70,10 @@ item:
     }
 
     unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> list;
-    list = load_data(file_name); // All the data from file gets loaded into the unordered map
+    unordered_multimap<string,long long> na_id;
+    auto pe = load_data(file_name); // All the data from file gets loaded into the unordered map
+    list = pe.first;
+    na_id = pe.second;
     int b = 1;
     unordered_map<string, unordered_multimap<int, Event>> data;
     data = ev_load();
@@ -92,7 +96,7 @@ item:
          std::cout << BLUE << BOLD << "8. To get detials for Events" << RESET << endl;
          std::cout << BLUE << BOLD << "9. to edit event detials" << RESET << endl;
          std::cout << BLUE << BOLD << "10. to Participate any Event" << RESET << endl;
-         std::cout << BLUE << BOLD << "11.To get ditials of festivals" << RESET << endl;
+         std::cout << BLUE << BOLD << "11.To get details of festivals" << RESET << endl;
          std::cout << BLUE << BOLD << "12.to exit" << RESET << endl;
          std::cout << "Enter Choice: ";
         int menu;
@@ -107,7 +111,7 @@ item:
         case 2:
         {
             std::cout << endl;
-            std::cout <<BRIGHT_RED<< "Please enter the club name(You may type the name only and no need for the word CLUB, only for developer student club type DSClub): "<<RESET<<endl;
+            std::cout <<BRIGHT_RED<< "Please enter the club name(You may type the name only and no need for the word CLUB, only for developer student club type Developer_Student, type Headrush_Quizzing for headrush, DAIICT_Theatre for DTG): "<<RESET<<endl;
             string club;
             cin >> club;
             mem_club(list, club);
@@ -117,7 +121,7 @@ item:
 
         case 3:
         {
-            std::cout <<YELLOW<< "All the club member details are as follows: " <<<RESET< endl;
+            std::cout <<YELLOW<< "All the club member details are as follows: " <<RESET<< endl;
             get_all_mem(list);
             break;
         }
@@ -160,20 +164,13 @@ item:
         }
         case 7:
         {
-            cout << endl;
-            event(data);
+            del_entry(list);
             break;
         }
         case 8:
         {
             cout << endl;
-            edit_ev(data, list);
-            break;
-        }
-        case 9:
-        {
-            cout << endl;
-            ev_par(par_detials, data, s);
+            event(data);
             break;
         }
         case 9:

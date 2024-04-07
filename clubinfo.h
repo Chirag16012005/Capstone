@@ -1,5 +1,33 @@
 #include <iostream>
 using namespace std;
+
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define BOLD    "\033[1m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN    "\033[36m"
+#define WHITE   "\033[37m"
+#define BLACK       "\033[30m"
+#define BOLD_BLACK  "\033[1m\033[30m"
+#define BOLD_RED    "\033[1m\033[31m"
+#define BOLD_GREEN  "\033[1m\033[32m"
+#define BOLD_YELLOW "\033[1m\033[33m"
+#define BOLD_BLUE   "\033[1m\033[34m"
+#define BOLD_MAGENTA "\033[1m\033[35m"
+#define BOLD_CYAN   "\033[1m\033[36m"
+#define BOLD_WHITE  "\033[1m\033[37m"
+#define BRIGHT_BLACK        "\033[90m"
+#define BRIGHT_RED          "\033[91m"
+#define BRIGHT_GREEN        "\033[92m"
+#define BRIGHT_YELLOW       "\033[93m"
+#define BRIGHT_BLUE         "\033[94m"
+#define BRIGHT_MAGENTA      "\033[95m"
+#define BRIGHT_CYAN         "\033[96m"
+#define BRIGHT_WHITE        "\033[97m"
+
 void radioclub_info()
 {
     cout <<BLUE << "   ------------------" <<RESET<<endl;
@@ -76,7 +104,7 @@ void DSClub_info()
 }
 void Webkitclub_info()
 {
-    cout <<BLUE<< "    --------------------" <RESET< endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout <<GREEN<< "--> Webkit Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout << endl;
@@ -119,7 +147,7 @@ void musicclub_info()
 {
     cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout <<GREEN<< "--> Music Club detials: " <<RESET<< endl;
-    cout <<BLUE<< "    -------------------" <<<RESET< endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;
     cout << "       The Music Club of DA-IICT aims to develop an interest in students towards music and create a healthy music"
          << "atmosphere amongst the student community. To achieve this purpose, we organise various Acoustic Nite Lives for"
@@ -132,8 +160,8 @@ void musicclub_info()
 }
 void DAIICT_Theatreclub_info()
 {
-    cout <<<BLUE< "    ----------------------------" <<RESET<< endl;
-    cout <<<GREEN< "--> DAIICT_Theatre Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> DAIICT_Theatre Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    ----------------------------" <<RESET<< endl;
     cout << endl;
     cout << "       DAIICT Theatre Group, aka DTG, is a club that conducts and administers theatrics events of DAIICT. There are"
@@ -148,7 +176,7 @@ void researchclub_info()
 {
     cout <<BLUE<< "    ----------------------" <<RESET<< endl;
     cout <<GREEN<< "--> Research Club detials: " <<RESET<< endl;
-    cout <<BLUE<< "    ----------------------" <<<RESET< endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
     cout << endl;
     cout << "       DA-IICT boasts of being a research-oriented institute and the Research Club aims to work to foster a"
          << "community within the college for those interested in research. It works to help those interested in research,"
@@ -159,7 +187,7 @@ void researchclub_info()
 }
 void chessclub_info()
 {
-    cout <<BLUE<< "    -------------------" <<RESET<<>> endl;
+    cout <<BLUE<< "    -------------------" <<RESET<<endl;
     cout <<GREEN<< "--> Chess Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;
@@ -200,7 +228,7 @@ void khelaiyaclub_info()
 }
 void cubingclub_info()
 {
-    cout <<BLUE<< "    --------------------" <<<RESET< endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout <<GREEN<< "--> Cubing Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout << endl;
@@ -234,7 +262,7 @@ void excursionclub_info()
 void electronics_hobby_info()
 {
     cout <<BLUE<< "    -----------------" <<RESET<< endl;
-    cout <GREEN<< "--> EHC Club detials: " <<RESET<< endl;
+    cout <<GREEN<< "--> EHC Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    -----------------" <<RESET<< endl;
     cout << endl;
     cout << "       We, the EHC, as a group of enthusiastic electronics students aim to maintain and grow the culture of electronics "
@@ -249,7 +277,7 @@ void electronics_hobby_info()
 }
 void debateclub_info()
 {
-    cout <<BLUE<< "    -------------------" <<RESET<, endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout <<GREEN<< "--> Debat Club detials: " <<RESET<< endl;
     cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;

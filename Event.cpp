@@ -5,6 +5,34 @@
 
 using namespace std;
 
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define BOLD    "\033[1m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN    "\033[36m"
+#define WHITE   "\033[37m"
+#define BLACK       "\033[30m"
+#define BOLD_BLACK  "\033[1m\033[30m"
+#define BOLD_RED    "\033[1m\033[31m"
+#define BOLD_GREEN  "\033[1m\033[32m"
+#define BOLD_YELLOW "\033[1m\033[33m"
+#define BOLD_BLUE   "\033[1m\033[34m"
+#define BOLD_MAGENTA "\033[1m\033[35m"
+#define BOLD_CYAN   "\033[1m\033[36m"
+#define BOLD_WHITE  "\033[1m\033[37m"
+#define BRIGHT_BLACK        "\033[90m"
+#define BRIGHT_RED          "\033[91m"
+#define BRIGHT_GREEN        "\033[92m"
+#define BRIGHT_YELLOW       "\033[93m"
+#define BRIGHT_BLUE         "\033[94m"
+#define BRIGHT_MAGENTA      "\033[95m"
+#define BRIGHT_CYAN         "\033[96m"
+#define BRIGHT_WHITE        "\033[97m"
+
+
 string ev[]= {"Weekly Poetry Writing Challenge","Ink Chronicles","iPrompt","Prompt-A-Thon","Chess64","Rapid Chess Tournament",
 "RAAGA AND RHAPSODY","Festive Frames Photography Contest","Rolling Shutter(Videography)","Garba Night","Sheri Garba","Movie Scrrening","IPL Screening",
 "Comic Carnival: A Comic Making Challenge","Valentine's Poetry Contest","i.Papyrus","SYNOCUBIX","Mosaic Construction: Republic Day","SellOut",
@@ -13,9 +41,9 @@ string ev[]= {"Weekly Poetry Writing Challenge","Ink Chronicles","iPrompt","Prom
 "Rangoli Competition: Unleash Your Creativity!","i.Quiz","WALTZ","Public Speaking Workshop","DA-IICT MUN","EHC Session on Arduino",
 "Cyber Samvad","Krishna Leela Auditions","Rangmanch - The Drama Night","Museliversary"};
 
-string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
+/*string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
                  "Developer_Student", "WebKit", "Business", "BIS", "Debate", "Music", "Programming", "IEEE", "Heritage", "Headrush_Quizzing",
-                 "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};
+                 "Muse", "Press", "DAIICT_Theatre", "Film", "Khelaiya", "EHC", "PMMC", "CINS"};*/
 
 class Event
 {
@@ -308,11 +336,11 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
     it:
         cout << "Enter Event name: ";
         string evna;
-        std::getline(cin, evna)<< 
+        std::getline(cin, evna);
         int a = 0;
         for (int i = 0; i < 28; ++i)
         {
-            for (auto eve : data[club[i]]<< 
+            for (auto eve : data[club[i]])
             {
                 if (eve.second.name == evna)
                 {
@@ -321,10 +349,10 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
                     std::cout <<BOLD_GREEN<< "Event Detials: " <<RESET<< endl;
                     std::cout <<BOLD_BLUE<< "------------------------------" <<RESET<< endl;
                     std::cout <<CYAN<< left << setw(10) << "Club Name" << ": " << club[i] <<RESET<< endl;
-                    std::cout <<CYAN< left << setw(10) << "Name" << ": " << eve.second.name <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Name" << ": " << eve.second.name <<RESET<< endl;
                     std::cout <<CYAN<< left << setw(10) << "Date" << ": " << eve.second.date <<RESET<< endl;
                     std::cout <<CYAN<< left << setw(10) << "Time" << ": " << eve.second.time <<RESET<< endl;
-                    std::cout <<<CYAN< left << setw(10) << "Venue" << ": " << eve.second.venue <<RESET<< endl;
+                    std::cout <<CYAN<< left << setw(10) << "Venue" << ": " << eve.second.venue <<RESET<< endl;
                     std::cout <<CYAN<< left << setw(10) << "Rating" << ": " << eve.second.rating <<RESET<< endl;
                     std::cout << "------------------------------" << endl;
                     std::cout << left << setw(12) << "Information" << ": " << eve.second.in1 << endl;
@@ -334,7 +362,7 @@ void event(unordered_map<string, unordered_multimap<int, Event>> &data)
                     std::cout << "              " << eve.second.rule2 << endl;
                     std::cout << "              " << eve.second.rule3 << endl;
                     std::cout << "------------------------------" << endl;
-                    std::cout << endl<< 
+                    std::cout << endl;
                     a = 1;
                     break;
                 }
@@ -534,7 +562,7 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
     cin >> id;
     std::cout << "Enter the name of the club name whose event you want to change: ";
     std::cout << "If you want to know about Developer Student Club then type Developer_Student and for Headrush, type Headrush_Quizzing "<<endl;
-    std::cout << "and for DTG, type DAIICT_Theatre";
+    std::cout << "and for DTG, type DAIICT_Theatre"<<endl;
     cin >> cl;
     cin.ignore();
     int b = 0;
@@ -996,7 +1024,7 @@ la4:
         int n = 1;
         if (t == 'Y')
         {
-            cout << "You Participed in those group:- " << endl;
+            cout << "You Participed in these event:- " << endl;
             cout << "-------------------------------" << endl;
             for (int i = 0; i < ev->size(); ++i)
             {
@@ -1284,7 +1312,7 @@ void mj_event()
     A.venue = "SAC Ground";
     data["Concours"]["Volleyball"] = A;
 
-t10:
+it10:
     cout << endl;
     cout <<BRIGHT_BLUE<< "1.to Show all event" <<RESET<< endl;
     cout <<BRIGHT_BLUE<< "2.to Show Particular event" <<RESET<< endl;
@@ -1452,7 +1480,7 @@ t10:
                 cout <<BRIGHT_YELLOW<< left << setw(13) << "Day" << ": " << ev.day <<RESET<< endl;
                 cout <<BRIGHT_YELLOW<< left << setw(13) << "Time" << ": " << ev.time <<RESET<< endl;
                 cout <<BRIGHT_YELLOW<< left << setw(13) << "Venue" << ": " << ev.venue <<RESET<< endl;
-                cout <<BRIGHT_YELLOW<< left << setw(13) << "Information" << ": " << ev.info <<rRESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Information" << ": " << ev.info <<RESET<< endl;
                 cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             else
@@ -1464,7 +1492,7 @@ t10:
         }
         default:
         {
-            cout <<RED<< "You enter invalid input..!!" <<REST<< endl;
+            cout <<RED<< "You enter invalid input..!!" <<RESET<< endl;
             break;
         }
         }

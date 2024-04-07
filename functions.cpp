@@ -6,6 +6,34 @@
 #include <vector>
 using namespace std;
 
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define BOLD    "\033[1m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN    "\033[36m"
+#define WHITE   "\033[37m"
+#define BLACK       "\033[30m"
+#define BOLD_BLACK  "\033[1m\033[30m"
+#define BOLD_RED    "\033[1m\033[31m"
+#define BOLD_GREEN  "\033[1m\033[32m"
+#define BOLD_YELLOW "\033[1m\033[33m"
+#define BOLD_BLUE   "\033[1m\033[34m"
+#define BOLD_MAGENTA "\033[1m\033[35m"
+#define BOLD_CYAN   "\033[1m\033[36m"
+#define BOLD_WHITE  "\033[1m\033[37m"
+#define BRIGHT_BLACK        "\033[90m"
+#define BRIGHT_RED          "\033[91m"
+#define BRIGHT_GREEN        "\033[92m"
+#define BRIGHT_YELLOW       "\033[93m"
+#define BRIGHT_BLUE         "\033[94m"
+#define BRIGHT_MAGENTA      "\033[95m"
+#define BRIGHT_CYAN         "\033[96m"
+#define BRIGHT_WHITE        "\033[97m"
+
+
 // Assumption : file is prechecked. file exist or not
 
 string club[] = {"AI", "Dance", "Research", "Chess", "Cubing", "Excursion", "Microsoft", "Radio", "DCEI", "Sambhav",
@@ -73,7 +101,7 @@ void mem_club(unordered_map<string, unordered_map<long long, pair<string, pair<l
     }
     if (n == 0)
     {
-        std::cout <<LIGHT_YELLOW<< "There are no member in " << club_name << " ..!!" <<RESET<< endl;
+        std::cout <<BRIGHT_YELLOW<< "There are no member in " << club_name << " ..!!" <<RESET<< endl;
     }
     std::cout << "------------//--------------//-------------//--------------" << endl;
     std::cout << endl
@@ -88,7 +116,7 @@ void get_all_mem(unordered_map<string, unordered_map<long long, pair<string, pai
     {
         if (!directory[club[i]].empty())
         {
-            std::cout <<YELLLOW<< "=> " << club[i] << " Club :" <<RESET<< endl;
+            std::cout <<YELLOW<< "=> " << club[i] << " Club :" <<RESET<< endl;
             std::cout <<BLUE<< left << setw(20) << "Name" << setw(15) << "Student ID" << setw(15) << "Contact Number" << setw(20) << "Position" <<RESET<< endl;
             std::cout <<MAGENTA<< "-----------------------------------------------------------" <<RESET<< endl;
             n = 1;
@@ -351,18 +379,19 @@ void del_entry(unordered_map<string, unordered_map<long long, pair<string, pair<
     std::cout << endl;
     string temp, club;
     std::cout <<BRIGHT_MAGENTA<< "What made you to leave this club: "<<RESET<<endl;
+    cin.ignore();
     std::getline(cin, temp);
-    std::cin.ignore();
     long long id;
 label:
     std::cout << endl;
     std::cout << "Please enter your id: ";
     cin >> id;
-    cout << "Please enter Your name: ";
+    cout << "Please enter Your club name: ";
     cin >> club;
     if (directory[club].find(id) != directory[club].end())
     {
         directory[club].erase(id);
+        std::cout<<"You left this club successfully"<<endl;
     }
     else
     {
