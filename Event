@@ -835,15 +835,12 @@ void ev_par(unordered_map<string, unordered_map<string, Person>> &data, unordere
         cout << setw(20) << "Now create your user name: ";
         cin >> uname;
 
-        for (int i = 0; i < ev->size(); ++i)
-        {
-            auto person = data[ev[i]].find(uname);
-            if (person != data[ev[i]].end())
-            {
-                cout << endl;
-                cout << "This user name already exist" << endl;
-                cout << "Please enter new username" << endl;
-                cout << endl;
+        for (const auto& event : data) {
+            const auto& participants = event.second;
+            auto person = participants.find(uname);
+            if (person != participants.end()) {
+                cout << "This username already exists in event: " << event.first << endl;
+                cout << "Please enter a new username" << endl;
                 goto la;
             }
         }
