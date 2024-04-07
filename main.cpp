@@ -15,7 +15,10 @@ int main()
     string file_name;
 
 item:
-    std::cout << endl;
+    std::cout << endl << endl;
+    std::cout << "There are some of the guidelines before entering into the DAIICT Club Manager"<<endl
+    <<"1. Please never enter the word 'club' while giving club name as input. Only write club name with starting letter as capital."<<endl;
+    <<"2. While entering the name, please follow the format of 'First_name Last_name'."<<endl<<endl;
     std::cout << "Enter the file name from which data will be loaded into the programme. (Use the extension .txt also): ";
     cin >> file_name;
     ifstream fin;
