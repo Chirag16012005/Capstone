@@ -69,16 +69,14 @@ item:
     }
 
     unordered_map<string, unordered_map<long long, pair<string, pair<long long, string>>>> list;
-    unordered_multimap<string,long long> na_id;
-
-    auto temp = load_data(file_name); // All the data from file gets loaded into the unordered map
-
-    list = temp.first;
-
-    na_id = temp.second;
-
+    list = load_data(file_name); // All the data from file gets loaded into the unordered map
     int b = 1;
-    cout <<GREEN<< "File Uploaded successfully..!!" <<RESET<< endl;
+    unordered_map<string, unordered_multimap<int, Event>> data;
+    data = ev_load();
+    unordered_map<string, unordered_map<string, Person>> par_detials;
+    string s = "participate.txt";
+    par_detials = par_load(s);
+    cout << "File Uploaded successfully..!!" << endl;
     while (b == 1)
     {
          std::cout << endl;

@@ -1284,11 +1284,11 @@ void mj_event()
     A.venue = "SAC Ground";
     data["Concours"]["Volleyball"] = A;
 
-it10:
+t10:
     cout << endl;
-    cout << "1.to Show all event" << endl;
-    cout << "2.to Show Particular event" << endl;
-    cout << "3.to exit" << endl;
+    cout <<BRIGHT_BLUE<< "1.to Show all event" <<RESET<< endl;
+    cout <<BRIGHT_BLUE<< "2.to Show Particular event" <<RESET<< endl;
+    cout <<BRIGHT_BLUE<< "3.to exit" <<RESET<< endl;
     cout << "Enter Choice: ";
     int x;
     cin >> x;
@@ -1297,9 +1297,9 @@ it10:
     case 1:
     {
         cout << endl;
-        cout << "1.to show all event of Synaps: " << endl;
-        cout << "2.to show all event of ifest: " << endl;
-        cout << "3.to show all event of councers: " << endl;
+        cout <<BRIGHT_BLUE<< "1.to show all event of Synaps: " <<RESET<< endl;
+        cout <<BRIGHT_BLUE<< "2.to show all event of ifest: " <<RESET<< endl;
+        cout <<BRIGHT_BLUE<< "3.to show all event of councers: " <<RESET<< endl;
         cout << "Enter Choice: ";
         int y;
         cin >> y;
@@ -1308,60 +1308,60 @@ it10:
         case 1:
         {
             cout << endl;
-            cout << "-------------------" << endl;
-            cout << "Synapse all events: " << endl;
-            cout << "-------------------" << endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
+            cout <<BRIGHT_GREEN<< "Synapse all events: " <<RESET<< endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
             cout << endl;
             for (auto ev : data["Synapse"])
             {
-                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
-                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
-                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
-                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
-                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Event Name" << ": " << ev.first <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Day" << ": " << ev.second.day <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Time" << ": " << ev.second.time <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Venue" << ": " << ev.second.venue <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Information" << ": " << ev.second.info <<RESET<< endl;
+                cout <<YELLOW<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             goto it10;
         }
         case 2:
         {
             cout << endl;
-            cout << "-------------------" << endl;
-            cout << "ifest all events: " << endl;
-            cout << "-------------------" << endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
+            cout <<BRIGHT_GREEN<< "ifest all events: " <<RESET<< endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
             cout << endl;
             for (auto ev : data["ifest"])
             {
-                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
-                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
-                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
-                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
-                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Event Name" << ": " << ev.first <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Day" << ": " << ev.second.day <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Time" << ": " << ev.second.time <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Venue" << ": " << ev.second.venue <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Information" << ": " << ev.second.info <<RESET<< endl;
+                cout <<YELLOW<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             goto it10;
         }
         case 3:
         {
             cout << endl;
-            cout << "-------------------" << endl;
-            cout << "Concours all events: " << endl;
-            cout << "-------------------" << endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
+            cout <<BRIGHT_GREEN<< "Concours all events: " <<RESET<< endl;
+            cout <<BLUE<< "-------------------" <<RESET<< endl;
             cout << endl;
             for (auto ev : data["Concours"])
             {
-                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
-                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
-                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
-                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
-                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Event Name" << ": " << ev.first <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Day" << ": " << ev.second.day <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Time" << ": " << ev.second.time <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Venue" << ": " << ev.second.venue <<RESET<< endl;
+                cout <<BRIGHT_MAGENTA<< left << setw(12) << "Information" << ": " << ev.second.info <<RESET<< endl;
+                cout <<YELLOW<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             goto it10;
         }
         default:
         {
-            cout << "You enter invalid input..!!" << endl;
+            cout <<RED<< "You enter invalid input..!!" <<RESET<<endl;
             goto it10;
         }
         }
@@ -1370,9 +1370,9 @@ it10:
     case 2:
     {
         cout << endl;
-        cout << "1.to show particular event of Synaps: " << endl;
-        cout << "2.to show particular event of ifest: " << endl;
-        cout << "3.to show particular event of councers: " << endl;
+        cout <<BRIGHT_CYAN<< "1.to show particular event of Synaps: " <<RESET<< endl;
+        cout <<BRIGHT_CYAN<< "2.to show particular event of ifest: " <<RESET<< endl;
+        cout <<BRIGHT_CYAN<< "3.to show particular event of councers: " <<RESET<< endl;
         cout << "Enter Choice: ";
         int y;
         cin >> y;
@@ -1389,19 +1389,19 @@ it10:
             {
                 cout << endl;
                 auto ev = data["Synapse"][event_name];
-                cout << "Event Detials:" << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-                cout << left << setw(12) << "event held by: Synapse" << endl;
-                cout << left << setw(13) << "Event Name" << ": " << event_name << endl;
-                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
-                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
-                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
-                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<YELLOW<< "Event Detials:" <<RESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(12) << "event held by: Synapse" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Event Name" << ": " << event_name <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Day" << ": " << ev.day <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Time" << ": " << ev.time <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Venue" << ": " << ev.venue <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Information" << ": " << ev.info <<RESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             else
             {
-                cout << "Event not found." << endl;
+                cout <<RED<< "Event not found." <<RESET<< endl;
                 cout << endl;
             }
             goto it10;
@@ -1417,15 +1417,15 @@ it10:
             {
                 cout << endl;
                 auto ev = data["I-FEST"][event_name];
-                cout << "Event Detials:" << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-                cout << left << setw(12) << "event held by: I-FEST" << endl;
-                cout << left << setw(13) << "Event Name" << ": " << event_name << endl;
-                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
-                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
-                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
-                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<YELLOW<<"Event Detials:" <<RESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(12) << "event held by: I-FEST" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Event Name" << ": " << event_name <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Day" << ": " << ev.day <<RESET<<endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Time" << ": " << ev.time <<RESET<<endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Venue" << ": " << ev.venue <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<<left << setw(13) << "Information" << ": " << ev.info <<RESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             else
             {
@@ -1445,26 +1445,26 @@ it10:
             {
                 cout << endl;
                 auto ev = data["Concours"][event_name];
-                cout << "Event Detials:" << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
-                cout << left << setw(12) << "event held by: Concours" << endl;
-                cout << left << setw(13) << "Game Name" << ": " << event_name << endl;
-                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
-                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
-                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
-                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
-                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout <<YELLOW<< "Event Detials:" <<RESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(12) << "event held by: Concours" <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Game Name" << ": " << event_name <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Day" << ": " << ev.day <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Time" << ": " << ev.time <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Venue" << ": " << ev.venue <<RESET<< endl;
+                cout <<BRIGHT_YELLOW<< left << setw(13) << "Information" << ": " << ev.info <<rRESET<< endl;
+                cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
             }
             else
             {
-                cout << "Event not found." << endl;
+                cout <<RED<< "Event not found." <<RESET<< endl;
                 cout << endl;
             }
             goto it10;
         }
         default:
         {
-            cout << "You enter invalid input..!!" << endl;
+            cout <<RED<< "You enter invalid input..!!" <<REST<< endl;
             break;
         }
         }
