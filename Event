@@ -1037,253 +1037,451 @@ la4:
     }
 }
 
-void mj_event(){
-    cout<<"There is three major event conducted by clubs and committiees"<<endl;
-    cout<<"1.Synapse    2.iFest    3.Concours"<<endl;
+void mj_event()
+{
+    cout << "There is three major event conducted by clubs and committiees" << endl;
+    cout << "1.Synapse    2.iFest    3.Concours" << endl;
+    cout << endl;
+    cout << "-------------" << endl;
+    cout << "SYNAPSE:-" << endl;
+    cout << "-------------" << endl;
+    cout << "Synapse is DAIICT's annual college fest, unites global artists and creative minds to showcase unique collages, share"
+         << "creative processes, and transforms into a vibrant night of live music, DJ performances, and dance parties, fostering creative"
+         << "connections and celebrating artistic expression." << endl;
+    cout << "It is spread across 4 days, from 22 Feb to 25 Feb." << endl;
 
-    cout<<"Synapse is DAIICT's annual college fest, unites global artists and creative minds to showcase unique collages, share" 
-    <<"creative processes, and transforms into a vibrant night of live music, DJ performances, and dance parties, fostering creative" 
-    <<"connections and celebrating artistic expression."<<endl;
-    cout<<"It is spread across 4 days, from 22 Feb to 25 Feb."<<endl;
+    cout << endl;
+    cout << "-------------" << endl;
+    cout << "I FEST:-" << endl;
+    cout << "-------------" << endl;
+    cout << "iFest is one of the most anticipated and acknowledged technical fest all over Gujarat. It is lauded for its"
+         << "versatile and wide ranging technical, social and non-technical events" << endl
+         << " The event spans across 3 days from November 3 to November 5" << endl;
 
-    cout<<"iFest is one of the most anticipated and acknowledged technical fest all over Gujarat. It is lauded for its"
-    <<"versatile and wide ranging technical, social and non-technical events."<<endl
-    <<" The event spans across 3 days from November 3 to November 5"<<endl;
+    cout << endl;
+    cout << "-------------" << endl;
+    cout << "CONCOURS:-" << endl;
+    cout << "-------------" << endl;
+    cout << "Concours is the annual national sports fest. Concours facilitates a healthy competition among the students in nine different sports"
+         << "The central idea the fest is to ingrain vigour and honour in the students" << endl;
+    cout << "It spans across 4 days from 26 October to 29 October." << endl;
+    cout << endl;
 
-    cout<<"Concours is the annual national sports fest. Concours facilitates a healthy competition among the students in nine different sports"
-    <<"The central idea the fest is to ingrain vigour and honour in the students"<<endl;
-    cout<<"It spans across 4 days from 26 October to 29 October."<<endl;
-
-    unordered_map<string,unordered_map<string,mj_Event>> data;
+    unordered_map<string, unordered_map<string, mj_Event>> data;
 
     mj_Event A;
-    
-    A.day=1;
-    A.info="Stage Play is a part of Theatric events. Immerse yourself in the world of stage plays. A theatrical experience"
-    <<"that brings stories to life on a captivating stage";
-    A.time="22:00 to 01:00";
-    A.venue="OAT";
+
+    A.day = 1;
+    A.info = "Stage Play is a part of Theatric events. Immerse yourself in the world of stage plays. A theatrical experience that brings stories to life on a captivating stage";
+    A.time = "22:00 to 01:00";
+    A.venue = "OAT";
     data["Synapse"]["Stage Play"] = A;
 
-    A.day=1;
-    A.info="Stand Up will feature two great artists: Nishant Suri and Gurleen Pannu. The performances will be a mixture of clever"
-    <<"storytellying, witty one liner and spontaneous interactions which will be memorable.";
-    A.time="20:00 to 21:30";
-    A.venue="OAT";
+    A.day = 1;
+    A.info = "Stand Up will feature two great artists: Nishant Suri and Gurleen Pannu. The performances will be a mixture of clever storytellying, witty one liner and spontaneous interactions which will be memorable.";
+    A.time = "20:00 to 21:30";
+    A.venue = "OAT";
     data["Synapse"]["Stand Up"] = A;
 
-    A.day=1;
-    A.info="Rampage is a fashion show. Immerse yourself in the world of style at our Fashion Expo. Explore the latest trends,"
-    <<"designs, and glamorous runway showcases.";
-    A.time="01:30 to 03:00";
-    A.venue="OAT";
-    data["Synapse"]["Rampage"]=A;
+    A.day = 1;
+    A.info = "Rampage is a fashion show. Immerse yourself in the world of style at our Fashion Expo. Explore the latest trends, designs, and glamorous runway showcases.";
+    A.time = "01:30 to 03:00";
+    A.venue = "OAT";
+    data["Synapse"]["Rampage"] = A;
 
-    A.day=2;
-    A.info="MonoActe is a Theatric event. Witness the power of a single performer in MonoAct. A solo act that weaves a" 
-    <<"compelling narrative and showcases the versatility of a lone artist.";
-    A.time="09:00 to 12:00";
-    A.venue="LT2";
-    data["Synapse"]["MonoActe"]=A;
+    A.day = 2;
+    A.info = "MonoActe is a Theatric event. Witness the power of a single performer in MonoAct. A solo act that weaves compelling narrative and showcases the versatility of a lone artist.";
+    A.time = "09:00 to 12:00";
+    A.venue = "LT2";
+    data["Synapse"]["MonoActe"] = A;
 
-    A.day=2;
-    A.info="Showdown is a dance event. Get ready to groove at our Hip-Hop Jam! A celebration of urban dance culture with beats" 
-    <<"that will make you move.";
-    A.time="09:00 to 15:00";
-    A.venue="CEP Foyer";
-    data["Synapse"]["Showdown"]=A;
+    A.day = 2;
+    A.info = "Showdown is a dance event. Get ready to groove at our Hip-Hop Jam! A celebration of urban dance culture with beats that will make you move.";
+    A.time = "09:00 to 15:00";
+    A.venue = "CEP Foyer";
+    data["Synapse"]["Showdown"] = A;
 
-    A.day=2;
-    A.info="Tech Hunt is a technical event. Embark on a coding adventure where solving challenges unlocks the next code quest.";
-    A.time="10:00 to 13:00";
-    A.venue="Lab";
-    data["Synapse"]["Tech Hunt"]=A;
+    A.day = 2;
+    A.info = "Tech Hunt is a technical event. Embark on a coding adventure where solving challenges unlocks the next code quest.";
+    A.time = "10:00 to 13:00";
+    A.venue = "Lab";
+    data["Synapse"]["Tech Hunt"] = A;
 
-    A.day=3;
-    A.info="Code Mutants ia Tech event  to show off your programming skills, and solve as many problems as you can.";
-    A.time="10:00 to 14:00";
-    A.venue="LT2";
-    data["Synapse"]["Code Mutants"]=A;
+    A.day = 3;
+    A.info = "Code Mutants ia Tech event  to show off your programming skills, and solve as many problems as you can.";
+    A.time = "10:00 to 14:00";
+    A.venue = "LT2";
+    data["Synapse"]["Code Mutants"] = A;
 
-    A.day=3;
-    A.info="Hunger Hikes is a fun event. A treasure hunt, but full of food. Showcase your knowledge about food";
-    A.time="11:00 to 17:00";
-    A.venue="Canteen";
-    data["Synapse"]["Canteen"]=A;
+    A.day = 3;
+    A.info = "Hunger Hikes is a fun event. A treasure hunt, but full of food. Showcase your knowledge about food";
+    A.time = "11:00 to 17:00";
+    A.venue = "Canteen";
+    data["Synapse"]["Canteen"] = A;
 
-    A.day=3;
-    A.info="Concert by Antara Mitra will be magical. Get ready to feel the beat, the rhythm, and the soul of the music. ";
-    A.time="20:00 to 23:00";
-    A.venue="SAC";
-    data["Synapse"]["Concert"]=A;
+    A.day = 3;
+    A.info = "Concert by Antara Mitra will be magical. Get ready to feel the beat, the rhythm, and the soul of the music. ";
+    A.time = "20:00 to 23:00";
+    A.venue = "SAC";
+    data["Synapse"]["Concert"] = A;
 
-    A.day=4;
-    A.info="Rap Battle,Use your frustration, thoughts, and feelings as a weapon and lay it out through a rap battle challenge";
-    A.time="13:00 to 16:00";
-    A.venue="Canteen";
-    data["Synapse"]["Rap Battle"]=A;
+    A.day = 4;
+    A.info = "Rap Battle,Use your frustration, thoughts, and feelings as a weapon and lay it out through a rap battle challenge";
+    A.time = "13:00 to 16:00";
+    A.venue = "Canteen";
+    data["Synapse"]["Rap Battle"] = A;
 
-    A.day=4;
-    A.info="Naach, Hold your breath as dancers showcase the richness of our pristine heritage, pay homepage to time-honored traditions";
-    A.time="15:00 to 18:00";
-    A.venue="OAT";
-    data["Synapse"]["Naach"]=A;
+    A.day = 4;
+    A.info = "Naach, Hold your breath as dancers showcase the richness of our pristine heritage, pay homepage to time-honored traditions";
+    A.time = "15:00 to 18:00";
+    A.venue = "OAT";
+    data["Synapse"]["Naach"] = A;
 
-    A.day=4;
-    A.info="Concert by Multi award winner, Amit Trivedi, Get ready to feel the beat, the rhythm, and the soul of the music.";
-    A.time="20:00 to 23:00";
-    A.venue="SAC";
-    data["Synapse"]["Concert"]=A;
+    A.day = 4;
+    A.info = "Concert by Multi award winner, Amit Trivedi, Get ready to feel the beat, the rhythm, and the soul of the music.";
+    A.time = "20:00 to 23:00";
+    A.venue = "SAC";
+    data["Synapse"]["Concert"] = A;
 
-    A.day=1;
-    A.info="iGanith is for math geeks who love playing with numbers at their fingertips, this is a chance to bring up your handy math skills.";
-    A.time="14:00 to 16:00";
-    A.venue="Lab";
-    data["ifest"]["iGanith"]=A;
+    A.day = 1;
+    A.info = "iGanith is for math geeks who love playing with numbers at their fingertips, this is a chance to bring up your handy math skills.";
+    A.time = "14:00 to 16:00";
+    A.venue = "Lab";
+    data["ifest"]["iGanith"] = A;
 
-    A.day=1;
-    A.info="iPapyrus,Present your innovative and mind-boggling research work at this event if you love ocean information.";
-    A.time="17:00 to 19:00";
-    A.venue="CEP-110";
-    data["ifest"]["iPapyrus"]=A;
+    A.day = 1;
+    A.info = "iPapyrus,Present your innovative and mind-boggling research work at this event if you love ocean information.";
+    A.time = "17:00 to 19:00";
+    A.venue = "CEP-110";
+    data["ifest"]["iPapyrus"] = A;
 
-    A.day=1;
-    A.info="iQuiz, Satiate your appetite for quizzes with i.Quiz, a tech-based quiz featuring staggering questions";
-    A.time="19:00 to 20:30";
-    A.venue="Lab";
-    data["ifest"]["iQuiz"]=A;
+    A.day = 1;
+    A.info = "iQuiz, Satiate your appetite for quizzes with i.Quiz, a tech-based quiz featuring staggering questions";
+    A.time = "19:00 to 20:30";
+    A.venue = "Lab";
+    data["ifest"]["iQuiz"] = A;
 
-    A.day=2;
-    A.info="CSS Battle, The main objective of this event is visually replicating the target image in the least possible CSS code.";
-    A.time="12:00 to 13:30";
-    A.venue="Lab";
-    data["ifest"]["CSS Battle"]=A;
+    A.day = 2;
+    A.info = "CSS Battle, The main objective of this event is visually replicating the target image in the least possible CSS code.";
+    A.time = "12:00 to 13:30";
+    A.venue = "Lab";
+    data["ifest"]["CSS Battle"] = A;
 
-    A.day=2;
-    A.info="Chess64, Show us your smart chess moves and engage in brain-stimulating competitions against your opponents.";
-    A.time="12:00 to 14:00";
-    A.venue="CEP 004";
-    data["ifest"]["Chess 64"]=A;
+    A.day = 2;
+    A.info = "Chess64, Show us your smart chess moves and engage in brain-stimulating competitions against your opponents.";
+    A.time = "12:00 to 14:00";
+    A.venue = "CEP 004";
+    data["ifest"]["Chess 64"] = A;
 
-    A.day=2;
-    A.info="Music Night, immerse yourself into the exciting music and show your enthusiasm on the stage.";
-    A.time="23:00 to 01:00";
-    A.venue="OAT";
-    data["ifest"]["Music Night"]=A;
+    A.day = 2;
+    A.info = "Music Night, immerse yourself into the exciting music and show your enthusiasm on the stage.";
+    A.time = "23:00 to 01:00";
+    A.venue = "OAT";
+    data["ifest"]["Music Night"] = A;
 
-    A.day=2;
-    A.info="iRide, Show your bicycle skills, but there is a twist, it is a slow cycling contest. Flaunt your balancing skills.";
-    A.time="17:00 to 19:00";
-    A.venue="Cafeteria";
-    data["ifest"]["iRide"]=A;
+    A.day = 2;
+    A.info = "iRide, Show your bicycle skills, but there is a twist, it is a slow cycling contest. Flaunt your balancing skills.";
+    A.time = "17:00 to 19:00";
+    A.venue = "Cafeteria";
+    data["ifest"]["iRide"] = A;
 
-    A.day=3;
-    A.info="iPrompt, where you can flaunt your amazing imagination skills and then transfer it with the help of AI generative framework.";
-    A.time="14:00 to 15:00";
-    A.venue="Lab";
-    data["ifest"]["iPrompt"]=A;
+    A.day = 3;
+    A.info = "iPrompt, where you can flaunt your amazing imagination skills and then transfer it with the help of AI generative framework.";
+    A.time = "14:00 to 15:00";
+    A.venue = "Lab";
+    data["ifest"]["iPrompt"] = A;
 
-    A.day=3;
-    A.info="The Open Box with Safin Hasan, join us to engage with a great personality and a source of inspiration.";
-    A.time="11:00 to 12:00";
-    A.venue="LT1";
-    data["ifest"]["The Open Box"]=A;
+    A.day = 3;
+    A.info = "The Open Box with Safin Hasan, join us to engage with a great personality and a source of inspiration.";
+    A.time = "11:00 to 12:00";
+    A.venue = "LT1";
+    data["ifest"]["The Open Box"] = A;
 
-    A.day=3;
-    A.info="Blind C, Confident enough about your coding skills to be able to write them down blindfolded? (Well, not"
-    <<"literally. But you’ll be screen blind!)";
-    A.time="13:00 to 14:00";
-    A.venue="Lab";
-    data["ifest"]["Blind C"]=A;
+    A.day = 3;
+    A.info = "Blind C, Confident enough about your coding skills to be able to write them down blindfolded? (Well, not literally. But you’ll be screen blind!)";
+    A.time = "13:00 to 14:00";
+    A.venue = "Lab";
+    data["ifest"]["Blind C"] = A;
 
-    A.day=3;
-    A.info="Concert by Asees Kaur, Get ready to feel the beat, the rhythm, and the soul of the music as soon as she gets on stage.";
-    A.time="20:30 to 23:00";
-    A.venue="SAC";
-    data["ifest"]["Concert"]=A;
+    A.day = 3;
+    A.info = "Concert by Asees Kaur, Get ready to feel the beat, the rhythm, and the soul of the music as soon as she gets on stage.";
+    A.time = "20:30 to 23:00";
+    A.venue = "SAC";
+    data["ifest"]["Concert"] = A;
 
+    A.day = 1;
+    A.info = "Badminton Contest";
+    A.time = "20:00";
+    A.venue = "Badminton Court";
+    data["Concours"]["Badminton"] = A;
 
-    A.day=1;
-    A.info="Badminton Contest";
-    A.time="20:00";
-    A.venue="Badminton Court";
-    data["Concours"]["Badminton"]=A;
+    A.day = 1;
+    A.info = "Volleyball Match";
+    A.time = "21:00";
+    A.venue = "SAC Ground";
+    data["Concours"]["Volleyball"] = A;
 
-    A.day=1;
-    A.info="Volleyball Match";
-    A.time="21:00";
-    A.venue="SAC Ground";
-    data["Concours"]["Volleyball"]=A;
+    A.day = 1;
+    A.info = "Football match";
+    A.time = "19:30";
+    A.venue = "SAC Ground";
+    data["Concours"]["Football"] = A;
 
-    A.day=1;
-    A.info="Football match";
-    A.time="19:30";
-    A.venue="SAC Ground";
-    data["Concours"]["Football"]=A;
+    A.day = 1;
+    A.info = "Basketball Match";
+    A.time = "21:45";
+    A.venue = "Basketball Court";
+    data["Concours"]["Basketball"] = A;
 
-    A.day=1;
-    A.info="Basketball Match";
-    A.time="21:45";
-    A.venue="Basketball Court";
-    data["Concours"]["Basketball"]=A;
+    A.day = 2;
+    A.info = "Chess battle";
+    A.time = "10:00";
+    A.venue = "CEP 004";
+    data["Concours"]["Chess"] = A;
 
-    A.day=2;
-    A.info="Chess battle";
-    A.time="10:00";
-    A.venue="CEP 004";
-    data["Concours"]["Chess"]=A;
+    A.day = 2;
+    A.info = "Cricket";
+    A.time = "07:30";
+    A.venue = "SAC Ground";
+    data["Concours"]["Cricket"] = A;
 
-    A.day=2;
-    A.info="Cricket";
-    A.time="07:30";
-    A.venue="SAC Ground";
-    data["Concours"]["Cricket"]=A;
+    A.day = 2;
+    A.info = "Table Tennis";
+    A.time = "13:00";
+    A.venue = "SAC-2";
+    data["Concours"]["Table Tennis"] = A;
 
-    A.day=2;
-    A.info="Table Tennis";
-    A.time="13:00";
-    A.venue="SAC-2";
-    data["Concours"]["Table Tennis"]=A;
+    A.day = 3;
+    A.info = "Cricket";
+    A.time = "10:00";
+    A.venue = "SAC Ground";
+    data["Concours"]["Cricket"] = A;
 
-    A.day=3;
-    A.info="Cricket";
-    A.time="10:00";
-    A.venue="SAC Ground";
-    data["Concours"]["Cricket"]=A;
+    A.day = 3;
+    A.info = "Carrom";
+    A.time = "13:00";
+    A.venue = "SAC-2";
+    data["Concours"]["Carrom"] = A;
 
-    A.day=3;
-    A.info="Carrom";
-    A.time="13:00";
-    A.venue="SAC-2";
-    data["Concours"]["Carrom"]=A;
+    A.day = 3;
+    A.info = "Football";
+    A.time = "18:30";
+    A.venue = "SAC Ground";
+    data["Concours"]["Football"] = A;
 
-    A.day=3;
-    A.info="Football";
-    A.time="18:30";
-    A.venue="SAC Ground";
-    data["Concours"]["Football"]=A;
+    A.day = 4;
+    A.info = "Cricket";
+    A.time = "07:30";
+    A.venue = "SAC Ground";
+    data["Concours"]["Cricket"] = A;
 
-    A.day=4;
-    A.info="Cricket";
-    A.time="07:30";
-    A.venue="SAC Ground";
-    data["Concours"]["Cricket"]=A;
+    A.day = 4;
+    A.info = "Chess";
+    A.time = "11:00";
+    A.venue = "CEP 004";
+    data["Concours"]["Chess"] = A;
 
-    A.day=4;
-    A.info="Chess";
-    A.time="11:00";
-    A.venue="CEP 004";
-    data["Concours"]["Chess"]=A;
+    A.day = 4;
+    A.info = "Table Tennis";
+    A.time = "15:00";
+    A.venue = "SAC-2";
+    data["Concours"]["Table Tennis"] = A;
 
-    A.day=4;
-    A.info="Table Tennis";
-    A.time="15:00";
-    A.venue="SAC-2";
-    data["Concours"]["Table Tennis"]=A;
+    A.day = 4;
+    A.info = "Volleyball";
+    A.time = "19:00";
+    A.venue = "SAC Ground";
+    data["Concours"]["Volleyball"] = A;
 
-    A.day=4;
-    A.info="Volleyball";
-    A.time="19:00";
-    A.venue="SAC Ground";
-    data["Concours"]["Volleyball"]=A;
+it10:
+    cout << endl;
+    cout << "1.to Show all event" << endl;
+    cout << "2.to Show Particular event" << endl;
+    cout << "3.to exit" << endl;
+    cout << "Enter Choice: ";
+    int x;
+    cin >> x;
+    switch (x)
+    {
+    case 1:
+    {
+        cout << endl;
+        cout << "1.to show all event of Synaps: " << endl;
+        cout << "2.to show all event of ifest: " << endl;
+        cout << "3.to show all event of councers: " << endl;
+        cout << "Enter Choice: ";
+        int y;
+        cin >> y;
+        switch (y)
+        {
+        case 1:
+        {
+            cout << endl;
+            cout << "-------------------" << endl;
+            cout << "Synapse all events: " << endl;
+            cout << "-------------------" << endl;
+            cout << endl;
+            for (auto ev : data["Synapse"])
+            {
+                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
+                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
+                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
+                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
+                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            goto it10;
+        }
+        case 2:
+        {
+            cout << endl;
+            cout << "-------------------" << endl;
+            cout << "ifest all events: " << endl;
+            cout << "-------------------" << endl;
+            cout << endl;
+            for (auto ev : data["ifest"])
+            {
+                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
+                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
+                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
+                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
+                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            goto it10;
+        }
+        case 3:
+        {
+            cout << endl;
+            cout << "-------------------" << endl;
+            cout << "Concours all events: " << endl;
+            cout << "-------------------" << endl;
+            cout << endl;
+            for (auto ev : data["Concours"])
+            {
+                cout << left << setw(12) << "Event Name" << ": " << ev.first << endl;
+                cout << left << setw(12) << "Day" << ": " << ev.second.day << endl;
+                cout << left << setw(12) << "Time" << ": " << ev.second.time << endl;
+                cout << left << setw(12) << "Venue" << ": " << ev.second.venue << endl;
+                cout << left << setw(12) << "Information" << ": " << ev.second.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            goto it10;
+        }
+        default:
+        {
+            cout << "You enter invalid input..!!" << endl;
+            goto it10;
+        }
+        }
+        break;
+    }
+    case 2:
+    {
+        cout << endl;
+        cout << "1.to show particular event of Synaps: " << endl;
+        cout << "2.to show particular event of ifest: " << endl;
+        cout << "3.to show particular event of councers: " << endl;
+        cout << "Enter Choice: ";
+        int y;
+        cin >> y;
+        switch (y)
+        {
+        case 1:
+        {
+            cout << endl;
+            string event_name;
+            cin.ignore();
+            cout << "Enter Event name: ";
+            getline(cin, event_name);
+            if (data["Synapse"].count(event_name) > 0)
+            {
+                cout << endl;
+                auto ev = data["Synapse"][event_name];
+                cout << "Event Detials:" << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw(12) << "event held by: Synapse" << endl;
+                cout << left << setw(13) << "Event Name" << ": " << event_name << endl;
+                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
+                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
+                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
+                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            else
+            {
+                cout << "Event not found." << endl;
+                cout << endl;
+            }
+            goto it10;
+        }
+        case 2:
+        {
+            cout << endl;
+            string event_name;
+            cin.ignore();
+            cout << "Enter Event name: ";
+            getline(cin, event_name);
+            if (data["ifest"].count(event_name) > 0)
+            {
+                cout << endl;
+                auto ev = data["I-FEST"][event_name];
+                cout << "Event Detials:" << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw(12) << "event held by: I-FEST" << endl;
+                cout << left << setw(13) << "Event Name" << ": " << event_name << endl;
+                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
+                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
+                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
+                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            else
+            {
+                cout << "Event not found." << endl;
+                cout << endl;
+            }
+            goto it10;
+        }
+        case 3:
+        {
+            cout << endl;
+            string event_name;
+            cin.ignore();
+            cout << "Enter Event game: ";
+            getline(cin, event_name);
+            if (data["Concours"].count(event_name) > 0)
+            {
+                cout << endl;
+                auto ev = data["Concours"][event_name];
+                cout << "Event Detials:" << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw(12) << "event held by: Concours" << endl;
+                cout << left << setw(13) << "Game Name" << ": " << event_name << endl;
+                cout << left << setw(13) << "Day" << ": " << ev.day << endl;
+                cout << left << setw(13) << "Time" << ": " << ev.time << endl;
+                cout << left << setw(13) << "Venue" << ": " << ev.venue << endl;
+                cout << left << setw(13) << "Information" << ": " << ev.info << endl;
+                cout << "---------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+            }
+            else
+            {
+                cout << "Event not found." << endl;
+                cout << endl;
+            }
+            goto it10;
+        }
+        default:
+        {
+            cout << "You enter invalid input..!!" << endl;
+            break;
+        }
+        }
+        break;
+    }
+    case 3:
+    {
+        return;
+    }
+    }
 }

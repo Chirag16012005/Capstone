@@ -96,7 +96,11 @@ item:
          std::cout << BLUE << BOLD << "4. To search any club member." << RESET << endl;
          std::cout << BLUE << BOLD << "5. To become a member in any club." << RESET << endl;
          std::cout << BLUE << BOLD << "6. To leave any club." << RESET << endl;
-         std::cout << BLUE << BOLD << "7. To exit." << RESET << endl;
+         std::cout << BLUE << BOLD << "7. To get detials for Events" << RESET << endl;
+         std::cout << BLUE << BOLD << "8. to edit event detials" << RESET << endl;
+         std::cout << BLUE << BOLD << "9. to Participate any Event" << RESET << endl;
+         std::cout << BLUE << BOLD << "10.To get ditials of festivals" << RESET << endl;
+         std::cout << BLUE << BOLD << "11.to exit" << RESET << endl;
          std::cout << "Enter Choice: ";
         int menu;
         cin >> menu;
@@ -165,7 +169,19 @@ item:
         }
         case 9:
         {
-            reload_data(list,file_name);
+            cout << endl;
+            ev_par(par_detials, data, s);
+            break;
+        }
+        case 10:
+        {
+            cout << endl;
+            mj_event();
+            break;
+        }
+        case 11:
+        {
+            reload_data(list, file_name);
             return 0;
         }
         default:
