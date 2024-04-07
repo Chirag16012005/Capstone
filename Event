@@ -814,7 +814,7 @@ unordered_map<string,unordered_map<string,Person>> par_load(string file_name){
 void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_map<string, unordered_multimap<int,Event>> &info,string file_name){
 
     char temp;
-    cout<<"Have you registered yourself ??  (Enter Y/N)"<<endl;
+    cout<<"Have you registered yourself ??  (Enter Y/N): ";
     cin>>temp;
     cout<<endl;
     cin.ignore();
@@ -827,16 +827,16 @@ void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_m
         cout<<"You are new candidate please register yourself"<<endl;
         cout<<endl;
 
-        cout<<"Please enter your name :";
+        cout<<"Please enter your name : ";
         getline(cin,A.name);
         cout<<endl;
-        cout<<"Enter your contact number :";
+        cout<<"Enter your contact number: ";
         cin>>A.contact;
         cout<<endl;
-        cout<<"Enter your email id :";
+        cout<<"Enter your email id: ";
         cin>>A.emid;
         cout<<endl;
-        cout<<"Now create your user name :";
+        cout<<"Now create your user name: ";
         la:
         cin>>uname;
         cout<<endl;
@@ -851,10 +851,10 @@ void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_m
         }
 
         la1:
-        cout<<"Now create password : ";
+        cout<<"Now create password: ";
         cin>>A.password;
         cout<<endl;
-        cout<<"Please enter your password again :";
+        cout<<"Please enter your password again:";
         cin>>tem;
         cout<<endl;
 
@@ -869,10 +869,10 @@ void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_m
     else{
         la3:
         int a=0;
-        cout<<"Enter your username :"<<endl;
+        cout<<"Enter your username: ";
         cin>>uname;
         cout<<endl;
-        cout<<"Now enter your password :"<<endl;
+        cout<<"Now enter your password: ";
         cin>>A.password;
         cout<<endl;
 
@@ -941,7 +941,7 @@ void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_m
     cout<<B.rule3<<endl;
     cout<<endl;
 
-    cout<<"Are you still want to join this event, Please enter Y|N"<<endl;
+    cout<<"Are you still want to join this event, Please enter Y|N: ";
     char t;
     cin>>t;
 
@@ -959,7 +959,7 @@ void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_m
         cout<<endl;
 
         cout<<"Do you want list of the person who is participated in this event"<<endl;
-        cout<<"Enter Y|N : ";
+        cout<<"Enter Y|N: ";
         char t;
         cin>>t;
         cout<<endl;
