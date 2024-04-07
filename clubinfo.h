@@ -2,9 +2,9 @@
 using namespace std;
 void radioclub_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> Radio Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE << "   ------------------" <<RESET<<endl;
+    cout <<GREEN<< "--> Radio Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Radio Club is a hobby club at DAIICT, Gujarat, India. Radio Club makes podcasts, shows"
          << "interviews and other radio sessions brought to you by the enthusiastic students of the institute"
@@ -13,9 +13,9 @@ void radioclub_info()
 }
 void sambhav_info()
 {
-    cout << "    ---------------------" << endl;
-    cout << "--> Sambhav Club detials: " << endl;
-    cout << "    ---------------------" << endl;
+    cout <<BLUE<< "    ---------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Sambhav Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ---------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Sambhav means possible. Sambhav, at DA-IICT is a group of students with interest or urge to"
          << "bring some positive change in the society. Sambhav organises various activities throughout a year."
@@ -29,9 +29,9 @@ void sambhav_info()
 }
 void businessclub_info()
 {
-    cout << "    --------------------------" << endl;
-    cout << "--> Businessclub club detials: " << endl;
-    cout << "    --------------------------" << endl;
+    cout <<BLUE<< "    --------------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Businessclub club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    --------------------------" <<RESET<< endl;
     cout << endl;
     cout << "       The Business Club consist of individuals who possess a genuine enthusiasm for the dynamics of wealth"
          << "creation and a thirst for knowledge, regardless of their current level of expertise."
@@ -41,9 +41,9 @@ void businessclub_info()
 }
 void DCEI_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> DCEI Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> DCEI Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Hello all, we are DA-IICT Centre for Entrepreneurship and Incubation. We're here to help you turn your ideas"
          << "into reality. As representatives of DCEI, we're passionate about promoting innovation, entrepreneurship, and problem-solving."
@@ -53,9 +53,9 @@ void DCEI_info()
 }
 void CINS_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> CINS Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> CINS Club detials: " <<RESET<<endl;
+    cout <<BLUE<< "    ------------------" <<RESET<<endl;
     cout << endl;
     cout << "       We are the Cyber Security Club. We are driven by the amazing passion of students of Cyber Information and Network Security"
          << "Club. We also organise different cyber security events that promises to test your skills, challenge your "
@@ -63,9 +63,9 @@ void CINS_info()
 }
 void DSClub_info()
 {
-    cout << "    --------------------" << endl;
-    cout << "--> DSClub Club detials: " << endl;
-    cout << "    --------------------" << endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> DSClub Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout << endl;
     cout << "       We are a chapter of Google Developer Groups, which has numerous chapters all over the globe. DA-IICT is"
          << "one of the very few colleges in India which has its own chapter. We are a group of technology enthusiasts who aim to"
@@ -76,9 +76,9 @@ void DSClub_info()
 }
 void Webkitclub_info()
 {
-    cout << "    --------------------" << endl;
-    cout << "--> Webkit Club detials: " << endl;
-    cout << "    --------------------" << endl;
+    cout <<BLUE<< "    --------------------" <RESET< endl;
+    cout <<GREEN<< "--> Webkit Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout << endl;
     cout << "       The WebKit club is a student community of Web development enthusiasts, interested both in creating and maintaining codes"
          << "as well as building and expanding a stronger community of like minded students. As the name suggests ,we are about all things web."
@@ -89,9 +89,9 @@ void Webkitclub_info()
 }
 void filmclub_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> Film Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Film Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       By far the most celebrated club, the Film Club occupies a special place in every student heart. The club was started"
          << "by a few movie enthusiasts with the aim of providing regular entertainment to DA-IICTians in the form of interesting as"
@@ -103,9 +103,9 @@ void filmclub_info()
 }
 void Press_info()
 {
-    cout << "    -------------------" << endl;
-    cout << "--> Press Club detials: " << endl;
-    cout << "    -------------------" << endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Press Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;
     cout << "       As the journalism cell of DAIICT, The Press Club strives to give voice to the student community and"
          << "aspires to be a podium to lodge campus musings in all its moods. To achieve its maxim, The Press Club engages in a"
@@ -117,9 +117,9 @@ void Press_info()
 }
 void musicclub_info()
 {
-    cout << "    -------------------" << endl;
-    cout << "--> Music Club detials: " << endl;
-    cout << "    -------------------" << endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Music Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -------------------" <<<RESET< endl;
     cout << endl;
     cout << "       The Music Club of DA-IICT aims to develop an interest in students towards music and create a healthy music"
          << "atmosphere amongst the student community. To achieve this purpose, we organise various Acoustic Nite Lives for"
@@ -132,9 +132,9 @@ void musicclub_info()
 }
 void DAIICT_Theatreclub_info()
 {
-    cout << "    ----------------------------" << endl;
-    cout << "--> DAIICT_Theatre Club detials: " << endl;
-    cout << "    ----------------------------" << endl;
+    cout <<<BLUE< "    ----------------------------" <<RESET<< endl;
+    cout <<<GREEN< "--> DAIICT_Theatre Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------------" <<RESET<< endl;
     cout << endl;
     cout << "       DAIICT Theatre Group, aka DTG, is a club that conducts and administers theatrics events of DAIICT. There are"
          << "no bounds to the form of theatre that we perform, having ventured through stage plays, nukkad natak, mime, mono-acting,"
@@ -146,9 +146,9 @@ void DAIICT_Theatreclub_info()
 }
 void researchclub_info()
 {
-    cout << "    ----------------------" << endl;
-    cout << "--> Research Club detials: " << endl;
-    cout << "    ----------------------" << endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Research Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------" <<<RESET< endl;
     cout << endl;
     cout << "       DA-IICT boasts of being a research-oriented institute and the Research Club aims to work to foster a"
          << "community within the college for those interested in research. It works to help those interested in research,"
@@ -159,9 +159,9 @@ void researchclub_info()
 }
 void chessclub_info()
 {
-    cout << "    -------------------" << endl;
-    cout << "--> Chess Club detials: " << endl;
-    cout << "    -------------------" << endl;
+    cout <<BLUE<< "    -------------------" <<RESET<<>> endl;
+    cout <<GREEN<< "--> Chess Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;
     cout << "       As the name suggests, we are a group of enthusiastic people who are mad about chess. Chess club focuses on"
          << "enhancing the skills of the students having interest in chess. We provide them proper guidance about tactics and"
@@ -171,9 +171,9 @@ void chessclub_info()
 }
 void programmingclub_info()
 {
-    cout << "    -------------------------" << endl;
-    cout << "--> Programming Club detials: " << endl;
-    cout << "    -------------------------" << endl;
+    cout <<BLUE<< "    -------------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Programming Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -------------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Programming Club has been working to help people explore their hidden passion for programming. We help"
          << "students understand some basic concepts and few who stick around enjoy and master the art competitive programming."
@@ -188,9 +188,9 @@ void programmingclub_info()
 }
 void khelaiyaclub_info()
 {
-    cout << "    ----------------------" << endl;
-    cout << "--> Khelaiya Club detials: " << endl;
-    cout << "    ----------------------" << endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Khelaiya Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Folk dance is where the culture breaths.” Khelaiya club- DAIICT provides a medium and platform to express "
          << "through the art of folk dance and thus strives to keep the culture of folk dance alive. The khelaiya club organises "
@@ -200,9 +200,9 @@ void khelaiyaclub_info()
 }
 void cubingclub_info()
 {
-    cout << "    --------------------" << endl;
-    cout << "--> Cubing Club detials: " << endl;
-    cout << "    --------------------" << endl;
+    cout <<BLUE<< "    --------------------" <<<RESET< endl;
+    cout <<GREEN<< "--> Cubing Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    --------------------" <<RESET<< endl;
     cout << endl;
     cout << "       It is a community by and for people interested in solving Rubiks Cube and its other cubic and non-cubic "
          << "variants. We promote cubing by speedcubing sessions and organizing various competitions(general and WCA affiliated). "
@@ -211,9 +211,9 @@ void cubingclub_info()
 }
 void PMMC_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> PMMC Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> PMMC Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       PMMC or Photography and moviemaking club as the name suggest we are the photographer and video makers."
          << "We, as the members of the club, seek to display our love of photography through capturing our college's events and "
@@ -222,9 +222,9 @@ void PMMC_info()
 }
 void excursionclub_info()
 {
-    cout << "    -----------------------" << endl;
-    cout << "--> Excursion Club detials: " << endl;
-    cout << "    -----------------------" << endl;
+    cout <<BLUE<< "    -----------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Excursion Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -----------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Excursions are the activities which every engineering student is most awaited of. These "
          << "become the most memorable moments of ones life when we travel with our friends. We, the Excursion "
@@ -233,9 +233,9 @@ void excursionclub_info()
 }
 void electronics_hobby_info()
 {
-    cout << "    -----------------" << endl;
-    cout << "--> EHC Club detials: " << endl;
-    cout << "    -----------------" << endl;
+    cout <<BLUE<< "    -----------------" <<RESET<< endl;
+    cout <GREEN<< "--> EHC Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -----------------" <<RESET<< endl;
     cout << endl;
     cout << "       We, the EHC, as a group of enthusiastic electronics students aim to maintain and grow the culture of electronics "
          << "in the campus of DA-IICT. We believe that for excellence in any field, it is necessary that student has strong roots in "
@@ -249,9 +249,9 @@ void electronics_hobby_info()
 }
 void debateclub_info()
 {
-    cout << "    -------------------" << endl;
-    cout << "--> Debat Club detials: " << endl;
-    cout << "    -------------------" << endl;
+    cout <<BLUE<< "    -------------------" <<RESET<, endl;
+    cout <<GREEN<< "--> Debat Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -------------------" <<RESET<< endl;
     cout << endl;
     cout << "       We are a group of people who like to talk, who believe in the power of words to bring about change, "
          << "who promote dissent and discussion. We do this by conducting weekly sessions of Parliamentary Debating and "
@@ -262,9 +262,9 @@ void debateclub_info()
 }
 void heritageclub_info()
 {
-    cout << "    ----------------------" << endl;
-    cout << "--> Heritage Club detials: " << endl;
-    cout << "    ----------------------" << endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Heritage Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Our mission is to “Have every child, experience the inspiration and mysticism embodied in Indian and "
          << "world heritage”. We organize different events, categorized into two parts: local events and other events. "
@@ -275,9 +275,9 @@ void heritageclub_info()
 }
 void headrush_info()
 {
-    cout << "    ----------------------" << endl;
-    cout << "--> Headrush Club detials: " << endl;
-    cout << "    ----------------------" << endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Headrush Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Headrush is the quizzing club of DA-IICT. We are a group of quizzing enthusiasts that aim to not "
          << "only maintain but perpetually ascertain the growth of the level of comepetitive quizzing in the college "
@@ -286,9 +286,9 @@ void headrush_info()
 }
 void BISclub_info()
 {
-    cout << "    -----------------" << endl;
-    cout << "--> BIS Club detials: " << endl;
-    cout << "    -----------------" << endl;
+    cout <<BLUE<< "    -----------------" <<RESET<< endl;
+    cout <<GREEN<< "--> BIS Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    -----------------" <<RESET<< endl;
     cout << endl;
     cout << "       You can have the chance of shaping the future of technology and safety. Join the Bureau Of Indian Standards"
          << "Club and collaborate with industry experts, contribute to national standards and gain hands-on experience in emerging fields like"
@@ -297,9 +297,9 @@ void BISclub_info()
 }
 void IEEEclub_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> IEEE Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> IEEE Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       IEEE student branch of DAIICT focuses on enhancing the learning experience of the student community. IEEEs"
          << "main focus is to foster technological innovation and excellence for the benefit of humanity. We focus on conducting"
@@ -315,9 +315,9 @@ void IEEEclub_info()
 }
 void museclub_info()
 {
-    cout << "    ------------------" << endl;
-    cout << "--> Muse Club detials: " << endl;
-    cout << "    ------------------" << endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
+    cout <<GREEN<< "--> Muse Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ------------------" <<RESET<< endl;
     cout << endl;
     cout << "       Welcome aboard the Muse Club express, where the creative vibes are high and the fun is even higher!"
          << "We're a bunch of design fanatics who believe that art is all about letting loose and having a blast. Doodles,"
@@ -327,9 +327,9 @@ void museclub_info()
 
 void AIclub_info()
 {
-    cout << "    ----------------" << endl;
-    cout << "--> AI Club detials: " << endl;
-    cout << "    ----------------" << endl;
+    cout <<BLUE<< "    ----------------" <<RESET<< endl;
+    cout <<GREEN<< "--> AI Club detials: " <<RESET<< endl;
+    cout <<BLUE<< "    ----------------" <<RESET<< endl;
     cout << endl;
     cout << "       We are on a mission to educate others about AI and its applications. We are a bunch of ML(Machine Learning) Enthusiasts"
          << ". We also arrange prompt conteests in which studentss may imagine the wildest, most impossible scenarios and then "
