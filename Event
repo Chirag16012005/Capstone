@@ -778,6 +778,222 @@ void edit_ev(unordered_map<string, unordered_multimap<int, Event>> &data, unorde
     }
 }
 
+unordered_map<string,unordered_map<string,Person>> par_load(string file_name){
+
+    unordered_map<string,unordered_map<string,Person>> detail;
+
+    ifstream fin;
+
+    fin.open(file_name,ios :: in);
+
+    Person A;
+    string temp,event,username;
+
+    while(fin>>A.name>>temp>>A.contact>>A.emid>>username>>A.password){
+        getline(fin,event);
+        event.erase(0,1);
+        A.name = A.name +" " + temp;
+        
+        detail[event][username] = A;
+    }
+
+    fin.close();
+
+    return detail;
+
+}
+
+void ev_par(unordered_map<string,unordered_map<string,Person>> &data,unordered_map<string, unordered_multimap<int,Event>> &info,string file_name){
+
+    char temp;
+    cout<<"Have you registered yourself ??  (Enter Y/N)"<<endl;
+    cin>>temp;
+    cout<<endl;
+    cin.ignore();
+
+    Person A;
+    string uname,tem,evname;
+
+    if(temp=='N'){
+
+        cout<<"You are new candidate please register yourself"<<endl;
+        cout<<endl;
+
+        cout<<"Please enter your name :";
+        getline(cin,A.name);
+        cout<<endl;
+        cout<<"Enter your contact number :";
+        cin>>A.contact;
+        cout<<endl;
+        cout<<"Enter your email id :";
+        cin>>A.emid;
+        cout<<endl;
+        cout<<"Now create your user name :";
+        la:
+        cin>>uname;
+        cout<<endl;
+        
+        for(int i=0;i<ev->size();++i){
+            auto person = data[ev[i]].find(uname);
+            if(person !=data[ev[i]].end()){
+                cout<<"This user name already exist"<<endl;
+                cout<<"Please enter new username"<<endl;
+                goto la;
+            }
+        }
+
+        la1:
+        cout<<"Now create password : ";
+        cin>>A.password;
+        cout<<endl;
+        cout<<"Please enter your password again :";
+        cin>>tem;
+        cout<<endl;
+
+        if(tem!=A.password){
+            cout<<"Both password are not matching, Please make your password again"<<endl;
+            cout<<endl;
+            goto la1;
+        }
+
+        cout<<"You are registration completed sucessfully"<<endl;
+    }
+    else{
+        la3:
+        int a=0;
+        cout<<"Enter your username :"<<endl;
+        cin>>uname;
+        cout<<endl;
+        cout<<"Now enter your password :"<<endl;
+        cin>>A.password;
+        cout<<endl;
+
+        for(int i=0;i<ev->size();++i){
+            auto person = data[ev[i]].find(uname);
+            if(person != data[ev[i]].end()){
+                if(person->second.password==A.password){
+                    a=1;
+                    A.contact=person->second.contact;
+                    A.emid=person->second.emid;
+                    A.name=person->second.name;
+                    A.password=person->second.password;
+                    break;
+                }
+            }
+        }
+
+        if(a==0){
+            cout<<"Incorrect user-name or password"<<endl;
+            int k;
+            cout<<"Press 1 to re-enter or 0 to exit : ";
+            cin>>k;
+            if(k==1){
+                goto la3;
+            }
+            else{
+                return;
+            }
+        }
+
+        cout<<"You are succesfully login"<<endl;
+    }
+
+    Event B;
+    la4: 
+    int k=0;
+    cout<<"Enter the name of the event you want to participate : ";
+    cin.ignore();
+    getline(cin,evname);
+    cout<<endl;
+
+    for(int i=0;i<28;++i){
+        for(auto person : info[club[i]]){
+            if(person.second.name==evname){
+                B.rule1=person.second.rule1;
+                B.rule2=person.second.rule2;
+                B.rule3=person.second.rule3;
+                k=1;
+            }
+        }
+    }
+
+    if(k==0){
+        cout<<"No event found, Please eneter correct name of the event"<<endl;
+        cout<<"Enter 1 to re-enter or 0 to leave"<<endl;
+        int b;
+        cin>>b;
+        goto la4;
+    }
+
+    cout<<"Rules for this event is as below "<<endl;
+    cout<<endl;
+
+    cout<<B.rule1<<endl;
+    cout<<B.rule2<<endl;
+    cout<<B.rule3<<endl;
+    cout<<endl;
+
+    cout<<"Are you still want to join this event, Please enter Y|N"<<endl;
+    char t;
+    cin>>t;
+
+    if(t=='Y'){
+        cout<<"You registered succesfully for "<<evname<<endl;
+
+        ofstream fout;
+        fout.open(file_name, ios::app);
+        fout<<endl;
+        fout<<A.name<<" "<<A.contact<<" "<<A.emid<<" "<<uname<<" "<<A.password<<" "<<evname;
+        fout.close();
+
+        data[evname][uname]=A;
+
+        cout<<endl;
+
+        cout<<"Do you want list of the person who is participated in this event"<<endl;
+        cout<<"Enter Y|N : ";
+        char t;
+        cin>>t;
+        cout<<endl;
+
+        if(t=='Y'){
+
+            for(auto person : data[evname]){
+                cout<<"--------------------------------------"<<endl;
+            }
+        }
+
+        cout<<"Do you want list of the events name in which you participate"<<endl;
+        cout<<"Enter Y|N : ";
+        cin>>t;
+        cout<<endl;
+
+        int n=1;
+        if(t=='Y'){
+            for(int i=0;i<ev->size();++i){
+                auto person = data[ev[i]].find(uname);
+                if(person!=data[ev[i]].end()){
+                    cout<<n<<". "<<ev[i]<<endl;
+                    n++;
+                }
+            }
+        }
+        cout<<endl;
+    }
+    else{
+        cout<<"Press 1 to participate in any other event or 0 to leave : ";
+        int k;
+        cin>>k;
+        if(k==0){
+            return;
+        }
+        else{
+            goto la4;
+        }
+    }
+
+}
+
 void mj_event(){
     cout<<"There is three major event conducted by clubs and committiees"<<endl;
     cout<<"1.Synapse    2.iFest    3.Concours"<<endl;
