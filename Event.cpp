@@ -1444,7 +1444,7 @@ it10:
             if (data["ifest"].count(event_name) > 0)
             {
                 cout << endl;
-                auto ev = data["I-FEST"][event_name];
+                auto ev = data["ifest"][event_name];
                 cout <<YELLOW<<"Event Detials:" <<RESET<< endl;
                 cout <<BLUE<< "---------------------------------------------------------------------------------------------------------------------------------------------" <<RESET<< endl;
                 cout <<BRIGHT_YELLOW<< left << setw(12) << "event held by: I-FEST" <<RESET<< endl;
